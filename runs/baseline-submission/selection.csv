@@ -1,0 +1,16 @@
+image,norm,distance,reference,predicted,probability,source
+knot,linf,0.25300008058547974,616,840,0.4140031039714813,/home/archant/projects/cs454-adversarial/runs/ga-v2
+knot,l2,2277.0791015625,616,327,0.4599526822566986,/home/archant/projects/cs454-adversarial/runs/l2-energy-450
+knot,l0,787,616,584,0.3774399161338806,/home/archant/projects/cs454-adversarial/runs/ga-v2
+mink,linf,0.1041409969329834,357,337,0.4825949966907501,/home/archant/projects/cs454-adversarial/runs/ga-v2
+mink,l2,574.5946044921875,357,337,0.4944157600402832,/home/archant/projects/cs454-adversarial/runs/l2-energy-450
+mink,l0,687,357,337,0.5227258205413818,/home/archant/projects/cs454-adversarial/runs/ga-v2
+orca,linf,0.2006000280380249,148,457,0.2509270906448364,/home/archant/projects/cs454-adversarial/runs/ga-v2
+orca,l2,2144.84765625,148,145,0.4982708990573883,/home/archant/projects/cs454-adversarial/runs/l2-energy-450
+orca,l0,940,148,814,0.6196138858795166,/home/archant/projects/cs454-adversarial/runs/ga-v2
+sock,linf,0.06656825542449951,806,443,0.3106980323791504,/home/archant/projects/cs454-adversarial/runs/ga-v2
+sock,l2,367.0217590332031,806,502,0.3880724608898163,/home/archant/projects/cs454-adversarial/runs/l2-energy-450
+sock,l0,113,806,658,0.41026878356933594,/home/archant/projects/cs454-adversarial/runs/ga-v2
+tank,linf,0.12566405534744263,847,408,0.5001015067100525,/home/archant/projects/cs454-adversarial/runs/ga-v2
+tank,l2,2240.3212890625,847,408,0.49983447790145874,/home/archant/projects/cs454-adversarial/runs/l2-energy-450
+tank,l0,2382,847,408,0.5220641493797302,/home/archant/projects/cs454-adversarial/runs/ga-v2

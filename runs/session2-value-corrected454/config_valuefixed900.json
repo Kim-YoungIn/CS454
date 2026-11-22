@@ -1,0 +1,85 @@
+{
+  "created_utc": "2026-11-20T13:01:12.067574+00:00",
+  "command": [
+    "benchmark_attacks.py",
+    "--implementation",
+    "research.value_prune",
+    "--images",
+    "mink",
+    "sock",
+    "--norms",
+    "l0",
+    "--queries",
+    "900",
+    "--seconds",
+    "165",
+    "--threads",
+    "4",
+    "--seed",
+    "454",
+    "--output",
+    "runs/session2-value-corrected454",
+    "--tag",
+    "valuefixed900"
+  ],
+  "options": {
+    "implementation": "research.value_prune",
+    "images": [
+      "mink",
+      "sock"
+    ],
+    "norms": [
+      "l0"
+    ],
+    "seed": 454,
+    "seconds": 165.0,
+    "queries": 900,
+    "threads": 4,
+    "output": "/home/archant/projects/cs454-adversarial/runs/session2-value-corrected454",
+    "tag": "valuefixed900"
+  },
+  "python": "3.14.4",
+  "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "packages": {
+    "torch": "2.15.0+cpu",
+    "torchvision": "0.29.2+cpu",
+    "numpy": "2.5.4",
+    "Pillow": "13.0.0",
+    "matplotlib": "3.11.2"
+  },
+  "cpu_threads": 4,
+  "source_sha256": {
+    "benchmark_attacks.py": "4699e27b1344017758642526bbe9a9751988f26a427e055b23c6db37170018dc",
+    "epsilon_ball.py": "630cc774f7e4087dfe6c632abffe9e7739018718a6a4bf1d0167afa5e3c702b0",
+    "util.py": "28053bc959dac6064fcd1c55629f65f42382e0c7d546c44622b10f95d6b1fb45",
+    "grade.py": "c14e22a5e60c36a1d85417d09c4044c9332ad788353c702a52a41d16db017d6f",
+    "verify_artifacts.py": "575a01d95fc932b75f3ff015de71c811ab6a4a2190d363d3e4bb780f55e82a02",
+    "research.value_prune": "a9357d6252b328fd317b3752cd8ebea1a4daeead3cba7339eea53c49a1444064",
+    "research/repeat_prune.py": "c8a4838bd0f15dfec212b103382ae68a84eeb922171e37028dc5036abd353c21",
+    "research/structured_sparse.py": "d7b81d280a16ce80ca1f147c3abb2e2f98333bed3edd805cf8b8e8e629bd96da"
+  },
+  "source_snapshot": {
+    "epsilon_ball.py": "epsilon_ball_valuefixed900.py",
+    "research.value_prune": "candidate_valuefixed900.py",
+    "research/repeat_prune.py": "dependency_valuefixed900_repeat_prune.py",
+    "research/structured_sparse.py": "dependency_valuefixed900_structured_sparse.py"
+  },
+  "images_sha256": {
+    "/home/archant/projects/cs454-adversarial/images/mink.jpg": "2d600ec859aacdd87adfe76c84b6000d002c506413bd73da022c124594af4ed4",
+    "/home/archant/projects/cs454-adversarial/images/sock.jpg": "bb5cd37b0645056ff0c9e8b4e200a79f341ea846437e8c500de226d03790b506"
+  },
+  "environment": {
+    "TORCH_HOME": "/tmp/cs454-torch",
+    "CS454_SEED": "454",
+    "CS454_SECONDS": "165.0",
+    "CS454_THREADS": "4",
+    "CS454_QUERIES": "900"
+  },
+  "metric_semantics": {
+    "linf": "max absolute normalized channel difference",
+    "l2": "sum of squared normalized channel differences",
+    "l0": "number of changed channel elements"
+  },
+  "timing": "entry point call only; excludes model import, clean reference check, visualization and independent reload verification",
+  "implementation": "research.value_prune"
+}

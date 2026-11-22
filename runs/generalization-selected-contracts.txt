@@ -1,0 +1,12 @@
+test_every_proposal_matches_the_research_candidate (research.test_epsilon_generalized.GeneralizedPortTests.test_every_proposal_matches_the_research_candidate) ... ok
+test_original_core_and_other_norm_routes_are_preserved (research.test_epsilon_generalized.GeneralizedPortTests.test_original_core_and_other_norm_routes_are_preserved) ... ok
+test_default_gate_preserves_global_prefix_then_activates (research.test_dense_exploration_boundary.ExplorationTests.test_default_gate_preserves_global_prefix_then_activates) ... ok
+test_zero_warmup_replays_previous_candidate_and_long_warmup_replays_control (research.test_dense_exploration_boundary.ExplorationTests.test_zero_warmup_replays_previous_candidate_and_long_warmup_replays_control) ... ok
+test_endpoint_transport_has_no_row_or_channel_wrap (research.test_local_support_tail.LocalSupportTests.test_endpoint_transport_has_no_row_or_channel_wrap) ... ok
+test_entire_real_policy_prefix_preserved_and_failed_tail_protects_archive (research.test_local_support_tail.LocalSupportTests.test_entire_real_policy_prefix_preserved_and_failed_tail_protects_archive) ... ok
+test_new_neighbor_locus_can_replace_and_reduce_a_parent (research.test_local_support_tail.LocalSupportTests.test_new_neighbor_locus_can_replace_and_reduce_a_parent) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.706s
+
+OK

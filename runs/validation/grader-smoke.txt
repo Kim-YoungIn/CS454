@@ -1,0 +1,7 @@
+====REPORT====
+id,time,image,loss,score,error
+interface-smoke,5.90,sock.jpg,Linf,0.10094088315963745,
+interface-smoke,6.29,sock.jpg,L2,831.0608520507812,
+interface-smoke,6.18,sock.jpg,L0,709,
+interface-smoke,16.94,sock.jpg,Perlin,0.169921875,
+

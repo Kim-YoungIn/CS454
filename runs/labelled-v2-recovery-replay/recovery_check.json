@@ -1,0 +1,9 @@
+{
+  "exact_tensor": true,
+  "exact_history": true,
+  "exact_trace": true,
+  "original_seconds": "58.70192916200176",
+  "replay_seconds": "67.46839984300004",
+  "same_versions_cpu_platform": true,
+  "interpretation": "One deliberate recovery replay establishes fixed-call reuse; runtime changed, so no timing controls are reused."
+}

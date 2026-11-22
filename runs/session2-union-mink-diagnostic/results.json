@@ -1,0 +1,27 @@
+{
+  "experiment": "posthoc_elite_union",
+  "image": "images/mink.jpg",
+  "parent_paths": [
+    "runs/session2-production-five454/raw_mink_l0.png",
+    "runs/session2-repeat-five455/raw_mink_l0.png"
+  ],
+  "parent_distances": [
+    63,
+    41
+  ],
+  "parent_sha256": [
+    "8c152455ccf9aa2f533b755b77f51a4169dff02c24acd88919f9d3458c9f26fa",
+    "ac098fc8b7921ae99df77181a038e1ad3ac0349ac63667bb1da3b9d9009a4f74"
+  ],
+  "union_initial_distance": 104,
+  "union_feasible": true,
+  "union_margin": -3.707275390625,
+  "distance": 38,
+  "selected": "union",
+  "diagnostic_queries": 134,
+  "charged_prior_queries": 1613,
+  "total_charged_queries": 1747,
+  "seconds": 9.105235365997942,
+  "deletion_minimal": true,
+  "caveat": "Posthoc mechanism diagnostic, not an online end-to-end implementation or runtime measurement."
+}

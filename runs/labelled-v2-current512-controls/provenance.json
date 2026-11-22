@@ -1,0 +1,5 @@
+{
+  "source_results": "runs/labelled-v2-l2-baseline-development/results.csv",
+  "source_sha256": "a373aa5d69ae59fbcff701490030ed99e96409f51d5ac7aaf6df2312957979c9",
+  "action": "Relabel previous comparison candidate as the new comparison control only; preserve configuration/raw paths, implementation, scores and actual work. No new VGG call or selection."
+}

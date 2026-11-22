@@ -1,0 +1,20 @@
+[
+  {
+    "norm": "l2",
+    "split": "development",
+    "queries_limit": "900",
+    "seconds_limit": "165",
+    "pairs": 4,
+    "control_successes": 4,
+    "candidate_successes": 4,
+    "success_regressions": 0,
+    "wins": 4,
+    "ties": 0,
+    "losses": 0,
+    "both_failures": 0,
+    "activated_pairs": 4,
+    "common_successes": 4,
+    "geometric_mean_ratio": 0.7762338223379472,
+    "worst_ratio": 0.9328372619587226
+  }
+]

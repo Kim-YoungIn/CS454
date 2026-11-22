@@ -1,0 +1,11 @@
+{
+  "selection_source": "Development only; selected exploration512 before confirmation.",
+  "promotion_requirements": [
+    "No confirmation success regressions; report every failure.",
+    "Confirmation geometric-mean paired squared-L2 ratio below1.0; at most one losing common-success pair, no loss above15%.",
+    "Both predeclared165-second confirmation pairs have candidate distance no more than1% above control, accounting for actual work separately.",
+    "Self-contained port proposal contracts, full suite and instructor source/interface audit pass."
+  ],
+  "if_not_met": "Keep current production default and preserve the candidate with measured limitations; do not tune on confirmation outcomes.",
+  "note": "Fixed before inspection of confirmation attack results. Small sample and different budget/seeds limit population claims."
+}

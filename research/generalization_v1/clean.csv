@@ -1,0 +1,9 @@
+id,split,reference_class,reference_name,probability,shape
+astronaut,development,450,"bobsled, bobsleigh, bob",0.14660833775997162,"[1, 3, 224, 224]"
+coffee,development,967,espresso,0.9644326567649841,"[1, 3, 224, 224]"
+brick,development,688,"oscilloscope, scope, cathode-ray oscilloscope, CRO",0.19901008903980255,"[1, 3, 224, 224]"
+rocket,development,812,space shuttle,0.35472553968429565,"[1, 3, 224, 224]"
+camera,confirmation,872,tripod,0.8820745348930359,"[1, 3, 224, 224]"
+chelsea,confirmation,285,Egyptian cat,0.6101527810096741,"[1, 3, 224, 224]"
+grass,confirmation,522,croquet ball,0.04035770893096924,"[1, 3, 224, 224]"
+motorcycle_left,confirmation,665,moped,0.6367144584655762,"[1, 3, 224, 224]"

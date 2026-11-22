@@ -1,0 +1,56 @@
+test_default_gate_preserves_global_prefix_then_activates (research.test_dense_exploration_boundary.ExplorationTests.test_default_gate_preserves_global_prefix_then_activates) ... ERROR
+test_zero_warmup_replays_previous_candidate_and_long_warmup_replays_control (research.test_dense_exploration_boundary.ExplorationTests.test_zero_warmup_replays_previous_candidate_and_long_warmup_replays_control) ... 
+  test_zero_warmup_replays_previous_candidate_and_long_warmup_replays_control (research.test_dense_exploration_boundary.ExplorationTests.test_zero_warmup_replays_previous_candidate_and_long_warmup_replays_control) (warmup=0) ... ERROR
+  test_zero_warmup_replays_previous_candidate_and_long_warmup_replays_control (research.test_dense_exploration_boundary.ExplorationTests.test_zero_warmup_replays_previous_candidate_and_long_warmup_replays_control) (warmup=1000) ... ERROR
+
+======================================================================
+ERROR: test_default_gate_preserves_global_prefix_then_activates (research.test_dense_exploration_boundary.ExplorationTests.test_default_gate_preserves_global_prefix_then_activates)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/cs454-baseline-env/lib/python3.14/site-packages/torch/utils/_contextlib.py", line 158, in inference_mode
+    return func(*args, **kwargs)
+  File "/home/archant/projects/cs454-adversarial/research/test_dense_exploration_boundary.py", line 54, in test_default_gate_preserves_global_prefix_then_activates
+    candidate=ExplorationBoundary('unseen','l2');result=candidate.run()
+                                                        ~~~~~~~~~~~~~^^
+  File "/home/archant/projects/cs454-adversarial/epsilon_ball.py", line 322, in run
+    self.dense()
+    ~~~~~~~~~~^^
+  File "/home/archant/projects/cs454-adversarial/research/dense_exploration_boundary.py", line 40, in dense
+    previous = pool[0][0] if pool else math.inf
+                                       ^^^^
+NameError: name 'math' is not defined. Did you forget to import 'math'?
+
+======================================================================
+ERROR: test_zero_warmup_replays_previous_candidate_and_long_warmup_replays_control (research.test_dense_exploration_boundary.ExplorationTests.test_zero_warmup_replays_previous_candidate_and_long_warmup_replays_control) (warmup=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/archant/projects/cs454-adversarial/research/test_dense_exploration_boundary.py", line 33, in test_zero_warmup_replays_previous_candidate_and_long_warmup_replays_control
+    trial=ExplorationBoundary('unseen','l2');actual=trial.run()
+                                                    ~~~~~~~~~^^
+  File "/home/archant/projects/cs454-adversarial/epsilon_ball.py", line 322, in run
+    self.dense()
+    ~~~~~~~~~~^^
+  File "/home/archant/projects/cs454-adversarial/research/dense_exploration_boundary.py", line 40, in dense
+    previous = pool[0][0] if pool else math.inf
+                                       ^^^^
+NameError: name 'math' is not defined. Did you forget to import 'math'?
+
+======================================================================
+ERROR: test_zero_warmup_replays_previous_candidate_and_long_warmup_replays_control (research.test_dense_exploration_boundary.ExplorationTests.test_zero_warmup_replays_previous_candidate_and_long_warmup_replays_control) (warmup=1000)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/archant/projects/cs454-adversarial/research/test_dense_exploration_boundary.py", line 33, in test_zero_warmup_replays_previous_candidate_and_long_warmup_replays_control
+    trial=ExplorationBoundary('unseen','l2');actual=trial.run()
+                                                    ~~~~~~~~~^^
+  File "/home/archant/projects/cs454-adversarial/epsilon_ball.py", line 322, in run
+    self.dense()
+    ~~~~~~~~~~^^
+  File "/home/archant/projects/cs454-adversarial/research/dense_exploration_boundary.py", line 40, in dense
+    previous = pool[0][0] if pool else math.inf
+                                       ^^^^
+NameError: name 'math' is not defined. Did you forget to import 'math'?
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.186s
+
+FAILED (errors=3)

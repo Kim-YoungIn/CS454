@@ -1,0 +1,7 @@
+{
+  "tensor_exact": true,
+  "distance_exact": true,
+  "prediction_exact": true,
+  "query_history_exact": true,
+  "queries_exact": true
+}

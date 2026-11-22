@@ -1,0 +1,27 @@
+{
+  "knot": {
+    "original": 627,
+    "refined": 185,
+    "queries": 900
+  },
+  "mink": {
+    "original": 113,
+    "refined": 63,
+    "queries": 850
+  },
+  "orca": {
+    "original": 176,
+    "refined": 82,
+    "queries": 900
+  },
+  "sock": {
+    "original": 39,
+    "refined": 23,
+    "queries": 640
+  },
+  "tank": {
+    "original": 2240,
+    "refined": 99,
+    "queries": 900
+  }
+}

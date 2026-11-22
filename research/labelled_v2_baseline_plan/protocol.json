@@ -1,0 +1,23 @@
+{
+  "version": "labelled-v2-baseline-audit",
+  "data_protocol": "research/generalization_imagenette_v2/protocol.json",
+  "scope": "Labelled clean-correct Imagenette160; held out from attack development, not asserted excluded from pretrained ImageNet training.",
+  "primary": {
+    "metric": "l2",
+    "control": "research.session3_promoted.epsilon_ball",
+    "candidate": "research.generalization_session_promoted.epsilon_ball",
+    "queries": 900,
+    "seconds": 165,
+    "threads": 4,
+    "development_seed": 456,
+    "confirmation_seed": 457,
+    "environment": {
+      "CS454_L2_SEARCH": "exploration",
+      "CS454_BOUNDARY_MIN_GENERATIONS": 512
+    }
+  },
+  "purpose": "Audit previous global-only versus current512 default on all10 DEVELOPMENT images before new architecture selection.",
+  "confirmation": "Reserved. This baseline-audit plan does not select the confirmation comparison; freeze a separate selected plan later.",
+  "scoring": "Success/failure first, common-success squared-distance ratios, worst regression, actual calls/time and activation.900-call screening does not establish full165-second gains.",
+  "model_order": "Alternating method order by predetermined manifest order; no class/image filtering after attack results."
+}

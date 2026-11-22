@@ -1,0 +1,12 @@
+test_failed_exact_extension_preserves_verified_prefix (research.test_fog_integrated.IntegratedFogTests.test_failed_exact_extension_preserves_verified_prefix) ... ok
+test_mixture_search_and_instructor_renderers_are_preserved (research.test_fog_integrated.IntegratedFogTests.test_mixture_search_and_instructor_renderers_are_preserved) ... ok
+test_port_matches_research_genes_and_every_proposal (research.test_fog_integrated.IntegratedFogTests.test_port_matches_research_genes_and_every_proposal) ... ok
+test_verified_fallback_does_not_need_another_query (research.test_fog_integrated.IntegratedFogTests.test_verified_fallback_does_not_need_another_query) ... ok
+test_complete_discovery_pruning_and_support_trajectory (research.test_support_integrated.SupportPortTests.test_complete_discovery_pruning_and_support_trajectory) ... ok
+test_original_search_is_unchanged (research.test_support_integrated.SupportPortTests.test_original_search_is_unchanged) ... ok
+test_spatial_oracle_probes_and_deterministic_archive (research.test_dense_radial_probe.RadialProbeTests.test_spatial_oracle_probes_and_deterministic_archive) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.581s
+
+OK

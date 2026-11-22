@@ -1,0 +1,5 @@
+folder,image,mode,seed,initial_distance,distance,local_distance,diagnostic_queries,prior_queries,total_charged_queries,seconds,promotions,repeated_supports
+runs/session3-elite-mink-ga,images/mink.jpg,ga,454,41,32,32,187,1613,1800,14.32544461300131,9,0
+runs/session3-elite-mink-weakfirst,images/mink.jpg,weakfirst,454,41,41,41,127,1613,1740,8.076959422000073,,
+runs/session3-elite-sock-ga,images/sock.jpg,ga,454,23,22,22,299,1501,1800,19.766218819000642,1,14
+runs/session3-elite-sock-weakfirst,images/sock.jpg,weakfirst,454,23,23,47,153,1501,1654,13.635614300997986,,

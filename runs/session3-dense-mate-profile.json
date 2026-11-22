@@ -1,0 +1,26 @@
+{
+  "threads": 4,
+  "proposals": 512,
+  "repetitions": 7,
+  "original_seconds": [
+    0.051038426001468906,
+    0.05210966500089853,
+    0.050189377998322016,
+    0.051932767000835156,
+    0.046693650001543574,
+    0.05124540100223385,
+    0.05059584300033748
+  ],
+  "optimized_seconds": [
+    0.0012488009997468907,
+    0.0009863930026767775,
+    0.0010700679995352402,
+    0.0011167660013597924,
+    0.00102656799936085,
+    0.0010649790019670036,
+    0.0010253150030621327
+  ],
+  "median_original_seconds": 0.051038426001468906,
+  "median_optimized_seconds": 0.0010649790019670036,
+  "note": "Forward-free mate preparation only; no model calls. May run alongside another experiment; no full-attack speed claim."
+}

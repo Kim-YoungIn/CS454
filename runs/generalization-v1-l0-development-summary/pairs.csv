@@ -1,0 +1,5 @@
+split,image,norm,seed,queries_limit,seconds_limit,control_success,candidate_success,control_distance,candidate_distance,ratio,verdict,activated,control_queries,candidate_queries,control_seconds,candidate_seconds
+development,astronaut,l0,454,900,165,True,True,1.0,1.0,1.0,tie,False,498,498,29.570225813004072,29.01734244299587
+development,coffee,l0,454,900,165,True,True,39.0,33.0,0.8461538461538461,win,True,672,900,38.97965525199834,51.994205148999754
+development,brick,l0,454,900,165,True,True,3.0,3.0,1.0,tie,False,900,900,52.753916813002434,51.953513942004065
+development,rocket,l0,454,900,165,True,True,1.0,1.0,1.0,tie,False,498,498,28.691927184001543,28.822137057999498

@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "stage": "Data prepared; attack methods/seeds/budgets must be frozen separately before confirmation.",
+  "source_url": "https://s3.amazonaws.com/fast-ai-imageclas/imagenette2-160.tgz",
+  "archive_sha256": "64d0c4859f35a461889e0147755a999a48b49bf38a7e0f9bd27003f10db02fe5",
+  "source_docs": "https://github.com/fastai/imagenette#the-datasets",
+  "class_index_sha256": "a1e7a966a1f601d39e4b43e119b3e7dd4a2ad3ea08cf69847cbaf021013767bc",
+  "source_split": "Official Imagenette val; ImageNet-derived, not asserted unseen during VGG pretraining.",
+  "preparation": "Decode JPEG to RGB PNG without resize; unchanged instructor preprocessing handles224px input.",
+  "pool_rule": "Per class, sort SHA256(seed+NUL+archive path), tie by path; even ranks development, odd confirmation; first10 candidates each.",
+  "selection_seed": "CS454-labelled-generalization-v2",
+  "eligibility": "First clean argmax equal to official1000-class label, per role/class; no confidence threshold or attack filtering.",
+  "duplicates": "Exact original-byte duplicates are assigned to the first deterministic pool entry; later duplicate candidates are excluded.",
+  "reporting": "Retain every scanned failure/exclusion and failure-to-fill class. Selected100% clean accuracy is an eligibility condition, not classifier accuracy.",
+  "scope": "Ten labelled classes only, low-resolution160px source, two distinct photographs/class; descriptive transfer evidence, not population guarantees.",
+  "freeze": "Pools and selector source are written before any clean forward. Confirmation attack outcomes must remain unused until selection."
+}

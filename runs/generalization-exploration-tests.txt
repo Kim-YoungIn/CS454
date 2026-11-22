@@ -1,0 +1,7 @@
+test_default_gate_preserves_global_prefix_then_activates (research.test_dense_exploration_boundary.ExplorationTests.test_default_gate_preserves_global_prefix_then_activates) ... ok
+test_zero_warmup_replays_previous_candidate_and_long_warmup_replays_control (research.test_dense_exploration_boundary.ExplorationTests.test_zero_warmup_replays_previous_candidate_and_long_warmup_replays_control) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.417s
+
+OK

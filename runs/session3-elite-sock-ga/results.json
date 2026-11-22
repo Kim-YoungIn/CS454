@@ -1,0 +1,42 @@
+{
+  "experiment": "posthoc_parental_support",
+  "mode": "ga",
+  "seed": 454,
+  "image": "images/sock.jpg",
+  "parent_paths": [
+    "runs/session2-production-five454/raw_sock_l0.png",
+    "runs/session2-repeat-five455/raw_sock_l0.png"
+  ],
+  "parent_sha256": [
+    "47fef43d408b08dea4703b9c7b201638e5d15fd61cb2b53724967f059b01d4ae",
+    "6f53d1140915b2254776bb669ff3300ed801eeebdc4a5178b20af92fbbe1edd3"
+  ],
+  "parent_distances": [
+    23,
+    49
+  ],
+  "initial_distance": 23,
+  "distance": 22,
+  "local_distance": 22,
+  "diagnostic_queries": 299,
+  "prior_queries": 1501,
+  "queries_limit": 299,
+  "total_charged_queries": 1800,
+  "seconds": 19.766218819000642,
+  "reference": 806,
+  "predicted": 658,
+  "post_validation_queries": 1,
+  "threads": 4,
+  "torch_version": "2.15.0+cpu",
+  "attempts": 296,
+  "promotions": 1,
+  "repeated_supports": 14,
+  "min_margin": -0.010608673095703125,
+  "history": [
+    [
+      135,
+      22
+    ]
+  ],
+  "caveat": "Saved-parent mechanism diagnostic, not an end-to-end benchmark."
+}

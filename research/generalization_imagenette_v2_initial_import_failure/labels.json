@@ -1,0 +1,52 @@
+{
+  "n01440764": {
+    "index": 0,
+    "label": "tench",
+    "assignment_name": "tench, Tinca tinca"
+  },
+  "n02102040": {
+    "index": 217,
+    "label": "English_springer",
+    "assignment_name": "English springer, English springer spaniel"
+  },
+  "n02979186": {
+    "index": 482,
+    "label": "cassette_player",
+    "assignment_name": "cassette player"
+  },
+  "n03000684": {
+    "index": 491,
+    "label": "chain_saw",
+    "assignment_name": "chain saw, chainsaw"
+  },
+  "n03028079": {
+    "index": 497,
+    "label": "church",
+    "assignment_name": "church, church building"
+  },
+  "n03394916": {
+    "index": 566,
+    "label": "French_horn",
+    "assignment_name": "French horn, horn"
+  },
+  "n03417042": {
+    "index": 569,
+    "label": "garbage_truck",
+    "assignment_name": "garbage truck, dustcart"
+  },
+  "n03425413": {
+    "index": 571,
+    "label": "gas_pump",
+    "assignment_name": "gas pump, gasoline pump, petrol pump, island dispenser"
+  },
+  "n03445777": {
+    "index": 574,
+    "label": "golf_ball",
+    "assignment_name": "golf ball"
+  },
+  "n03888257": {
+    "index": 701,
+    "label": "parachute",
+    "assignment_name": "parachute, chute"
+  }
+}

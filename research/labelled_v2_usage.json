@@ -1,0 +1,41 @@
+{
+  "data_bank": "research/generalization_imagenette_v2",
+  "creation_docs": "Frozen bank README/protocol describe preparation-time status; current attack exposure is tracked here and in experiment plans.",
+  "scheduled_development_ids": [
+    "development_n01440764_00",
+    "development_n02102040_00",
+    "development_n02979186_00",
+    "development_n03000684_00",
+    "development_n03028079_02",
+    "development_n03394916_00",
+    "development_n03417042_00",
+    "development_n03425413_00",
+    "development_n03445777_01",
+    "development_n03888257_00"
+  ],
+  "confirmation_attack_used": [],
+  "confirmation_reserved_ids": [
+    "confirmation_n01440764_00",
+    "confirmation_n02102040_01",
+    "confirmation_n02979186_03",
+    "confirmation_n03000684_00",
+    "confirmation_n03028079_00",
+    "confirmation_n03394916_01",
+    "confirmation_n03417042_00",
+    "confirmation_n03425413_00",
+    "confirmation_n03445777_00",
+    "confirmation_n03888257_00"
+  ],
+  "completed_development_ids": [
+    "development_n01440764_00",
+    "development_n02102040_00",
+    "development_n02979186_00",
+    "development_n03000684_00",
+    "development_n03028079_02",
+    "development_n03394916_00",
+    "development_n03417042_00",
+    "development_n03425413_00",
+    "development_n03445777_01",
+    "development_n03888257_00"
+  ]
+}

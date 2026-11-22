@@ -1,0 +1,5 @@
+{
+  "results": "runs/generalization-v1-l2-development/results.csv",
+  "sha256": "459ed8d85607927ee30d5824dce641f266d85a5f6db6467d89adcc4dec1aa4c8",
+  "timing": "Controls reused at fixed query/time ceilings; no claim of paired current-window speed."
+}

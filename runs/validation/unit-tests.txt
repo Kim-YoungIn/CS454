@@ -1,0 +1,21 @@
+test_archive_keeps_lowest_distance_success_when_offspring_fail (test_attacks.SearchContractTests.test_archive_keeps_lowest_distance_success_when_offspring_fail) ... ok
+test_deadline_preserves_success_with_default_and_clamped_budget (test_attacks.SearchContractTests.test_deadline_preserves_success_with_default_and_clamped_budget) ... ok
+test_fixed_query_seed_repeats_without_using_global_rng (test_attacks.SearchContractTests.test_fixed_query_seed_repeats_without_using_global_rng) ... ok
+test_l2_mutation_can_leave_zero_parent_and_handles_cancellation (test_attacks.SearchContractTests.test_l2_mutation_can_leave_zero_parent_and_handles_cancellation) ... ok
+test_l2_mutations_stay_finite_and_bounded_with_overlapping_windows (test_attacks.SearchContractTests.test_l2_mutations_stay_finite_and_bounded_with_overlapping_windows) ... ok
+test_l2_styles_are_reproducible_under_fixed_query_cap (test_attacks.SearchContractTests.test_l2_styles_are_reproducible_under_fixed_query_cap) ... ok
+test_no_success_raises_instead_of_returning_clean_image (test_attacks.SearchContractTests.test_no_success_raises_instead_of_returning_clean_image) ... ok
+test_projection_enforces_actual_norm_after_clipping (test_attacks.SearchContractTests.test_projection_enforces_actual_norm_after_clipping) ... ok
+test_public_entrypoints_return_valid_adversarial_images (test_attacks.SearchContractTests.test_public_entrypoints_return_valid_adversarial_images) ... ok
+test_sparse_mutations_respect_channel_element_budget (test_attacks.SearchContractTests.test_sparse_mutations_respect_channel_element_budget) ... ok
+test_thread_setting_restored_when_oracle_raises (test_attacks.SearchContractTests.test_thread_setting_restored_when_oracle_raises) ... ok
+test_batched_blending_is_elementwise (test_fog_geometry.FogGeometryTests.test_batched_blending_is_elementwise) ... ok
+test_cached_mixture_matches_reference_renderer (test_fog_geometry.FogGeometryTests.test_cached_mixture_matches_reference_renderer) ... ok
+test_ga_returns_valid_reproducible_success_with_toy_classifier (test_fog_geometry.FogGeometryTests.test_ga_returns_valid_reproducible_success_with_toy_classifier) ... ok
+test_runtime_cap_preserves_a_success_when_budget_expires (test_fog_geometry.FogGeometryTests.test_runtime_cap_preserves_a_success_when_budget_expires) ... ok
+test_timeout_without_success_restores_threads (test_fog_geometry.FogGeometryTests.test_timeout_without_success_restores_threads) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 8.694s
+
+OK

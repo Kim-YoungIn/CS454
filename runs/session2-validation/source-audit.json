@@ -1,0 +1,12 @@
+{
+  "original_search_ast": true,
+  "make_Linf_adversarial_from": true,
+  "make_L2_adversarial_from": true,
+  "make_L0_adversarial_from": true,
+  "util.py_unchanged": true,
+  "grade.py_unchanged": true,
+  "README.md_unchanged": true,
+  "perlin_image_generator_unchanged": true,
+  "genotype2phenotype_unchanged": true,
+  "add_noise_to_image_unchanged": true
+}

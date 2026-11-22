@@ -1,0 +1,5 @@
+{
+  "results": "runs/labelled-v2-current512-controls/results.csv",
+  "sha256": "be6a508ce524a6e3f5a3d01973d86ba4aee90f5498b3ef65f3387b7a72081309",
+  "timing": "Controls reused at fixed query/time ceilings; no claim of paired current-window speed."
+}

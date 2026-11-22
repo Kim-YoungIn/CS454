@@ -1,0 +1,3 @@
+image,generations,budget_seconds,elapsed_seconds,score,reference_class,predicted_class,status,genes,initial_score,completed_generations,queries,round_trip,engine_metadata
+images/sock.jpg,80,90.0,48.41947286599316,0.169921875,806,658,pass,"[[48, 0.169921875]]",0.169921875,36,639,True,"{""distance"": 0.169921875, ""generations"": 36, ""initial_score"": 0.169921875, ""queries"": 639, ""reference"": 806, ""seconds"": 48.419132834002085}"
+images/tank.jpg,80,90.0,47.81849922100082,0.9765625,847,539,pass,"[[64, 0.9765625]]",0.9765625,36,619,True,"{""distance"": 0.9765625, ""generations"": 36, ""initial_score"": 0.9765625, ""queries"": 619, ""reference"": 847, ""seconds"": 47.81831580400467}"

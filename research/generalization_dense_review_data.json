@@ -1,0 +1,58 @@
+[
+  {
+    "image": "astronaut",
+    "control": 2.7134461402893066,
+    "radial": 7.184147357940674,
+    "ratio": 2.647610081980364,
+    "switch_query": 9,
+    "switch_distance": 368.63995361328125,
+    "accepts": 104,
+    "probe_success": 33,
+    "probe_calls": 133,
+    "control_reaches_radial_final_at": 293,
+    "control_archive_q256": 10.376293182373047,
+    "radial_archive_q256": 40.629180908203125
+  },
+  {
+    "image": "coffee",
+    "control": 383.7210693359375,
+    "radial": 305.32745361328125,
+    "ratio": 0.7957015603591349,
+    "switch_query": 370,
+    "switch_distance": 943.7183837890625,
+    "accepts": 46,
+    "probe_success": 2,
+    "probe_calls": 48,
+    "control_reaches_radial_final_at": null,
+    "control_archive_q256": null,
+    "radial_archive_q256": null
+  },
+  {
+    "image": "brick",
+    "control": 150.84751892089844,
+    "radial": 154.1802215576172,
+    "ratio": 1.022093188277537,
+    "switch_query": 279,
+    "switch_distance": 368.6400146484375,
+    "accepts": 41,
+    "probe_success": 0,
+    "probe_calls": 41,
+    "control_reaches_radial_final_at": 867,
+    "control_archive_q256": 576.0,
+    "radial_archive_q256": 576.0
+  },
+  {
+    "image": "rocket",
+    "control": 6.631103515625,
+    "radial": 11.816244125366211,
+    "ratio": 1.7819423415006812,
+    "switch_query": 23,
+    "switch_distance": 368.6400146484375,
+    "accepts": 94,
+    "probe_success": 28,
+    "probe_calls": 120,
+    "control_reaches_radial_final_at": 234,
+    "control_archive_q256": 10.376294136047363,
+    "radial_archive_q256": 47.38404083251953
+  }
+]

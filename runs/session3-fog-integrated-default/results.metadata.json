@@ -1,0 +1,67 @@
+{
+  "command": [
+    "benchmark_fog.py",
+    "--implementation",
+    "research.fog_integrated",
+    "--images",
+    "images/mink.jpg",
+    "--generations",
+    "80",
+    "--seconds",
+    "270",
+    "--threads",
+    "4",
+    "--seed",
+    "454",
+    "--output",
+    "runs/session3-fog-integrated-default/results.csv",
+    "--artifacts",
+    "runs/session3-fog-integrated-default"
+  ],
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "torch": "2.15.0+cpu",
+  "threads": 4,
+  "seed": 454,
+  "seconds": 270.0,
+  "generations": 80,
+  "octaves": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    8,
+    12,
+    24,
+    32,
+    48,
+    64,
+    96
+  ],
+  "source_snapshot": "runs/session3-fog-integrated-default/results.source.py",
+  "context": "isolated",
+  "timing": "entry-point call only; excludes model import, artifact rendering and verification",
+  "environment": {
+    "TORCH_HOME": "/tmp/cs454-torch",
+    "CS454_THREADS": "4",
+    "CS454_SEED": "454"
+  },
+  "packages": {
+    "torchvision": "0.29.2+cpu",
+    "numpy": "2.5.4",
+    "Pillow": "13.0.0",
+    "perlin-noise": "1.13"
+  },
+  "sha256": {
+    "perlin_fog.py": "6771a509eb6ef0a75229802979cbed7cc8144702a202520f21e7db28dea96c00",
+    "util.py": "28053bc959dac6064fcd1c55629f65f42382e0c7d546c44622b10f95d6b1fb45",
+    "grade.py": "c14e22a5e60c36a1d85417d09c4044c9332ad788353c702a52a41d16db017d6f",
+    "benchmark_fog.py": "bf4ffeba0212412593afa218a309d534e962f94b0c1357cf98aaf0661c5041e1",
+    "images/mink.jpg": "2d600ec859aacdd87adfe76c84b6000d002c506413bd73da022c124594af4ed4",
+    "research.fog_integrated": "85733d54ba8d1c02a1cd3221a4f7f499ef9af9df5ffdce2cf9b9fcb8462de8d0"
+  },
+  "implementation": "research.fog_integrated",
+  "candidate_snapshot": "runs/session3-fog-integrated-default/results.candidate.py",
+  "dependency_snapshots": {}
+}

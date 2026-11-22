@@ -1,0 +1,74 @@
+{
+  "experiment": "posthoc_parental_support",
+  "mode": "ga",
+  "seed": 454,
+  "image": "images/mink.jpg",
+  "parent_paths": [
+    "runs/session2-production-five454/raw_mink_l0.png",
+    "runs/session2-repeat-five455/raw_mink_l0.png"
+  ],
+  "parent_sha256": [
+    "8c152455ccf9aa2f533b755b77f51a4169dff02c24acd88919f9d3458c9f26fa",
+    "ac098fc8b7921ae99df77181a038e1ad3ac0349ac63667bb1da3b9d9009a4f74"
+  ],
+  "parent_distances": [
+    63,
+    41
+  ],
+  "initial_distance": 41,
+  "distance": 32,
+  "local_distance": 32,
+  "diagnostic_queries": 187,
+  "prior_queries": 1613,
+  "queries_limit": 187,
+  "total_charged_queries": 1800,
+  "seconds": 14.32544461300131,
+  "reference": 357,
+  "predicted": 337,
+  "post_validation_queries": 1,
+  "threads": 4,
+  "torch_version": "2.15.0+cpu",
+  "attempts": 184,
+  "promotions": 9,
+  "repeated_supports": 0,
+  "min_margin": -0.21926122903823853,
+  "history": [
+    [
+      6,
+      40
+    ],
+    [
+      12,
+      39
+    ],
+    [
+      54,
+      38
+    ],
+    [
+      55,
+      37
+    ],
+    [
+      86,
+      36
+    ],
+    [
+      102,
+      35
+    ],
+    [
+      104,
+      34
+    ],
+    [
+      105,
+      33
+    ],
+    [
+      159,
+      32
+    ]
+  ],
+  "caveat": "Saved-parent mechanism diagnostic, not an end-to-end benchmark."
+}

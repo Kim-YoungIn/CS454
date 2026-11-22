@@ -1,0 +1,6 @@
+image,generations,budget_seconds,elapsed_seconds,score,reference_class,predicted_class,status,genes,initial_score,completed_generations,queries,round_trip
+images/knot.jpg,10,90.0,20.98752995399991,0.912109375,616,320,pass,"[[24, 0.912109375]]",0.912109375,10,212,True
+images/mink.jpg,10,90.0,22.481310258999656,0.556640625,357,298,pass,"[[64, 0.556640625]]",0.556640625,10,239,True
+images/orca.jpg,10,90.0,15.940863722999893,0.501953125,148,146,pass,"[[24, 0.501953125]]",0.501953125,10,239,True
+images/sock.jpg,10,90.0,15.762105873999644,0.169921875,806,658,pass,"[[48, 0.169921875]]",0.169921875,10,223,True
+images/tank.jpg,10,90.0,14.607021646999783,0.9765625,847,539,pass,"[[64, 0.9765625]]",0.9765625,10,203,True

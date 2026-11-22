@@ -1,0 +1,2 @@
+image,generations,budget_seconds,elapsed_seconds,score,reference_class,predicted_class,status,genes,initial_score,completed_generations,queries,round_trip,engine_metadata
+images/mink.jpg,80,90.0,50.38403618599841,0.556640625,357,298,pass,"[[64, 0.556640625]]",0.556640625,36,655,True,"{""distance"": 0.556640625, ""generations"": 36, ""initial_score"": 0.556640625, ""queries"": 655, ""reference"": 357, ""seconds"": 50.3834051140002}"

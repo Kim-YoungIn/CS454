@@ -1,0 +1,86 @@
+{
+  "stage": "Frozen before reversible candidate VGG evaluation; no confirmation outcomes inspected.",
+  "development_screen": {
+    "ids": [
+      "development_n01440764_00",
+      "development_n02102040_00",
+      "development_n02979186_00",
+      "development_n03000684_00",
+      "development_n03028079_02",
+      "development_n03394916_00",
+      "development_n03417042_00",
+      "development_n03425413_00",
+      "development_n03445777_01",
+      "development_n03888257_00"
+    ],
+    "seed": 456,
+    "queries": 900,
+    "seconds": 165,
+    "threads": 4,
+    "control": "research.generalization_session_promoted.epsilon_ball",
+    "candidate": "research.dense_reversible_windows",
+    "reuse": "Use the complete matching current512 rows from the initial audit; relabel comparison role only, preserve config/raw source and real counts."
+  },
+  "development_wall": {
+    "ids": [
+      "development_n02979186_00",
+      "development_n03425413_00"
+    ],
+    "seed": 456,
+    "queries": null,
+    "seconds": 165,
+    "threads": 4,
+    "selection": "Deterministic class positions2 and7, fixed before any reversible-candidate VGG outcome; the initial baseline audit was already underway and cassette baseline/current outputs were available. These are development diagnostics, not blind confirmation."
+  },
+  "confirmation": {
+    "ids": [
+      "confirmation_n01440764_00",
+      "confirmation_n02102040_01",
+      "confirmation_n02979186_03",
+      "confirmation_n03000684_00",
+      "confirmation_n03028079_00",
+      "confirmation_n03394916_01",
+      "confirmation_n03417042_00",
+      "confirmation_n03425413_00",
+      "confirmation_n03445777_00",
+      "confirmation_n03888257_00"
+    ],
+    "seed": 457,
+    "queries": 900,
+    "seconds": 165,
+    "threads": 4,
+    "reserved": true
+  },
+  "confirmation_wall": {
+    "ids": [
+      "confirmation_n01440764_00",
+      "confirmation_n03888257_00"
+    ],
+    "seed": 457,
+    "queries": null,
+    "seconds": 165,
+    "threads": 4,
+    "selection": "First/last class indices fixed before any confirmation attack results."
+  },
+  "selection": "Prefer success; measure all ratios/regressions and active phase work. Candidate must show a useful actual-time development gain before spending confirmation data. No source or constant tuning on confirmation.",
+  "preconfirmation_gate": {
+    "development_success_regressions": 0,
+    "development_screen_max_geomean": 1.1,
+    "development_screen_max_worst_ratio": 1.5,
+    "development_wall_max_geomean": 0.95,
+    "development_wall_max_worst_ratio": 1.05
+  },
+  "promotion": "Requires independent confirmation success preservation and useful matched165-second gains, source/contracts and one-thread validation; preserving current production is the default if evidence is weak.",
+  "additional_original_wall": {
+    "ids": [
+      "development_n02979186_00",
+      "development_n03425413_00"
+    ],
+    "queries": null,
+    "seconds": 165,
+    "seed": 456,
+    "implementation": "research.session3_promoted.epsilon_ball",
+    "reason": "Added developmental baseline audit after sizeable correctly labelled900-query regressions of current512; compare original global-only at actual grading budget on the already fixed class positions. No confirmation information used.",
+    "timing": "Run after the frozen paired candidate study; report separate-window timing/calls and avoid claiming a balanced three-way timing trial."
+  }
+}

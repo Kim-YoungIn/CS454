@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "source": "scikit-image v0.25.2 official sample images",
+  "source_docs": "https://scikit-image.org/docs/stable/api/skimage.data.html",
+  "registry_sha256": "1029735ee9f5a3a857219c8b6f80d181d9b0d744610f224e028fabaffd8bf69a",
+  "items": [
+    {
+      "id": "astronaut",
+      "split": "development",
+      "original": "astronaut.png",
+      "url": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.25.2/skimage/data/astronaut.png",
+      "expected_sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5"
+    },
+    {
+      "id": "coffee",
+      "split": "development",
+      "original": "coffee.png",
+      "url": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.25.2/skimage/data/coffee.png",
+      "expected_sha256": "cc02f8ca188b167c775a7101b5d767d1e71792cf762c33d6fa15a4599b5a8de7"
+    },
+    {
+      "id": "brick",
+      "split": "development",
+      "original": "brick.png",
+      "url": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.25.2/skimage/data/brick.png",
+      "expected_sha256": "7966caf324f6ba843118d98f7a07746d22f6a343430add0233eca5f6eaaa8fcf"
+    },
+    {
+      "id": "rocket",
+      "split": "development",
+      "original": "rocket.jpg",
+      "url": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.25.2/skimage/data/rocket.jpg",
+      "expected_sha256": "c2dd0de7c538df8d111e479619b129464d0269d0ae5fd18ca91d33a7fdfea95c"
+    },
+    {
+      "id": "camera",
+      "split": "confirmation",
+      "original": "camera.png",
+      "url": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.25.2/skimage/data/camera.png",
+      "expected_sha256": "b0793d2adda0fa6ae899c03989482bff9a42d3d5690fc7e3648f2795d730c23a"
+    },
+    {
+      "id": "chelsea",
+      "split": "confirmation",
+      "original": "chelsea.png",
+      "url": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.25.2/skimage/data/chelsea.png",
+      "expected_sha256": "596aa1e7cb875eb79f437e310381d26b338a81c2da23439704a73c4651e8c4bb"
+    },
+    {
+      "id": "grass",
+      "split": "confirmation",
+      "original": "grass.png",
+      "url": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.25.2/skimage/data/grass.png",
+      "expected_sha256": "b6b6022426b38936c43a4ac09635cd78af074e90f42ffa8227ac8b7452d39f89"
+    },
+    {
+      "id": "motorcycle_left",
+      "split": "confirmation",
+      "original": "motorcycle_left.png",
+      "url": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.25.2/skimage/data/motorcycle_left.png",
+      "expected_sha256": "db18e9c4157617403c3537a6ba355dfeafe9a7eabb6b9b94cb33f6525dd49179"
+    }
+  ],
+  "selection": "Fixed before any clean predictions or attack outcomes; no confidence-based filtering.",
+  "reference": "Original VGG-11 argmax, not independently verified semantic ground truth.",
+  "scope": "Held out from attack development, not asserted unseen during pretrained model training.",
+  "primary": {
+    "metric": "l2",
+    "control": "research.session3_promoted.epsilon_ball",
+    "candidate": "research.dense_exploration_boundary",
+    "queries": 900,
+    "seconds": 165,
+    "threads": 4,
+    "development_seed": 454,
+    "confirmation_seed": 455,
+    "decision": "Success/failure first; report paired ratios only when both succeed; do not tune on confirmation outcomes.",
+    "environment": {
+      "CS454_BOUNDARY_MIN_GENERATIONS": 512
+    }
+  },
+  "reserve": "Confirmation images are not used for candidate modification; after first inspection they become historical confirmation, not reusable untouched test cases.",
+  "secondary": {
+    "metric": "l0",
+    "control": "research.session3_promoted.epsilon_ball",
+    "candidate": "research.local_support_tail",
+    "queries": 900,
+    "seconds": 165,
+    "threads": 4,
+    "development_seed": 454,
+    "confirmation_seed": 455,
+    "decision": "Success/failure first; report paired ratios only when both succeed; do not tune on confirmation outcomes.",
+    "hypothesis": "Use otherwise idle allowance after the complete production policy; no established calls displaced."
+  },
+  "development_revision": {
+    "reason": "One second coarse work scale, chosen from the observed development coarse contractions at q488 and q833. Test256 versus512 before confirmation; no fine threshold sweep.",
+    "parent_protocol_sha256": "bb754b0ad3f979dab3d5da447a43b357ab1712a75344a8d50bf7033da0d0e140",
+    "minimum_generations": 512,
+    "selection_scope": "Development images only. The same confirmation bank remains unexamined; it is not a new independent dataset.",
+    "confirmation_rule": "Select or reject using development evidence before a single confirmation pass; report every confirmation failure/regression."
+  },
+  "wall_confirmation_plan": {
+    "ids": [
+      "camera",
+      "motorcycle_left"
+    ],
+    "queries": null,
+    "seconds": 165,
+    "seed": 455,
+    "selection": "First and last confirmation IDs, fixed before any confirmation outcomes; same frozen selected method for both budgets."
+  }
+}

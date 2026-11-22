@@ -1,0 +1,5 @@
+{
+  "real_model_benchmarks": "Sequential fixed900-call screening.",
+  "supplemental_tests": "AST-loaded production and mocked forwards; no VGG load. Five final tests0.600s, process2.29s; earlier2.9s/2.45s, all finished2026-11-20T21:55:49Z.",
+  "interpretation": "Timing descriptive during small synthetic/framework-import overlap; verify900 calls reached. All later165-second benchmarks must be isolated."
+}

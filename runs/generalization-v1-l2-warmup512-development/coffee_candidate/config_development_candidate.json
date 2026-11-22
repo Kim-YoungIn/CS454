@@ -1,0 +1,82 @@
+{
+  "created_utc": "2026-11-20T20:33:43.169259+00:00",
+  "command": [
+    "benchmark_generalization.py",
+    "--dataset",
+    "research/generalization_v1_warmup512",
+    "--split",
+    "development",
+    "--metric",
+    "l2",
+    "--reuse-controls",
+    "runs/generalization-v1-l2-development/results.csv",
+    "--output",
+    "runs/generalization-v1-l2-warmup512-development"
+  ],
+  "options": {
+    "images": [
+      "research/generalization_v1/images/coffee.png"
+    ],
+    "norms": [
+      "l2"
+    ],
+    "seed": 454,
+    "seconds": 165,
+    "queries": 900,
+    "threads": 4,
+    "implementation": "research.dense_exploration_boundary",
+    "output": "/home/archant/projects/cs454-adversarial/runs/generalization-v1-l2-warmup512-development/coffee_candidate",
+    "tag": "development_candidate"
+  },
+  "python": "3.14.4",
+  "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "packages": {
+    "torch": "2.15.0+cpu",
+    "torchvision": "0.29.2+cpu",
+    "numpy": "2.5.4",
+    "Pillow": "13.0.0",
+    "matplotlib": "3.11.2"
+  },
+  "cpu_threads": 4,
+  "source_sha256": {
+    "benchmark_attacks.py": "4699e27b1344017758642526bbe9a9751988f26a427e055b23c6db37170018dc",
+    "epsilon_ball.py": "a18ea45f2b26539f67805aabc743ab624b26c8f293ad248c9acf6d46c0c633fc",
+    "util.py": "28053bc959dac6064fcd1c55629f65f42382e0c7d546c44622b10f95d6b1fb45",
+    "grade.py": "c14e22a5e60c36a1d85417d09c4044c9332ad788353c702a52a41d16db017d6f",
+    "verify_artifacts.py": "575a01d95fc932b75f3ff015de71c811ab6a4a2190d363d3e4bb780f55e82a02",
+    "research.dense_exploration_boundary": "d97e9806dccb39d4945130d9d2ab738f688719062b65c2e37dcc9ad518458a77",
+    "research/dense_radial_probe.py": "d44c38f32d9e4791864f99a1926d8194751aeb133d657e3eb60dfb5979f51c95",
+    "research/dense_session3_boundary.py": "0b077cd6eaed8e5e462f1e04d463204627c8870c9859e01c4ce5d5344038d998"
+  },
+  "source_snapshot": {
+    "epsilon_ball.py": "epsilon_ball_development_candidate.py",
+    "research.dense_exploration_boundary": "candidate_development_candidate.py",
+    "research/dense_radial_probe.py": "dependency_development_candidate_dense_radial_probe.py",
+    "research/dense_session3_boundary.py": "dependency_development_candidate_dense_session3_boundary.py"
+  },
+  "images_sha256": {
+    "/home/archant/projects/cs454-adversarial/research/generalization_v1/images/coffee.png": "1b334876bab6bccddc821520b67fad5bceaaf3c454885b75cdc126b7ebfe9576"
+  },
+  "environment": {
+    "TORCH_HOME": "/tmp/cs454-torch",
+    "CS454_L0_STYLE": "parental",
+    "CS454_L2_STYLE": "energy",
+    "CS454_DISCOVERY_REFERENCE": "900",
+    "CS454_DISCOVERY_FRACTION": ".55",
+    "CS454_BOUNDARY_SUCCESSES": "3",
+    "CS454_BOUNDARY_FRACTION": ".99",
+    "CS454_BOUNDARY_ALPHA": ".25",
+    "CS454_BOUNDARY_MIN_GENERATIONS": "512",
+    "CS454_SEED": "454",
+    "CS454_SECONDS": "165",
+    "CS454_THREADS": "4",
+    "CS454_QUERIES": "900"
+  },
+  "metric_semantics": {
+    "linf": "max absolute normalized channel difference",
+    "l2": "sum of squared normalized channel differences",
+    "l0": "number of changed channel elements"
+  },
+  "timing": "entry point call only; excludes model import, clean reference check, visualization and independent reload verification",
+  "implementation": "research.dense_exploration_boundary"
+}

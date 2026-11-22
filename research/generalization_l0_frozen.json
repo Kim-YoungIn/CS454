@@ -1,0 +1,15 @@
+{
+  "status": "frozen before image attack evaluation",
+  "files": {
+    "research/local_support_tail.py": "19b10a5fe1096eb59b3c36117746876591d0ac20316a6fd73528da868b09b76e",
+    "research/test_local_support_tail.py": "68cca3f0d31238c93798dc2a8dcd41be803d6ad57910664f82333bc1949cdf0c",
+    "epsilon_ball.py": "a18ea45f2b26539f67805aabc743ab624b26c8f293ad248c9acf6d46c0c633fc"
+  },
+  "tests": {
+    "module": "research.test_local_support_tail",
+    "count": 3,
+    "result": "pass",
+    "seconds": 0.069
+  },
+  "real_model_attacks_run": false
+}

@@ -1,0 +1,36 @@
+{
+  "README.md": {
+    "matches_instructor": true,
+    "sha256": "2c797a3fe65f86e02cd5df6b1f142520e80c30988f271ffad42eaa3b0e11d248"
+  },
+  "util.py": {
+    "matches_instructor": true,
+    "sha256": "28053bc959dac6064fcd1c55629f65f42382e0c7d546c44622b10f95d6b1fb45"
+  },
+  "grade.py": {
+    "matches_instructor": true,
+    "sha256": "c14e22a5e60c36a1d85417d09c4044c9332ad788353c702a52a41d16db017d6f"
+  },
+  "perlin_image_generator": {
+    "ast_matches_instructor": true
+  },
+  "genotype2phenotype": {
+    "ast_matches_instructor": true
+  },
+  "add_noise_to_image": {
+    "ast_matches_instructor": true
+  },
+  "epsilon_ball.py": {
+    "sha256": "2a152f45637801c1c1991e96ad52a1afc0beaf3e8e4799efa9da2ee1e33880b7",
+    "public_interfaces_preserved": true,
+    "self_contained": true
+  },
+  "perlin_fog.py": {
+    "sha256": "85733d54ba8d1c02a1cd3221a4f7f499ef9af9df5ffdce2cf9b9fcb8462de8d0",
+    "public_interfaces_preserved": true,
+    "self_contained": true
+  },
+  "existing_classes": {
+    "all_original_classes_ast_preserved": true
+  }
+}

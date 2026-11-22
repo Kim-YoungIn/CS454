@@ -1,0 +1,24 @@
+[
+  {
+    "image": "mink",
+    "distance": 32,
+    "reference": 357,
+    "predicted": 337,
+    "threads": 1,
+    "parent_value_hashes_match": true,
+    "exact_tensor_matches_diagnostic": true,
+    "strong_parent_loci": 28,
+    "weak_parent_loci": 4
+  },
+  {
+    "image": "sock",
+    "distance": 22,
+    "reference": 806,
+    "predicted": 658,
+    "threads": 1,
+    "parent_value_hashes_match": true,
+    "exact_tensor_matches_diagnostic": true,
+    "strong_parent_loci": 21,
+    "weak_parent_loci": 1
+  }
+]

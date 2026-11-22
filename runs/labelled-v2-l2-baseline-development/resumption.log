@@ -1,0 +1,13 @@
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-0.13885331..1.0970404].
+{"image": "/home/archant/projects/cs454-adversarial/research/generalization_imagenette_v2/images/development_n03425413_00.png", "method": "candidate", "distance": "1945.4239501953125", "queries": "900", "status": "pass"}
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-0.16366202..1.069586].
+{"image": "/home/archant/projects/cs454-adversarial/research/generalization_imagenette_v2/images/development_n03425413_00.png", "method": "control", "distance": "2399.432373046875", "queries": "900", "status": "pass"}
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [0.1647059..1.0448464].
+{"image": "/home/archant/projects/cs454-adversarial/research/generalization_imagenette_v2/images/development_n03445777_01.png", "method": "control", "distance": "149.9645233154297", "queries": "900", "status": "pass"}
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [0.16843826..1.0580022].
+{"image": "/home/archant/projects/cs454-adversarial/research/generalization_imagenette_v2/images/development_n03445777_01.png", "method": "candidate", "distance": "205.0556182861328", "queries": "900", "status": "pass"}
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-0.08685568..1.0306756].
+{"image": "/home/archant/projects/cs454-adversarial/research/generalization_imagenette_v2/images/development_n03888257_00.png", "method": "candidate", "distance": "462.7886962890625", "queries": "900", "status": "pass"}
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-0.041480005..1.0434004].
+{"image": "/home/archant/projects/cs454-adversarial/research/generalization_imagenette_v2/images/development_n03888257_00.png", "method": "control", "distance": "593.4096069335938", "queries": "900", "status": "pass"}
+Completed matrix: 20 rows; preserved all 14 existing rows and added 6.

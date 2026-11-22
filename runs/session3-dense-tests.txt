@@ -1,0 +1,9 @@
+test_discovery_matches_original_through_switch (research.test_dense_session3_boundary.BoundaryDirectionTests.test_discovery_matches_original_through_switch) ... ok
+test_fast_variant_bitwise_model_inputs_for_acceptance_and_relaxation (research.test_dense_session3_boundary.BoundaryDirectionTests.test_fast_variant_bitwise_model_inputs_for_acceptance_and_relaxation) ... ok
+test_public_contract_archive_and_repeatability (research.test_dense_session3_boundary.BoundaryDirectionTests.test_public_contract_archive_and_repeatability) ... ok
+test_threads_restored_after_failure (research.test_dense_session3_boundary.BoundaryDirectionTests.test_threads_restored_after_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.529s
+
+OK

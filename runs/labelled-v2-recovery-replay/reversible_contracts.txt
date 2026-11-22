@@ -1,0 +1,10 @@
+test_exact_prefix_budget_archive_and_deterministic_replay (research.test_dense_reversible_windows.ReversibleWindowTests.test_exact_prefix_budget_archive_and_deterministic_replay) ... ok
+test_infeasible_oracle_exhaustion_keeps_failure_explicit (research.test_dense_reversible_windows.ReversibleWindowTests.test_infeasible_oracle_exhaustion_keeps_failure_explicit) ... ok
+test_probe_obeys_one_remaining_window_call (research.test_dense_reversible_windows.ReversibleWindowTests.test_probe_obeys_one_remaining_window_call) ... ok
+test_rebase_invalidates_fitness_and_failed_probe_keeps_feasible_parent (research.test_dense_reversible_windows.ReversibleWindowTests.test_rebase_invalidates_fitness_and_failed_probe_keeps_feasible_parent) ... ok
+test_scheduler_explores_both_and_limits_consecutive_winner_windows (research.test_dense_reversible_windows.ReversibleWindowTests.test_scheduler_explores_both_and_limits_consecutive_winner_windows) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.701s
+
+OK

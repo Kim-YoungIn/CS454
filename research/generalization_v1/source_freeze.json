@@ -1,0 +1,34 @@
+{
+  "epsilon_ball.py": {
+    "sha256": "a18ea45f2b26539f67805aabc743ab624b26c8f293ad248c9acf6d46c0c633fc",
+    "snapshot": "research/generalization_v1/frozen_sources/0_epsilon_ball.py"
+  },
+  "perlin_fog.py": {
+    "sha256": "85733d54ba8d1c02a1cd3221a4f7f499ef9af9df5ffdce2cf9b9fcb8462de8d0",
+    "snapshot": "research/generalization_v1/frozen_sources/1_perlin_fog.py"
+  },
+  "research/dense_radial_probe.py": {
+    "sha256": "d44c38f32d9e4791864f99a1926d8194751aeb133d657e3eb60dfb5979f51c95",
+    "snapshot": "research/generalization_v1/frozen_sources/2_dense_radial_probe.py"
+  },
+  "research/dense_session3_boundary.py": {
+    "sha256": "0b077cd6eaed8e5e462f1e04d463204627c8870c9859e01c4ce5d5344038d998",
+    "snapshot": "research/generalization_v1/frozen_sources/3_dense_session3_boundary.py"
+  },
+  "research/local_support_tail.py": {
+    "sha256": "19b10a5fe1096eb59b3c36117746876591d0ac20316a6fd73528da868b09b76e",
+    "snapshot": "research/generalization_v1/frozen_sources/4_local_support_tail.py"
+  },
+  "research/session3_promoted/epsilon_ball.py": {
+    "sha256": "a18ea45f2b26539f67805aabc743ab624b26c8f293ad248c9acf6d46c0c633fc",
+    "snapshot": "research/generalization_v1/frozen_sources/5_epsilon_ball.py"
+  },
+  "util.py": {
+    "sha256": "28053bc959dac6064fcd1c55629f65f42382e0c7d546c44622b10f95d6b1fb45",
+    "snapshot": "research/generalization_v1/frozen_sources/6_util.py"
+  },
+  "grade.py": {
+    "sha256": "c14e22a5e60c36a1d85417d09c4044c9332ad788353c702a52a41d16db017d6f",
+    "snapshot": "research/generalization_v1/frozen_sources/7_grade.py"
+  }
+}

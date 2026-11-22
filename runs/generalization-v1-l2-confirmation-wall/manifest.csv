@@ -1,0 +1,3 @@
+id,split,path,original_sha256,prepared_sha256,original_mode,width,height,source_url
+camera,confirmation,research/generalization_v1/images/camera.png,b0793d2adda0fa6ae899c03989482bff9a42d3d5690fc7e3648f2795d730c23a,ce32863dbdf226d611dc979713791281e23d22dedf25aae72729837345ba693c,L,512,512,https://raw.githubusercontent.com/scikit-image/scikit-image/v0.25.2/skimage/data/camera.png
+motorcycle_left,confirmation,research/generalization_v1/images/motorcycle_left.png,db18e9c4157617403c3537a6ba355dfeafe9a7eabb6b9b94cb33f6525dd49179,8d645c6ca405cc3cb9a991b0fb5a964571bf8183f88cd8ffcde59706a30a76c2,RGB,741,500,https://raw.githubusercontent.com/scikit-image/scikit-image/v0.25.2/skimage/data/motorcycle_left.png

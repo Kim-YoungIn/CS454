@@ -1,0 +1,59 @@
+{
+  "created_utc": "2026-11-20T09:10:06.523830+00:00",
+  "command": [
+    "profile_inference.py",
+    "--output",
+    "runs/session2-thread-profile.csv"
+  ],
+  "options": {
+    "image": "images/knot.jpg",
+    "threads": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "batches": [
+      1,
+      4
+    ],
+    "warmup": 2,
+    "repeats": 5,
+    "output": "runs/session2-thread-profile.csv"
+  },
+  "python": "3.14.4",
+  "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "cpu_model": "AMD Ryzen AI 7 350 w/ Radeon 860M",
+  "logical_cpus": 16,
+  "packages": {
+    "torch": "2.15.0+cpu",
+    "torchvision": "0.29.2+cpu",
+    "Pillow": "13.0.0",
+    "numpy": "2.5.4"
+  },
+  "input_shape": [
+    1,
+    3,
+    224,
+    224
+  ],
+  "input_strides": [
+    150528,
+    50176,
+    224,
+    1
+  ],
+  "input_dtype": "torch.float32",
+  "mkldnn_enabled": true,
+  "sha256": {
+    "profile_inference.py": "d0be834f374f57036ccef98334883890ccc81f728645f6a4433d3634fcfa6f33",
+    "util.py": "28053bc959dac6064fcd1c55629f65f42382e0c7d546c44622b10f95d6b1fb45",
+    "images/knot.jpg": "fb8f56f8b288434f5e581093605a3c3485e1c2203dcbc9024713aac9fce61759"
+  },
+  "environment": {
+    "TORCH_HOME": "/tmp/cs454-torch"
+  },
+  "timing": "perf_counter around prediction helper only, CPU synchronous; warmup excluded",
+  "context": "isolated"
+}
