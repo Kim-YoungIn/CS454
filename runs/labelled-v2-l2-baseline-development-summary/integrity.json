@@ -1,0 +1,108 @@
+{
+  "trial_rows": 20,
+  "successful_trials": 20,
+  "at_query_limit": 20,
+  "window_totals": {},
+  "candidate_trials": [
+    {
+      "image": "development_n01440764_00",
+      "status": "pass",
+      "calls": 900,
+      "runtime_seconds": 58.70192916200176,
+      "windows": {},
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": []
+    },
+    {
+      "image": "development_n02102040_00",
+      "status": "pass",
+      "calls": 900,
+      "runtime_seconds": 61.99627336100093,
+      "windows": {},
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": []
+    },
+    {
+      "image": "development_n02979186_00",
+      "status": "pass",
+      "calls": 900,
+      "runtime_seconds": 58.824598776998755,
+      "windows": {},
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": []
+    },
+    {
+      "image": "development_n03000684_00",
+      "status": "pass",
+      "calls": 900,
+      "runtime_seconds": 58.202542539002025,
+      "windows": {},
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": []
+    },
+    {
+      "image": "development_n03028079_02",
+      "status": "pass",
+      "calls": 900,
+      "runtime_seconds": 58.750283701003355,
+      "windows": {},
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": []
+    },
+    {
+      "image": "development_n03394916_00",
+      "status": "pass",
+      "calls": 900,
+      "runtime_seconds": 58.04155752999941,
+      "windows": {},
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": []
+    },
+    {
+      "image": "development_n03417042_00",
+      "status": "pass",
+      "calls": 900,
+      "runtime_seconds": 61.450533889001235,
+      "windows": {},
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": []
+    },
+    {
+      "image": "development_n03425413_00",
+      "status": "pass",
+      "calls": 900,
+      "runtime_seconds": 64.06439452599989,
+      "windows": {},
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": []
+    },
+    {
+      "image": "development_n03445777_01",
+      "status": "pass",
+      "calls": 900,
+      "runtime_seconds": 75.52784427399956,
+      "windows": {},
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": []
+    },
+    {
+      "image": "development_n03888257_00",
+      "status": "pass",
+      "calls": 900,
+      "runtime_seconds": 64.33641780000016,
+      "windows": {},
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": []
+    }
+  ]
+}

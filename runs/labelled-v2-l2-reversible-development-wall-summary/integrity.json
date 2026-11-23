@@ -1,0 +1,322 @@
+{
+  "trial_rows": 4,
+  "successful_trials": 4,
+  "at_query_limit": null,
+  "window_totals": {
+    "local": {
+      "calls": 2390,
+      "windows": 26,
+      "windows_with_gain": 25
+    },
+    "global": {
+      "calls": 1248,
+      "windows": 13,
+      "windows_with_gain": 0
+    }
+  },
+  "candidate_trials": [
+    {
+      "image": "development_n02979186_00",
+      "status": "pass",
+      "calls": 2551,
+      "runtime_seconds": 162.5580924620001,
+      "windows": {
+        "local": 1332,
+        "global": 672
+      },
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": [
+        {
+          "before_distance": 15.913530349731445,
+          "calls": 96,
+          "distance": 13.550341606140137,
+          "end_query": 631,
+          "log_gain": 0.16075795495915376,
+          "operator": "local",
+          "rate": 0.0016745620308245184,
+          "smoothed_rate": 0.0016745620308245184,
+          "start_query": 535
+        },
+        {
+          "before_distance": 13.550341606140137,
+          "calls": 96,
+          "distance": 11.772439002990723,
+          "end_query": 823,
+          "log_gain": 0.14065063598419233,
+          "operator": "local",
+          "rate": 0.0014651107915020034,
+          "smoothed_rate": 0.0015698364111632608,
+          "start_query": 727
+        },
+        {
+          "before_distance": 11.772439002990723,
+          "calls": 96,
+          "distance": 10.435325622558594,
+          "end_query": 919,
+          "log_gain": 0.12056437692158031,
+          "operator": "local",
+          "rate": 0.0012558789262664615,
+          "smoothed_rate": 0.0014128576687148613,
+          "start_query": 823
+        },
+        {
+          "before_distance": 10.435325622558594,
+          "calls": 96,
+          "distance": 8.364025115966797,
+          "end_query": 1111,
+          "log_gain": 0.22125696046005147,
+          "operator": "local",
+          "rate": 0.002304760004792203,
+          "smoothed_rate": 0.0018588088367535321,
+          "start_query": 1015
+        },
+        {
+          "before_distance": 8.364025115966797,
+          "calls": 96,
+          "distance": 7.564481735229492,
+          "end_query": 1207,
+          "log_gain": 0.10047594776522172,
+          "operator": "local",
+          "rate": 0.0010466244558877261,
+          "smoothed_rate": 0.0014527166463206291,
+          "start_query": 1111
+        },
+        {
+          "before_distance": 7.564481735229492,
+          "calls": 96,
+          "distance": 6.841383934020996,
+          "end_query": 1399,
+          "log_gain": 0.10047379595829503,
+          "operator": "local",
+          "rate": 0.0010466020412322398,
+          "smoothed_rate": 0.0012496593437764346,
+          "start_query": 1303
+        },
+        {
+          "before_distance": 6.841383934020996,
+          "calls": 96,
+          "distance": 6.312970161437988,
+          "end_query": 1495,
+          "log_gain": 0.08038376785604848,
+          "operator": "local",
+          "rate": 0.0008373309151671716,
+          "smoothed_rate": 0.001043495129471803,
+          "start_query": 1399
+        },
+        {
+          "before_distance": 6.312970161437988,
+          "calls": 96,
+          "distance": 5.94360876083374,
+          "end_query": 1687,
+          "log_gain": 0.06028978845431013,
+          "operator": "local",
+          "rate": 0.0006280186297323971,
+          "smoothed_rate": 0.0008357568796021001,
+          "start_query": 1591
+        },
+        {
+          "before_distance": 5.94360876083374,
+          "calls": 96,
+          "distance": 5.163646697998047,
+          "end_query": 1783,
+          "log_gain": 0.1406734300938805,
+          "operator": "local",
+          "rate": 0.0014653482301445885,
+          "smoothed_rate": 0.0011505525548733443,
+          "start_query": 1687
+        },
+        {
+          "before_distance": 5.163646697998047,
+          "calls": 96,
+          "distance": 4.764826774597168,
+          "end_query": 1975,
+          "log_gain": 0.08038187155892677,
+          "operator": "local",
+          "rate": 0.0008373111620721539,
+          "smoothed_rate": 0.000993931858472749,
+          "start_query": 1879
+        },
+        {
+          "before_distance": 4.764826774597168,
+          "calls": 96,
+          "distance": 4.396799087524414,
+          "end_query": 2071,
+          "log_gain": 0.08038438666659696,
+          "operator": "local",
+          "rate": 0.000837337361110385,
+          "smoothed_rate": 0.0009156346097915671,
+          "start_query": 1975
+        },
+        {
+          "before_distance": 4.396799087524414,
+          "calls": 96,
+          "distance": 4.139552116394043,
+          "end_query": 2263,
+          "log_gain": 0.06028919853508926,
+          "operator": "local",
+          "rate": 0.0006280124847405131,
+          "smoothed_rate": 0.00077182354726604,
+          "start_query": 2167
+        },
+        {
+          "before_distance": 4.139552116394043,
+          "calls": 96,
+          "distance": 4.057187080383301,
+          "end_query": 2359,
+          "log_gain": 0.020097701392063433,
+          "operator": "local",
+          "rate": 0.00020935105616732742,
+          "smoothed_rate": 0.0004905873017166838,
+          "start_query": 2263
+        },
+        {
+          "before_distance": 4.057187080383301,
+          "calls": 84,
+          "distance": 3.8973474502563477,
+          "end_query": 2539,
+          "log_gain": 0.040193715372019226,
+          "operator": "local",
+          "rate": 0.00047849661157165743,
+          "smoothed_rate": 0.00048454195664417057,
+          "start_query": 2455
+        }
+      ]
+    },
+    {
+      "image": "development_n03425413_00",
+      "status": "pass",
+      "calls": 2402,
+      "runtime_seconds": 162.35952303600016,
+      "windows": {
+        "local": 1058,
+        "global": 576
+      },
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": [
+        {
+          "before_distance": 2399.432373046875,
+          "calls": 96,
+          "distance": 2043.11669921875,
+          "end_query": 852,
+          "log_gain": 0.16075576244893952,
+          "operator": "local",
+          "rate": 0.0016745391921764534,
+          "smoothed_rate": 0.0016745391921764534,
+          "start_query": 756
+        },
+        {
+          "before_distance": 2043.11669921875,
+          "calls": 96,
+          "distance": 1775.023193359375,
+          "end_query": 1044,
+          "log_gain": 0.1406629461779512,
+          "operator": "local",
+          "rate": 0.0014652390226869915,
+          "smoothed_rate": 0.0015698891074317225,
+          "start_query": 948
+        },
+        {
+          "before_distance": 1775.023193359375,
+          "calls": 96,
+          "distance": 1542.09765625,
+          "end_query": 1140,
+          "log_gain": 0.1406698854861012,
+          "operator": "local",
+          "rate": 0.0014653113071468875,
+          "smoothed_rate": 0.001517600207289305,
+          "start_query": 1044
+        },
+        {
+          "before_distance": 1542.09765625,
+          "calls": 96,
+          "distance": 1451.871826171875,
+          "end_query": 1332,
+          "log_gain": 0.06028996551733285,
+          "operator": "local",
+          "rate": 0.0006280204741388838,
+          "smoothed_rate": 0.0010728103407140945,
+          "start_query": 1236
+        },
+        {
+          "before_distance": 1451.871826171875,
+          "calls": 96,
+          "distance": 1339.725341796875,
+          "end_query": 1428,
+          "log_gain": 0.08038901437437408,
+          "operator": "local",
+          "rate": 0.00083738556639973,
+          "smoothed_rate": 0.0009550979535569123,
+          "start_query": 1332
+        },
+        {
+          "before_distance": 1339.725341796875,
+          "calls": 96,
+          "distance": 1286.9454345703125,
+          "end_query": 1620,
+          "log_gain": 0.04019309381161005,
+          "operator": "local",
+          "rate": 0.0004186780605376047,
+          "smoothed_rate": 0.0006868880070472585,
+          "start_query": 1524
+        },
+        {
+          "before_distance": 1286.9454345703125,
+          "calls": 96,
+          "distance": 1236.243896484375,
+          "end_query": 1716,
+          "log_gain": 0.04019386351216254,
+          "operator": "local",
+          "rate": 0.0004186860782516931,
+          "smoothed_rate": 0.0005527870426494758,
+          "start_query": 1620
+        },
+        {
+          "before_distance": 1236.243896484375,
+          "calls": 96,
+          "distance": 1140.7564697265625,
+          "end_query": 1908,
+          "log_gain": 0.08038605454496553,
+          "operator": "local",
+          "rate": 0.0008373547348433909,
+          "smoothed_rate": 0.0006950708887464333,
+          "start_query": 1812
+        },
+        {
+          "before_distance": 1140.7564697265625,
+          "calls": 96,
+          "distance": 991.0509033203125,
+          "end_query": 2004,
+          "log_gain": 0.14068099263730974,
+          "operator": "local",
+          "rate": 0.001465427006638643,
+          "smoothed_rate": 0.0010802489476925382,
+          "start_query": 1908
+        },
+        {
+          "before_distance": 991.0509033203125,
+          "calls": 96,
+          "distance": 952.0060424804688,
+          "end_query": 2196,
+          "log_gain": 0.04019451670705815,
+          "operator": "local",
+          "rate": 0.000418692882365189,
+          "smoothed_rate": 0.0007494709150288636,
+          "start_query": 2100
+        },
+        {
+          "before_distance": 952.0060424804688,
+          "calls": 96,
+          "distance": 896.3046875,
+          "end_query": 2292,
+          "log_gain": 0.06029097373117035,
+          "operator": "local",
+          "rate": 0.0006280309763663578,
+          "smoothed_rate": 0.0006887509456976106,
+          "start_query": 2196
+        }
+      ]
+    }
+  ]
+}

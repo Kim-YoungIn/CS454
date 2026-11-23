@@ -1,0 +1,15 @@
+{
+  "submission_sha256sum_check": "pass: all47 recorded files unchanged",
+  "labelled_bank_sha256sum_check": "pass: all recorded preparation files unchanged",
+  "source_audit": "runs/labelled-v2-completion-source-audit.json",
+  "contract_tests": 81,
+  "contract_tests_status": "pass",
+  "tests_overlap": "Fixed900-call preserved development screen only; finished before any next wall-time calls.",
+  "tests_started": "2026-11-23T10:40:34Z",
+  "tests_finished": "2026-11-23T10:41:09Z",
+  "distinct_labelled_tensors_verified": 50,
+  "one_thread_status": "50pass/0fail; all predicted classes unchanged",
+  "confirmation_attack_used": [],
+  "production_changed": false,
+  "all_planned_jobs_complete": true
+}

@@ -1,0 +1,5 @@
+{
+  "recovery": "The original wall trial was interrupted before completing a row. Its snapshots and partial directory are preserved at the sibling -interrupted folder. This restarts the first complete wall block.",
+  "test_overlap": "The first control overlapped a roughly three-second one-thread AST synthetic test process. No real VGG ran in that process. Treat the first wall comparison as descriptive and use fresh isolated controls for promotion.",
+  "followup": "One benchmark process at a time. No confirmation trials."
+}

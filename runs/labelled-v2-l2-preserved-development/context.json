@@ -1,0 +1,6 @@
+{
+  "fixed_query_only": true,
+  "overlap": "The final81-test synthetic suite runs at one CPU thread during this900-call screen. It loads util/model but uses synthetic patched oracles; it is not a second VGG attack workload. Start/end UTC are in runs/labelled-v2-completion-validation/. Check every screen row reaches900; do not use screen timing for throughput claims. All tests must finish before full-time measurements.",
+  "controls": "Matching fixed900-call controls reused from the initial audit; runtime is separate-window descriptive only.",
+  "production_changed": false
+}

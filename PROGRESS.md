@@ -1,4 +1,4 @@
-# CS454 project status — 2026-11-22
+# CS454 project status — 2026-11-23
 
 ## Current verified implementation
 
@@ -9,30 +9,29 @@
 - **L0 default (`parental`):** bounded discovery, hierarchical/repeated channel deletion, protected restarts and fixed-cardinality parental-support evolution. **L0 counts changed channel elements.** `CS454_L0_STYLE=multistart`, `refined`, `original` retain controls. The new one-parent neighbor tail remains research-only.
 - **Fog:** unchanged full mixture GA followed by up to 24 integer-octave generations within remaining time, exact renderer verification and protected mixture fallback. `CS454_FOG_GENERATIONS` controls mixtures; `CS454_FOG_OCTAVE_GENERATIONS` controls the extension.
 
-Norm defaults remain four threads / 165 seconds (hard configurable maximum 170); fog remains 270 seconds (hard maximum 285). **72 tests pass. All 20 canonical artifacts pass fresh one-thread verification; 28 selected generalization artifacts also independently pass.** Existing artifact checksums remain unchanged.
+Norm defaults remain four threads / 165 seconds (hard configurable maximum 170); fog remains 270 seconds (hard maximum 285). **81 tests pass. All 50 distinct labelled-study tensors pass fresh one-thread verification.** Earlier one-thread verification passed all 20 canonical and 28 first-bank generalization artifacts; canonical and labelled-bank checksum manifests still match.
 
-## Generalization evidence and limits
+## Generalization evidence
 
-An eight-image external bank was split before attacks: development astronaut/coffee/brick/rocket at seed 454; reserved confirmation camera/chelsea/grass/motorcycle at seed 455. All paired L2 screens use exactly 900 model calls. Confirmation settings remained frozen through the predeclared full-time block.
+The first external bank confirmed the current L2 method on four fixture images at 900 calls (geometric-mean squared-distance ratio **0.788**) and two at 165 seconds (**0.599**). This was a small bank using the clean argmax as its reference. Its confirmation set has already been used. [Earlier evidence](docs/history/2026-11-21-generalization.md).
 
-| L2 comparison | Pairs | Candidate wins | Successes (control/candidate) | Geometric-mean squared-distance ratio |
-| --- | ---: | ---: | --- | ---: |
-| Old early-switch radial candidate, development | 4 | 1 | 4/4 / 4/4 | 1.400 |
-| Minimum exploration 256, development | 4 | 2 | 4/4 / 4/4 | 0.872 |
-| Selected exploration 512, development | 4 | 4 | 4/4 / 4/4 | **0.776** |
-| Frozen selected port, reserved confirmation | 4 | 4 | 4/4 / 4/4 | **0.788** |
-| Same frozen port, actual 165-second confirmation | 2 | 2 | 2/2 / 2/2 | **0.599** |
+The labelled Imagenette bank has ten clean-correct development and ten reserved confirmation images across ten classes. The 900-call development screens use seed 456 and four threads. Every method succeeded on every input.
 
-Actual-time cases: camera **158.252→99.669**, motorcycle **16.205→9.243** squared L2; all calls finish in 162.8–163.0 seconds. Actual model counts differ, so these establish matched-time performance rather than universal per-query efficiency. The earlier candidate's supplied-image gains did not generalize; its premature switch at query 9 on astronaut motivated the revised architecture.
+| Candidate vs. control | Wins / pairs | Geometric-mean squared L2 ratio | Worst ratio |
+| --- | ---: | ---: | ---: |
+| Current search vs. original global GA | 5 / 10 | 1.040 | 1.638 |
+| First reversible candidate vs. current search | 0 / 10 | 1.176 | 1.333 |
+| State-preserving candidate vs. current search | 2 / 10 | 1.050 | 1.234 |
 
-This small fixture bank uses clean argmax references and includes low-confidence/semantically misaligned classifications. It is not a representative ImageNet validation set or evidence of classifier-training-unseen inputs. Its confirmation is now consumed; later tuning must use it as historical evidence. [Current research log](docs/history/2026-11-21-generalization.md), [36 unique trials](runs/generalization-experiment-index.csv), [tests/audit/verification](runs/generalization-final-validation/).
+Both window candidates fail the frozen **165-second** selection: first reversible loses2/2 (ratio **1.122**); preserved-state wins1/2 but has ratio **1.110**, worst **1.244**. **Reject both; production and all ten labelled confirmation images remain untouched.** State retention produced some global gains but did not offset displaced local refinement. [Completed study and decisions](runs/labelled-v2-completion-study/study.json).
+
+The separate original-global165-second audit is mixed: cassette4.248, gas pump631.773. Its geometric-mean ratio is0.990 against earlier current controls,1.123 against later controls. All control measurements are retained; changing CPU throughput makes the denominator consequential. These two development cases do not settle broader generalization. [Detailed evidence and limitations](docs/history/2026-11-21-labelled-research.md).
 
 ## Next priorities
 
-1. **Active labelled audit:** all ten Imagenette development images, seed456, current512 default versus prior global-only GA at900 queries/165 seconds. Sources and budgets are frozen in `research/labelled_v2_baseline_plan/`; results stream to `runs/labelled-v2-l2-baseline-development/`. The environment interruption preserved14 rows; pinned runtime was restored, one exact tensor/history replay passed, and only unfinished trials are resuming. Ten confirmation images remain untouched. Freeze new experiment methods/budgets in a separate plan; preserve its data-only protocol. [Bank and scope](research/generalization_imagenette_v2/README.md).
-2. Evaluate broader actual 165-second performance, more seeds and the remaining supplied-image matrix with the new default. A complete default-duration matrix is still unmeasured. Consider reversible global/local windows driven by improvement per call/second if fixed-stage exploration shows new weaknesses; do not tune against consumed confirmation.
-3. Preserve `research/local_support_tail.py` as a mechanism candidate: external development coffee **39→33** at a 900-call ceiling; three inactive ties. Full-time production may already consume all allowance, so default-time benefit is unproven. Test active stage allocation before promotion. Notes: `research/generalization_l0.md`.
-4. Later: eight-thread attack scores; external Linf/fog generalization; fog fitness-repeat caching and a larger integer-generation allowance under the same 270-second ceiling. Keep real calls, proposals, partial failures and phase activation separate.
+1. Broaden matched165-second L2 evaluation beyond these two classes and check another seed. Keep timings sequential, record actual calls, use fresh controls, and retain all failures/regressions. Do not repeat the rejected window variants or infer wall-time quality from900-call screens alone.
+2. Test L0 fixed-support exhaustion plus novel neighboring loci. One consumed development case spent136/156 support calls on repeated masks; cache/exhaustion handling may free useful work, but earlier generic discovery caches already had mixed results. Preserve the discovery/pruning prefix and measure actual165-second gains before promotion. The existing one-parent tail has only one activated900-call win; its full-time benefit remains unmeasured.
+3. Keep the ten labelled confirmation images reserved until a frozen method qualifies. If revisiting L2, a compact spatial-coefficient genotype tests a different proposal representation; avoid another window/gate sweep. Generalization of Linf/fog is also still limited. Imagenette covers ten classes and may overlap classifier pretraining. [Data protocol](research/generalization_imagenette_v2/README.md).
 
 ## Canonical assignment artifacts
 
@@ -62,6 +61,8 @@ TORCH_HOME=/tmp/cs454-torch /tmp/cs454-baseline-env/bin/python \
   verify_artifacts.py submission --perlin
 ```
 
-Frozen production: `research/generalization_session_promoted/`; previous production: `research/session3_promoted/`; earlier baseline: `research/session3_baseline/`. Generalization protocols, manifests, algorithm/source freezes and exact commands are beside the run configurations. Strict historical source guards may require their captured dependencies in an isolated reproduction checkout; create new plans for current sources instead of changing old protocols. The next labelled archive is pinned by official MD5 and recorded SHA256; selection retains all exclusions and does not filter on attack difficulty.
+Frozen production: `research/generalization_session_promoted/`; previous production: `research/session3_promoted/`; earlier baseline: `research/session3_baseline/`. Generalization protocols, manifests, algorithm/source freezes and exact commands are beside the run configurations. Strict historical source guards may require their captured dependencies in an isolated reproduction checkout; create new plans for current sources instead of changing old protocols. The labelled archive is pinned by official MD5 and recorded SHA256; selection retains all exclusions and does not filter on attack difficulty.
+
+Completed labelled outputs: [50 unique trial records](runs/labelled-v2-completion-study/results.csv), [independent verification](runs/labelled-v2-completion-validation/artifacts.csv), [81-test log](runs/labelled-v2-completion-validation/tests.txt), [source audit](runs/labelled-v2-completion-source-audit.json). All planned jobs have finished; no promotion is pending.
 
 Detailed history: [current labelled session](docs/history/2026-11-21-labelled-research.md), [prior generalization session](docs/history/2026-11-21-generalization.md), [earlier November 21 session](docs/history/2026-11-21-research.md), [original November 20 record](docs/history/2026-11-20-research-log.md). The original 277-line log is intact. `experiments.csv` is a clean-classification control and `grader_results.csv` is historical starter failure output. Saved-parent diagnostics are not online benchmarks. Attack entry points never read saved attacks or known seed labels. The PDF report remains the user's responsibility.

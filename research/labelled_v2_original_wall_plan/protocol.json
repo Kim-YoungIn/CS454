@@ -1,0 +1,18 @@
+{
+  "version": "labelled-v2-original-global-development-wall",
+  "settings": {
+    "ids": [
+      "development_n02979186_00",
+      "development_n03425413_00"
+    ],
+    "queries": null,
+    "seconds": 165,
+    "seed": 456,
+    "implementation": "research.session3_promoted.epsilon_ball",
+    "reason": "Added developmental baseline audit after sizeable correctly labelled900-query regressions of current512; compare original global-only at actual grading budget on the already fixed class positions. No confirmation information used.",
+    "timing": "Run after the frozen paired candidate study; report separate-window timing/calls and avoid claiming a balanced three-way timing trial.",
+    "threads": 4
+  },
+  "comparison_control": "runs/labelled-v2-l2-reversible-development-wall",
+  "interpretation": "Two additional development diagnostics in a separate timing window. Compare against earlier current512 full-time measurements descriptively; neither balanced contemporaneous timing nor independent confirmation. Do not change production based solely on two selected development cases."
+}

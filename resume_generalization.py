@@ -40,7 +40,11 @@ def main():
     for row in images:
         if hashlib.sha256(Path(row['path']).read_bytes()).hexdigest()!=row['prepared_sha256']:
             raise ValueError('image checksum changed')
-    with (args.output/'results.csv').open() as stream:records=list(csv.DictReader(stream))
+    results_path = args.output / 'results.csv'
+    records = []
+    if results_path.exists():
+        with results_path.open() as stream:
+            records = list(csv.DictReader(stream))
     initial_rows=len(records)
     done=set()
     for row in records:
@@ -48,14 +52,16 @@ def main():
         if key in done or row['image'] not in expected or row['method'] not in ('control','candidate'):
             raise ValueError('duplicate or unexpected existing trial')
         if (row['implementation']!=settings[row['method']] or int(row['seed'])!=seed or row['norm']!=args.metric
-            or float(row['seconds_limit'])!=settings['seconds'] or int(row['queries_limit'])!=settings['queries']
+            or float(row['seconds_limit'])!=settings['seconds'] or (row['queries_limit'] or None)!=(
+                str(settings['queries']) if settings['queries'] is not None else None)
             or int(row['threads'])!=settings['threads']):raise ValueError('existing trial settings mismatch')
         if 'expected_class' in expected[row['image']] and int(row['reference_class'])!=int(expected[row['image']]['expected_class']):
             raise ValueError('labelled eligibility/reference changed')
         done.add(key)
     recovery=args.output/('recovery_'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ'))
     recovery.mkdir()
-    shutil.copy2(args.output/'results.csv',recovery/'results_before.csv')
+    if results_path.exists():
+        shutil.copy2(results_path, recovery/'results_before.csv')
     (recovery/'resume_snapshot.py').write_bytes(Path(__file__).read_bytes())
     events=[]
     os.environ.update(CS454_L0_STYLE='parental',CS454_L2_STYLE='energy',CS454_DISCOVERY_REFERENCE='900',
@@ -79,6 +85,13 @@ def main():
                     result=rows[0]
                     if result['image']!=key[0] or int(result['seed'])!=seed or result['norm']!=args.metric:
                         raise ValueError('orphaned trial does not match expected case')
+                    config = json.loads((output/f'config_{args.split}_{kind}.json').read_text())
+                    options = config['options']
+                    if (options['implementation'] != settings[kind]
+                            or options['threads'] != settings['threads']
+                            or options['queries'] != settings['queries']
+                            or options['seconds'] != settings['seconds']):
+                        raise ValueError('orphaned trial settings mismatch')
                     exit_code=0 if result['success']=='True' else 1
                     events.append(dict(case=output.name,action='recovered_completed_orphan'))
                 elif rows:raise ValueError('multiple rows in one case directory')
@@ -101,7 +114,7 @@ def main():
             temporary=args.output/'results.resuming.csv'
             with temporary.open('w',newline='') as stream:
                 writer=csv.DictWriter(stream,fieldnames=list(records[0]));writer.writeheader();writer.writerows(records)
-            temporary.replace(args.output/'results.csv')
+            temporary.replace(results_path)
             (recovery/'events.json').write_text(json.dumps(events,indent=2)+'\n')
             print(json.dumps({key:result[key] for key in ('image','method','distance','queries','status')}),flush=True)
     print(f'Completed matrix: {len(records)} rows; preserved all {initial_rows} existing rows and added {len(records)-initial_rows}.',flush=True)

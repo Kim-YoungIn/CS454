@@ -1,0 +1,26 @@
+{
+  "research/session3_promoted/epsilon_ball.py": {
+    "sha256": "a18ea45f2b26539f67805aabc743ab624b26c8f293ad248c9acf6d46c0c633fc",
+    "snapshot": "research/labelled_v2_original_wall_plan/frozen_sources/research/session3_promoted/epsilon_ball.py"
+  },
+  "epsilon_ball.py": {
+    "sha256": "2a152f45637801c1c1991e96ad52a1afc0beaf3e8e4799efa9da2ee1e33880b7",
+    "snapshot": "research/labelled_v2_original_wall_plan/frozen_sources/epsilon_ball.py"
+  },
+  "benchmark_attacks.py": {
+    "sha256": "4699e27b1344017758642526bbe9a9751988f26a427e055b23c6db37170018dc",
+    "snapshot": "research/labelled_v2_original_wall_plan/frozen_sources/benchmark_attacks.py"
+  },
+  "util.py": {
+    "sha256": "28053bc959dac6064fcd1c55629f65f42382e0c7d546c44622b10f95d6b1fb45",
+    "snapshot": "research/labelled_v2_original_wall_plan/frozen_sources/util.py"
+  },
+  "grade.py": {
+    "sha256": "c14e22a5e60c36a1d85417d09c4044c9332ad788353c702a52a41d16db017d6f",
+    "snapshot": "research/labelled_v2_original_wall_plan/frozen_sources/grade.py"
+  },
+  "README.md": {
+    "sha256": "6074c9b3b540002e9330f6b978b400bc004646a706105eb1c60cde89a00f6bae",
+    "snapshot": "research/labelled_v2_original_wall_plan/frozen_sources/README.md"
+  }
+}

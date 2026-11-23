@@ -1,0 +1,23 @@
+{
+  "version": "labelled-v2-reversible-development-wall",
+  "data_protocol": "research/generalization_imagenette_v2/protocol.json",
+  "primary": {
+    "metric": "l2",
+    "control": "research.generalization_session_promoted.epsilon_ball",
+    "candidate": "research.dense_reversible_windows",
+    "queries": null,
+    "seconds": 165,
+    "threads": 4,
+    "development_seed": 456,
+    "confirmation_seed": 457,
+    "environment": {
+      "CS454_L2_SEARCH": "exploration",
+      "CS454_BOUNDARY_MIN_GENERATIONS": 512
+    }
+  },
+  "scope": "Development only until selection, full10-image unchanged labelled bank. Candidate source fixed before any VGG candidate trial.",
+  "roadmap": "research/labelled_v2_research_roadmap.json",
+  "intervention": "96-call reversible global/local windows, log squared-distance gain/call EMA, forced exploration and target reanchoring; not isolated scheduler ablation.",
+  "confirmation": "Do not run this phase before frozen selection.",
+  "purpose": "Two fixed development classes at actual165 seconds; no confirmation outcomes used."
+}

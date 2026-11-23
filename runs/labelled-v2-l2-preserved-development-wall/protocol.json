@@ -1,0 +1,23 @@
+{
+  "version": "labelled-v2-preserved-development-wall",
+  "data_protocol": "research/generalization_imagenette_v2/protocol.json",
+  "primary": {
+    "metric": "l2",
+    "control": "research.generalization_session_promoted.epsilon_ball",
+    "candidate": "research.dense_preserved_windows",
+    "queries": null,
+    "seconds": 165,
+    "threads": 4,
+    "development_seed": 456,
+    "confirmation_seed": 457,
+    "environment": {
+      "CS454_L2_SEARCH": "exploration",
+      "CS454_BOUNDARY_MIN_GENERATIONS": 512
+    }
+  },
+  "scope": "Reuse the two predeclared development classes from the earlier actual-time comparison with fresh control calls.",
+  "roadmap": "research/labelled_v2_research_roadmap.json",
+  "intervention": "Preserve pending global elites, target, proposal clock and separate RNG. Keep the 96-call allocation and local-first order.",
+  "confirmation": "Do not run this phase before frozen selection.",
+  "interpretation": "Compare all ten at 900 calls against current512. Compare traces with the first window variant. A win must survive 165-second and independently reserved comparisons before integration."
+}

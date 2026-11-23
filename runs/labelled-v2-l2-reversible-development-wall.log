@@ -1,0 +1,6 @@
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-0.0053909123..1.001516].
+{"image": "/home/archant/projects/cs454-adversarial/research/generalization_imagenette_v2/images/development_n02979186_00.png", "norm": "l2", "method": "control", "seed": "456", "distance": "3.519603967666626", "queries": "2358", "runtime_seconds": "159.52855318499996", "status": "pass"}
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-0.008903086..1.0016313].
+{"image": "/home/archant/projects/cs454-adversarial/research/generalization_imagenette_v2/images/development_n02979186_00.png", "norm": "l2", "method": "candidate", "seed": "456", "distance": "3.872647762298584", "queries": "2551", "runtime_seconds": "162.5580924620001", "status": "pass"}
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-0.036382556..1.0315175].
+{"image": "/home/archant/projects/cs454-adversarial/research/generalization_imagenette_v2/images/development_n03425413_00.png", "norm": "l2", "method": "candidate", "seed": "456", "distance": "889.7520751953125", "queries": "2402", "runtime_seconds": "162.35952303600016", "status": "pass"}

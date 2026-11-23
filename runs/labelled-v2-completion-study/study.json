@@ -1,0 +1,175 @@
+{
+  "comparisons": {
+    "baseline_screen": {
+      "norm": "l2",
+      "split": "development",
+      "queries_limit": "900",
+      "seconds_limit": "165",
+      "pairs": 10,
+      "control_successes": 10,
+      "candidate_successes": 10,
+      "success_regressions": 0,
+      "wins": 5,
+      "ties": 0,
+      "losses": 5,
+      "both_failures": 0,
+      "activated_pairs": 10,
+      "common_successes": 10,
+      "geometric_mean_ratio": 1.0402446273051842,
+      "worst_ratio": 1.6380071243481609
+    },
+    "reversible_screen": {
+      "norm": "l2",
+      "split": "development",
+      "queries_limit": "900",
+      "seconds_limit": "165",
+      "pairs": 10,
+      "control_successes": 10,
+      "candidate_successes": 10,
+      "success_regressions": 0,
+      "wins": 0,
+      "ties": 0,
+      "losses": 10,
+      "both_failures": 0,
+      "activated_pairs": 10,
+      "common_successes": 10,
+      "geometric_mean_ratio": 1.1763362194327283,
+      "worst_ratio": 1.332598686683381
+    },
+    "preserved_screen": {
+      "norm": "l2",
+      "split": "development",
+      "queries_limit": "900",
+      "seconds_limit": "165",
+      "pairs": 10,
+      "control_successes": 10,
+      "candidate_successes": 10,
+      "success_regressions": 0,
+      "wins": 2,
+      "ties": 0,
+      "losses": 8,
+      "both_failures": 0,
+      "activated_pairs": 10,
+      "common_successes": 10,
+      "geometric_mean_ratio": 1.049727609239409,
+      "worst_ratio": 1.2336239651927574
+    },
+    "reversible_wall": {
+      "norm": "l2",
+      "split": "development",
+      "queries_limit": "",
+      "seconds_limit": "165",
+      "pairs": 2,
+      "control_successes": 2,
+      "candidate_successes": 2,
+      "success_regressions": 0,
+      "wins": 0,
+      "ties": 0,
+      "losses": 2,
+      "both_failures": 0,
+      "activated_pairs": 2,
+      "common_successes": 2,
+      "geometric_mean_ratio": 1.1216675620512455,
+      "worst_ratio": 1.1434419523722794
+    },
+    "preserved_wall": {
+      "norm": "l2",
+      "split": "development",
+      "queries_limit": "",
+      "seconds_limit": "165",
+      "pairs": 2,
+      "control_successes": 2,
+      "candidate_successes": 2,
+      "success_regressions": 0,
+      "wins": 1,
+      "ties": 0,
+      "losses": 1,
+      "both_failures": 0,
+      "activated_pairs": 2,
+      "common_successes": 2,
+      "geometric_mean_ratio": 1.1100429648362815,
+      "worst_ratio": 1.2443607566834933
+    }
+  },
+  "frozen_gates": {
+    "development_success_regressions": 0,
+    "development_screen_max_geomean": 1.1,
+    "development_screen_max_worst_ratio": 1.5,
+    "development_wall_max_geomean": 0.95,
+    "development_wall_max_worst_ratio": 1.05
+  },
+  "decisions": {
+    "reversible": {
+      "screen_gate_pass": false,
+      "wall_gate_pass": false,
+      "eligible_for_confirmation": false
+    },
+    "preserved": {
+      "screen_gate_pass": true,
+      "wall_gate_pass": false,
+      "eligible_for_confirmation": false
+    }
+  },
+  "original_wall_diagnostic": [
+    {
+      "image": "development_n02979186_00",
+      "original_distance": 4.2480549812316895,
+      "current_distance": 3.519603967666626,
+      "original_over_current": 1.2069695966526601,
+      "original_queries": 2632,
+      "current_queries": 2358,
+      "original_seconds": 162.70664783700022,
+      "current_seconds": 159.52855318499996,
+      "current_later_distance": 3.347989320755005,
+      "original_over_current_later": 1.2688376736738547,
+      "current_later_queries": 2503,
+      "current_later_seconds": 160.60018645900027
+    },
+    {
+      "image": "development_n03425413_00",
+      "original_distance": 631.7734985351562,
+      "current_distance": 778.1348876953125,
+      "original_over_current": 0.8119074321501625,
+      "original_queries": 2538,
+      "current_queries": 2096,
+      "original_seconds": 162.64061383299986,
+      "current_seconds": 162.76429083800008,
+      "current_later_distance": 635.2214965820312,
+      "original_over_current_later": 0.9945719751843604,
+      "current_later_queries": 2675,
+      "current_later_seconds": 162.74056371100005
+    }
+  ],
+  "original_wall_geomean": 0.9899230201897411,
+  "original_wall_geomean_later_control": 1.123365653424625,
+  "interpretation": "Development outcomes only; separate-window original timings are descriptive. All completed current-wall blocks are reported; neither is selected for a favorable ratio. Fixed-query controls are reused, not fresh trials. No algorithm was selected on confirmation.",
+  "unique_trials": 50,
+  "confirmation_attack_used": [],
+  "reserved_confirmation_count": 10,
+  "provenance": [
+    {
+      "directory": "runs/labelled-v2-l2-baseline-development",
+      "results_sha256": "a373aa5d69ae59fbcff701490030ed99e96409f51d5ac7aaf6df2312957979c9"
+    },
+    {
+      "directory": "runs/labelled-v2-l2-reversible-development",
+      "results_sha256": "a00e10d94a94bf406840e15f81b1b397f22649e278325e4808b2bef84d4b8c48"
+    },
+    {
+      "directory": "runs/labelled-v2-l2-preserved-development",
+      "results_sha256": "fb8627d5e48e25989893ef4bb107c1264b652ed1908cd3d237f8b91c53b23e2e"
+    },
+    {
+      "directory": "runs/labelled-v2-l2-reversible-development-wall",
+      "results_sha256": "b0682c5c91d73787c49df09a8d0f2470c40e0af61e1bee7cce37645e47e31a39"
+    },
+    {
+      "directory": "runs/labelled-v2-l2-preserved-development-wall",
+      "results_sha256": "6b8b5d8ef6affa0cc2263bb95c9355d0fa2f1ccd153e688507aedecc93c227bd"
+    },
+    {
+      "directory": "runs/labelled-v2-l2-original-development-wall",
+      "results_sha256": "a3e9600b539d9388b4ba671f4f5c04a3703fcaec2d19ebffbfbf65c1a71f68a0"
+    }
+  ]
+}

@@ -37,5 +37,15 @@
     "development_n03425413_00",
     "development_n03445777_01",
     "development_n03888257_00"
-  ]
+  ],
+  "completed_development_studies": {
+    "baseline_900": "runs/labelled-v2-l2-baseline-development",
+    "reversible_900": "runs/labelled-v2-l2-reversible-development",
+    "preserved_900": "runs/labelled-v2-l2-preserved-development",
+    "reversible_165": "runs/labelled-v2-l2-reversible-development-wall",
+    "preserved_165": "runs/labelled-v2-l2-preserved-development-wall",
+    "original_global_165": "runs/labelled-v2-l2-original-development-wall"
+  },
+  "selection_decision": "Both window candidates fail predeclared gates; no promotion or confirmation attacks. Production unchanged.",
+  "completion_evidence": "runs/labelled-v2-completion-study/study.json"
 }

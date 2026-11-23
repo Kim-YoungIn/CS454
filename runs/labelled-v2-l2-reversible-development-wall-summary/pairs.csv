@@ -1,0 +1,3 @@
+split,image,norm,seed,queries_limit,seconds_limit,control_success,candidate_success,control_distance,candidate_distance,ratio,verdict,activated,control_queries,candidate_queries,control_seconds,candidate_seconds
+development,development_n02979186_00,l2,456,,165,True,True,3.519603967666626,3.872647762298584,1.1003078181168247,loss,True,2358,2551,159.52855318499996,162.5580924620001
+development,development_n03425413_00,l2,456,,165,True,True,778.1348876953125,889.7520751953125,1.1434419523722794,loss,True,2096,2402,162.76429083800008,162.35952303600016

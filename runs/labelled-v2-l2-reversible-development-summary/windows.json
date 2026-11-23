@@ -1,0 +1,467 @@
+{
+  "trial_rows": 20,
+  "successful_trials": 20,
+  "at_query_limit": 20,
+  "window_totals": {
+    "local": {
+      "calls": 2411,
+      "windows": 28,
+      "windows_with_gain": 28
+    },
+    "global": {
+      "calls": 900,
+      "windows": 10,
+      "windows_with_gain": 0
+    }
+  },
+  "candidate_trials": [
+    {
+      "image": "development_n01440764_00",
+      "status": "pass",
+      "calls": 900,
+      "runtime_seconds": 58.69526883400022,
+      "windows": {
+        "local": 264,
+        "global": 96
+      },
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": [
+        {
+          "before_distance": 368.4599914550781,
+          "calls": 96,
+          "distance": 272.5128479003906,
+          "end_query": 624,
+          "log_gain": 0.3016463731282861,
+          "operator": "local",
+          "rate": 0.003142149720086314,
+          "smoothed_rate": 0.003142149720086314,
+          "start_query": 528
+        },
+        {
+          "before_distance": 272.5128479003906,
+          "calls": 96,
+          "distance": 256.5691833496094,
+          "end_query": 816,
+          "log_gain": 0.06028741234617774,
+          "operator": "local",
+          "rate": 0.0006279938786060181,
+          "smoothed_rate": 0.001885071799346166,
+          "start_query": 720
+        },
+        {
+          "before_distance": 256.5691833496094,
+          "calls": 72,
+          "distance": 246.46133422851562,
+          "end_query": 888,
+          "log_gain": 0.04019322683845063,
+          "operator": "local",
+          "rate": 0.0005582392616451476,
+          "smoothed_rate": 0.0012216555304956568,
+          "start_query": 816
+        }
+      ]
+    },
+    {
+      "image": "development_n02102040_00",
+      "status": "pass",
+      "calls": 900,
+      "runtime_seconds": 56.52801098400005,
+      "windows": {
+        "local": 261,
+        "global": 96
+      },
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": [
+        {
+          "before_distance": 93.17654418945312,
+          "calls": 96,
+          "distance": 82.5955810546875,
+          "end_query": 627,
+          "log_gain": 0.1205398372613166,
+          "operator": "local",
+          "rate": 0.0012556233048053812,
+          "smoothed_rate": 0.0012556233048053812,
+          "start_query": 531
+        },
+        {
+          "before_distance": 82.5955810546875,
+          "calls": 96,
+          "distance": 73.21664428710938,
+          "end_query": 819,
+          "log_gain": 0.12053340487701615,
+          "operator": "local",
+          "rate": 0.0012555563008022515,
+          "smoothed_rate": 0.0012555898028038164,
+          "start_query": 723
+        },
+        {
+          "before_distance": 73.21664428710938,
+          "calls": 69,
+          "distance": 68.93392181396484,
+          "end_query": 888,
+          "log_gain": 0.060274385208777315,
+          "operator": "local",
+          "rate": 0.000873541814619961,
+          "smoothed_rate": 0.0010645658087118886,
+          "start_query": 819
+        }
+      ]
+    },
+    {
+      "image": "development_n02979186_00",
+      "status": "pass",
+      "calls": 900,
+      "runtime_seconds": 65.40186277299972,
+      "windows": {
+        "local": 257,
+        "global": 96
+      },
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": [
+        {
+          "before_distance": 15.913530349731445,
+          "calls": 96,
+          "distance": 13.550341606140137,
+          "end_query": 631,
+          "log_gain": 0.16075795495915376,
+          "operator": "local",
+          "rate": 0.0016745620308245184,
+          "smoothed_rate": 0.0016745620308245184,
+          "start_query": 535
+        },
+        {
+          "before_distance": 13.550341606140137,
+          "calls": 96,
+          "distance": 11.772439002990723,
+          "end_query": 823,
+          "log_gain": 0.14065063598419233,
+          "operator": "local",
+          "rate": 0.0014651107915020034,
+          "smoothed_rate": 0.0015698364111632608,
+          "start_query": 727
+        },
+        {
+          "before_distance": 11.772439002990723,
+          "calls": 65,
+          "distance": 10.863240242004395,
+          "end_query": 888,
+          "log_gain": 0.08037648697967384,
+          "operator": "local",
+          "rate": 0.0012365613381488283,
+          "smoothed_rate": 0.0014031988746560447,
+          "start_query": 823
+        }
+      ]
+    },
+    {
+      "image": "development_n03000684_00",
+      "status": "pass",
+      "calls": 900,
+      "runtime_seconds": 63.49815029599995,
+      "windows": {
+        "local": 259,
+        "global": 96
+      },
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": [
+        {
+          "before_distance": 39.56309509277344,
+          "calls": 96,
+          "distance": 30.467920303344727,
+          "end_query": 629,
+          "log_gain": 0.2612224048730858,
+          "operator": "local",
+          "rate": 0.002721066717427977,
+          "smoothed_rate": 0.002721066717427977,
+          "start_query": 533
+        },
+        {
+          "before_distance": 30.467920303344727,
+          "calls": 96,
+          "distance": 28.11480712890625,
+          "end_query": 821,
+          "log_gain": 0.08037795511502997,
+          "operator": "local",
+          "rate": 0.0008372703657815623,
+          "smoothed_rate": 0.0017791685416047697,
+          "start_query": 725
+        },
+        {
+          "before_distance": 28.11480712890625,
+          "calls": 67,
+          "distance": 25.943470001220703,
+          "end_query": 888,
+          "log_gain": 0.08037644141468407,
+          "operator": "local",
+          "rate": 0.0011996483793236428,
+          "smoothed_rate": 0.0014894084604642063,
+          "start_query": 821
+        }
+      ]
+    },
+    {
+      "image": "development_n03028079_02",
+      "status": "pass",
+      "calls": 900,
+      "runtime_seconds": 67.27125954199983,
+      "windows": {
+        "local": 263,
+        "global": 96
+      },
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": [
+        {
+          "before_distance": 222.0845184326172,
+          "calls": 96,
+          "distance": 164.218994140625,
+          "end_query": 625,
+          "log_gain": 0.3018571558900874,
+          "operator": "local",
+          "rate": 0.003144345373855077,
+          "smoothed_rate": 0.003144345373855077,
+          "start_query": 529
+        },
+        {
+          "before_distance": 164.218994140625,
+          "calls": 96,
+          "distance": 145.56661987304688,
+          "end_query": 817,
+          "log_gain": 0.12056701682456412,
+          "operator": "local",
+          "rate": 0.0012559064252558763,
+          "smoothed_rate": 0.002200125899555477,
+          "start_query": 721
+        },
+        {
+          "before_distance": 145.56661987304688,
+          "calls": 71,
+          "distance": 129.03219604492188,
+          "end_query": 888,
+          "log_gain": 0.1205718954000982,
+          "operator": "local",
+          "rate": 0.001698195709860538,
+          "smoothed_rate": 0.0019491608047080074,
+          "start_query": 817
+        }
+      ]
+    },
+    {
+      "image": "development_n03394916_00",
+      "status": "pass",
+      "calls": 900,
+      "runtime_seconds": 62.15910359700001,
+      "windows": {
+        "local": 264,
+        "global": 96
+      },
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": [
+        {
+          "before_distance": 363.4384765625,
+          "calls": 96,
+          "distance": 322.16070556640625,
+          "end_query": 624,
+          "log_gain": 0.12055952307314498,
+          "operator": "local",
+          "rate": 0.0012558283653452602,
+          "smoothed_rate": 0.0012558283653452602,
+          "start_query": 528
+        },
+        {
+          "before_distance": 322.16070556640625,
+          "calls": 96,
+          "distance": 268.8659973144531,
+          "end_query": 816,
+          "log_gain": 0.18083740241666688,
+          "operator": "local",
+          "rate": 0.00188372294184028,
+          "smoothed_rate": 0.00156977565359277,
+          "start_query": 720
+        },
+        {
+          "before_distance": 268.8659973144531,
+          "calls": 72,
+          "distance": 248.10182189941406,
+          "end_query": 888,
+          "log_gain": 0.08037387015755244,
+          "operator": "local",
+          "rate": 0.0011163037521882283,
+          "smoothed_rate": 0.0013430397028904991,
+          "start_query": 816
+        }
+      ]
+    },
+    {
+      "image": "development_n03417042_00",
+      "status": "pass",
+      "calls": 900,
+      "runtime_seconds": 61.923171095999805,
+      "windows": {
+        "local": 263,
+        "global": 96
+      },
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": [
+        {
+          "before_distance": 232.82943725585938,
+          "calls": 96,
+          "distance": 175.70050048828125,
+          "end_query": 625,
+          "log_gain": 0.281525312829,
+          "operator": "local",
+          "rate": 0.00293255534196875,
+          "smoothed_rate": 0.00293255534196875,
+          "start_query": 529
+        },
+        {
+          "before_distance": 175.70050048828125,
+          "calls": 96,
+          "distance": 143.68389892578125,
+          "end_query": 817,
+          "log_gain": 0.20116510336607016,
+          "operator": "local",
+          "rate": 0.0020954698267298976,
+          "smoothed_rate": 0.0025140125843493236,
+          "start_query": 721
+        },
+        {
+          "before_distance": 143.68389892578125,
+          "calls": 71,
+          "distance": 119.91226196289062,
+          "end_query": 888,
+          "log_gain": 0.18085541530974844,
+          "operator": "local",
+          "rate": 0.0025472593705598372,
+          "smoothed_rate": 0.0025306359774545806,
+          "start_query": 817
+        }
+      ]
+    },
+    {
+      "image": "development_n03425413_00",
+      "status": "pass",
+      "calls": 900,
+      "runtime_seconds": 60.69992786700004,
+      "windows": {
+        "local": 96,
+        "global": 36
+      },
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": [
+        {
+          "before_distance": 2399.432373046875,
+          "calls": 96,
+          "distance": 2043.11669921875,
+          "end_query": 852,
+          "log_gain": 0.16075576244893952,
+          "operator": "local",
+          "rate": 0.0016745391921764534,
+          "smoothed_rate": 0.0016745391921764534,
+          "start_query": 756
+        }
+      ]
+    },
+    {
+      "image": "development_n03445777_01",
+      "status": "pass",
+      "calls": 900,
+      "runtime_seconds": 59.795092131000274,
+      "windows": {
+        "local": 264,
+        "global": 96
+      },
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": [
+        {
+          "before_distance": 352.97015380859375,
+          "calls": 96,
+          "distance": 282.8340148925781,
+          "end_query": 624,
+          "log_gain": 0.221523297482441,
+          "operator": "local",
+          "rate": 0.0023075343487754273,
+          "smoothed_rate": 0.0023075343487754273,
+          "start_query": 528
+        },
+        {
+          "before_distance": 282.8340148925781,
+          "calls": 96,
+          "distance": 245.70516967773438,
+          "end_query": 816,
+          "log_gain": 0.14072788584379248,
+          "operator": "local",
+          "rate": 0.001465915477539505,
+          "smoothed_rate": 0.001886724913157466,
+          "start_query": 720
+        },
+        {
+          "before_distance": 245.70516967773438,
+          "calls": 72,
+          "distance": 222.17010498046875,
+          "end_query": 888,
+          "log_gain": 0.10068899280312549,
+          "operator": "local",
+          "rate": 0.0013984582333767428,
+          "smoothed_rate": 0.0016425915732671045,
+          "start_query": 816
+        }
+      ]
+    },
+    {
+      "image": "development_n03888257_00",
+      "status": "pass",
+      "calls": 900,
+      "runtime_seconds": 62.01458295299926,
+      "windows": {
+        "local": 220,
+        "global": 96
+      },
+      "coarse_capture": null,
+      "coarse_reanchors": null,
+      "gains": [
+        {
+          "before_distance": 904.9568481445312,
+          "calls": 96,
+          "distance": 770.5684814453125,
+          "end_query": 668,
+          "log_gain": 0.16075873091604378,
+          "operator": "local",
+          "rate": 0.0016745701137087894,
+          "smoothed_rate": 0.0016745701137087894,
+          "start_query": 572
+        },
+        {
+          "before_distance": 770.5684814453125,
+          "calls": 96,
+          "distance": 642.9443969726562,
+          "end_query": 860,
+          "log_gain": 0.18107028392189206,
+          "operator": "local",
+          "rate": 0.0018861487908530424,
+          "smoothed_rate": 0.0017803594522809159,
+          "start_query": 764
+        },
+        {
+          "before_distance": 642.9443969726562,
+          "calls": 28,
+          "distance": 617.6160278320312,
+          "end_query": 888,
+          "log_gain": 0.04019129594254045,
+          "operator": "local",
+          "rate": 0.0014354034265193019,
+          "smoothed_rate": 0.001607881439400109,
+          "start_query": 860
+        }
+      ]
+    }
+  ]
+}
