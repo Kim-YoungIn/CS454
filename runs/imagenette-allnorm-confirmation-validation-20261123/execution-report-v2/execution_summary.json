@@ -1,0 +1,557 @@
+{
+  "overall": {
+    "cases": 40,
+    "independently_verified_successes": 40,
+    "success_rate": 1.0,
+    "verification_statuses": {
+      "pass": 40
+    },
+    "source_statuses": {
+      "pass": 40
+    },
+    "entry_seconds": {
+      "count": 40,
+      "median": 162.01225264799996,
+      "minimum": 34.042438255999514,
+      "maximum": 226.82504647199949,
+      "total": 6097.534919337
+    },
+    "grading_seconds": {
+      "count": 40,
+      "median": 162.10163569450015,
+      "minimum": 34.12388576699959,
+      "maximum": 228.10975700699964,
+      "total": 6108.157837500998
+    },
+    "actual_queries": {
+      "count": 40,
+      "median": 1664.0,
+      "minimum": 498.0,
+      "maximum": 2515.0,
+      "total": 65490.0
+    },
+    "failure_inclusive_grader_score_mean": null
+  },
+  "per_norm": {
+    "linf": {
+      "cases": 10,
+      "independently_verified_successes": 10,
+      "success_rate": 1.0,
+      "verification_statuses": {
+        "pass": 10
+      },
+      "source_statuses": {
+        "pass": 10
+      },
+      "entry_seconds": {
+        "count": 10,
+        "median": 162.01225264799996,
+        "minimum": 159.28392439599975,
+        "maximum": 162.80059957400044,
+        "total": 1614.9551315370013
+      },
+      "grading_seconds": {
+        "count": 10,
+        "median": 162.10163569450015,
+        "minimum": 159.37709531099972,
+        "maximum": 162.86890979600048,
+        "total": 1615.7702474859993
+      },
+      "actual_queries": {
+        "count": 10,
+        "median": 1867.0,
+        "minimum": 1555.0,
+        "maximum": 2515.0,
+        "total": 19567.0
+      },
+      "failure_inclusive_grader_score_mean": 0.03322145938873291
+    },
+    "l2": {
+      "cases": 10,
+      "independently_verified_successes": 10,
+      "success_rate": 1.0,
+      "verification_statuses": {
+        "pass": 10
+      },
+      "source_statuses": {
+        "pass": 10
+      },
+      "entry_seconds": {
+        "count": 10,
+        "median": 162.20155337300002,
+        "minimum": 159.40738727899952,
+        "maximum": 163.14947284200025,
+        "total": 1619.1259078139992
+      },
+      "grading_seconds": {
+        "count": 10,
+        "median": 162.34536418300013,
+        "minimum": 159.49661655599994,
+        "maximum": 163.25649615600014,
+        "total": 1620.2148766640003
+      },
+      "actual_queries": {
+        "count": 10,
+        "median": 1652.0,
+        "minimum": 1564.0,
+        "maximum": 2443.0,
+        "total": 17922.0
+      },
+      "failure_inclusive_grader_score_mean": 451.52672414183616
+    },
+    "l0": {
+      "cases": 10,
+      "independently_verified_successes": 10,
+      "success_rate": 1.0,
+      "verification_statuses": {
+        "pass": 10
+      },
+      "source_statuses": {
+        "pass": 10
+      },
+      "entry_seconds": {
+        "count": 10,
+        "median": 164.04635391500005,
+        "minimum": 34.042438255999514,
+        "maximum": 164.05736888699994,
+        "total": 1397.4514466169994
+      },
+      "grading_seconds": {
+        "count": 10,
+        "median": 164.13345401099969,
+        "minimum": 34.12388576699959,
+        "maximum": 164.17239790000076,
+        "total": 1398.362789724999
+      },
+      "actual_queries": {
+        "count": 10,
+        "median": 1764.0,
+        "minimum": 498.0,
+        "maximum": 2435.0,
+        "total": 16516.0
+      },
+      "failure_inclusive_grader_score_mean": 36.3
+    },
+    "perlin": {
+      "cases": 10,
+      "independently_verified_successes": 10,
+      "success_rate": 1.0,
+      "verification_statuses": {
+        "pass": 10
+      },
+      "source_statuses": {
+        "pass": 10
+      },
+      "entry_seconds": {
+        "count": 10,
+        "median": 141.09414558399976,
+        "minimum": 105.67226360299992,
+        "maximum": 226.82504647199949,
+        "total": 1466.0024333689998
+      },
+      "grading_seconds": {
+        "count": 10,
+        "median": 141.7951438064997,
+        "minimum": 106.33568890099923,
+        "maximum": 228.10975700699964,
+        "total": 1473.8099236259995
+      },
+      "actual_queries": {
+        "count": 10,
+        "median": 1031.5,
+        "minimum": 997.0,
+        "maximum": 1756.0,
+        "total": 11485.0
+      },
+      "failure_inclusive_grader_score_mean": 0.22066208145540966
+    }
+  },
+  "execution_strata": {
+    "serial_unpinned_four_threads": {
+      "overall": {
+        "cases": 11,
+        "independently_verified_successes": 11,
+        "success_rate": 1.0,
+        "verification_statuses": {
+          "pass": 11
+        },
+        "source_statuses": {
+          "pass": 11
+        },
+        "entry_seconds": {
+          "count": 11,
+          "median": 160.9641435929998,
+          "minimum": 34.042438255999514,
+          "maximum": 164.0550406679995,
+          "total": 1539.1431018939988
+        },
+        "grading_seconds": {
+          "count": 11,
+          "median": 161.05060875599975,
+          "minimum": 34.12388576699959,
+          "maximum": 164.140532765,
+          "total": 1541.4042918269975
+        },
+        "actual_queries": {
+          "count": 11,
+          "median": 2375.0,
+          "minimum": 498.0,
+          "maximum": 2515.0,
+          "total": 21055.0
+        },
+        "failure_inclusive_grader_score_mean": null
+      },
+      "per_norm": {
+        "linf": {
+          "cases": 3,
+          "independently_verified_successes": 3,
+          "success_rate": 1.0,
+          "verification_statuses": {
+            "pass": 3
+          },
+          "source_statuses": {
+            "pass": 3
+          },
+          "entry_seconds": {
+            "count": 3,
+            "median": 162.46352864300025,
+            "minimum": 160.7995210539998,
+            "maximum": 162.80059957400044,
+            "total": 486.0636492710005
+          },
+          "grading_seconds": {
+            "count": 3,
+            "median": 162.51976808699965,
+            "minimum": 160.86064156299972,
+            "maximum": 162.86890979600048,
+            "total": 486.24931944599984
+          },
+          "actual_queries": {
+            "count": 3,
+            "median": 2501.0,
+            "minimum": 2328.0,
+            "maximum": 2515.0,
+            "total": 7344.0
+          },
+          "failure_inclusive_grader_score_mean": 0.02690112590789795
+        },
+        "l2": {
+          "cases": 2,
+          "independently_verified_successes": 2,
+          "success_rate": 1.0,
+          "verification_statuses": {
+            "pass": 2
+          },
+          "source_statuses": {
+            "pass": 2
+          },
+          "entry_seconds": {
+            "count": 2,
+            "median": 161.81358041099975,
+            "minimum": 160.9641435929998,
+            "maximum": 162.6630172289997,
+            "total": 323.6271608219995
+          },
+          "grading_seconds": {
+            "count": 2,
+            "median": 161.89269769999964,
+            "minimum": 161.05060875599975,
+            "maximum": 162.73478664399954,
+            "total": 323.7853953999993
+          },
+          "actual_queries": {
+            "count": 2,
+            "median": 2409.0,
+            "minimum": 2375.0,
+            "maximum": 2443.0,
+            "total": 4818.0
+          },
+          "failure_inclusive_grader_score_mean": 158.5329691171646
+        },
+        "l0": {
+          "cases": 3,
+          "independently_verified_successes": 3,
+          "success_rate": 1.0,
+          "verification_statuses": {
+            "pass": 3
+          },
+          "source_statuses": {
+            "pass": 3
+          },
+          "entry_seconds": {
+            "count": 3,
+            "median": 164.026898006,
+            "minimum": 34.042438255999514,
+            "maximum": 164.0550406679995,
+            "total": 362.124376929999
+          },
+          "grading_seconds": {
+            "count": 3,
+            "median": 164.08492611099973,
+            "minimum": 34.12388576699959,
+            "maximum": 164.140532765,
+            "total": 362.3493446429993
+          },
+          "actual_queries": {
+            "count": 3,
+            "median": 2434.0,
+            "minimum": 498.0,
+            "maximum": 2435.0,
+            "total": 5367.0
+          },
+          "failure_inclusive_grader_score_mean": 23.0
+        },
+        "perlin": {
+          "cases": 3,
+          "independently_verified_successes": 3,
+          "success_rate": 1.0,
+          "verification_statuses": {
+            "pass": 3
+          },
+          "source_statuses": {
+            "pass": 3
+          },
+          "entry_seconds": {
+            "count": 3,
+            "median": 121.54758452799979,
+            "minimum": 105.67226360299992,
+            "maximum": 140.10806674000014,
+            "total": 367.32791487099985
+          },
+          "grading_seconds": {
+            "count": 3,
+            "median": 121.9498135470003,
+            "minimum": 106.33568890099923,
+            "maximum": 140.73472988999947,
+            "total": 369.020232337999
+          },
+          "actual_queries": {
+            "count": 3,
+            "median": 1033.0,
+            "minimum": 997.0,
+            "maximum": 1496.0,
+            "total": 3526.0
+          },
+          "failure_inclusive_grader_score_mean": 0.2525168451769751
+        }
+      }
+    },
+    "parallel_pinned_four_cores_two_workers": {
+      "overall": {
+        "cases": 29,
+        "independently_verified_successes": 29,
+        "success_rate": 1.0,
+        "verification_statuses": {
+          "pass": 29
+        },
+        "source_statuses": {
+          "pass": 29
+        },
+        "entry_seconds": {
+          "count": 29,
+          "median": 162.0227164299995,
+          "minimum": 52.690824331999465,
+          "maximum": 226.82504647199949,
+          "total": 4558.391817443001
+        },
+        "grading_seconds": {
+          "count": 29,
+          "median": 162.10307029599971,
+          "minimum": 52.813366547999976,
+          "maximum": 228.10975700699964,
+          "total": 4566.753545674001
+        },
+        "actual_queries": {
+          "count": 29,
+          "median": 1646.0,
+          "minimum": 498.0,
+          "maximum": 1963.0,
+          "total": 44435.0
+        },
+        "failure_inclusive_grader_score_mean": null
+      },
+      "per_norm": {
+        "linf": {
+          "cases": 7,
+          "independently_verified_successes": 7,
+          "success_rate": 1.0,
+          "verification_statuses": {
+            "pass": 7
+          },
+          "source_statuses": {
+            "pass": 7
+          },
+          "entry_seconds": {
+            "count": 7,
+            "median": 162.00178886600042,
+            "minimum": 159.28392439599975,
+            "maximum": 162.2700962889994,
+            "total": 1128.8914822660008
+          },
+          "grading_seconds": {
+            "count": 7,
+            "median": 162.10020109300058,
+            "minimum": 159.37709531099972,
+            "maximum": 162.37230810899928,
+            "total": 1129.5209280399995
+          },
+          "actual_queries": {
+            "count": 7,
+            "median": 1762.0,
+            "minimum": 1555.0,
+            "maximum": 1963.0,
+            "total": 12223.0
+          },
+          "failure_inclusive_grader_score_mean": 0.03593017373766218
+        },
+        "l2": {
+          "cases": 8,
+          "independently_verified_successes": 8,
+          "success_rate": 1.0,
+          "verification_statuses": {
+            "pass": 8
+          },
+          "source_statuses": {
+            "pass": 8
+          },
+          "entry_seconds": {
+            "count": 8,
+            "median": 162.20155337300002,
+            "minimum": 159.40738727899952,
+            "maximum": 163.14947284200025,
+            "total": 1295.4987469919997
+          },
+          "grading_seconds": {
+            "count": 8,
+            "median": 162.34536418300013,
+            "minimum": 159.49661655599994,
+            "maximum": 163.25649615600014,
+            "total": 1296.429481264001
+          },
+          "actual_queries": {
+            "count": 8,
+            "median": 1630.5,
+            "minimum": 1564.0,
+            "maximum": 1741.0,
+            "total": 13104.0
+          },
+          "failure_inclusive_grader_score_mean": 524.775162898004
+        },
+        "l0": {
+          "cases": 7,
+          "independently_verified_successes": 7,
+          "success_rate": 1.0,
+          "verification_statuses": {
+            "pass": 7
+          },
+          "source_statuses": {
+            "pass": 7
+          },
+          "entry_seconds": {
+            "count": 7,
+            "median": 164.0474074220001,
+            "minimum": 52.690824331999465,
+            "maximum": 164.05736888699994,
+            "total": 1035.3270696870004
+          },
+          "grading_seconds": {
+            "count": 7,
+            "median": 164.13855940299982,
+            "minimum": 52.813366547999976,
+            "maximum": 164.17239790000076,
+            "total": 1036.0134450819996
+          },
+          "actual_queries": {
+            "count": 7,
+            "median": 1724.0,
+            "minimum": 498.0,
+            "maximum": 1908.0,
+            "total": 11149.0
+          },
+          "failure_inclusive_grader_score_mean": 42.0
+        },
+        "perlin": {
+          "cases": 7,
+          "independently_verified_successes": 7,
+          "success_rate": 1.0,
+          "verification_statuses": {
+            "pass": 7
+          },
+          "source_statuses": {
+            "pass": 7
+          },
+          "entry_seconds": {
+            "count": 7,
+            "median": 148.13616654500038,
+            "minimum": 127.89812393000011,
+            "maximum": 226.82504647199949,
+            "total": 1098.674518498
+          },
+          "grading_seconds": {
+            "count": 7,
+            "median": 149.20137158499983,
+            "minimum": 128.330032803,
+            "maximum": 228.10975700699964,
+            "total": 1104.7896912880005
+          },
+          "actual_queries": {
+            "count": 7,
+            "median": 1030.0,
+            "minimum": 1005.0,
+            "maximum": 1756.0,
+            "total": 7959.0
+          },
+          "failure_inclusive_grader_score_mean": 0.20701003986045305
+        }
+      }
+    }
+  },
+  "cpu_groups": [
+    "0,4,8,12",
+    "2,6,10,14"
+  ],
+  "limitations": "The first11 terminal trials used unrestricted scheduling and four Torch threads; the remaining29 used two concurrent workers, each pinned to four distinct physical cores with one SMT thread per core. The groups do not overlap physical cores. Memory bandwidth, CPU package power, frequency and host activity remain shared. These strata contain different cases and were not randomized between execution modes. Their timing, call counts, distances and success rates are descriptive; no same-case counterfactual establishes speedup, slowdown or an algorithmic gain. This is one seed and one confirmation photograph per each of ten classes. Imagenette may overlap VGG pretraining. All40 cases, including failures, remain in the total success denominator; every norm has ten cases. Distance units differ across norms and must not be compared across attacks. The confirmation bank is now consumed and must not be relabeled fresh after tuning.",
+  "grading": "Mandatory attack+distance/render+classification uses180/300 seconds. Frozen optimizer165/270 targets are separate diagnostics. Failed cases retain999999999.",
+  "score_statistics": "Scores have different units; aggregate means are computed within one norm only. Mixed-norm overall/stratum score means are deliberately null.",
+  "timing_statistics": "Runtime totals are sums of recorded per-case wall times, not elapsed makespan or CPU seconds. Parallel case intervals overlap. Query totals are actual model-evaluation examples as recorded by each attack.",
+  "provenance_sha256": {
+    "runs/imagenette-allnorm-confirmation-20261123/protocol.json": "8649b119cbb65980b3c90c524f0135e8949dc255a97281d37e62e2ba7b24a902",
+    "runs/imagenette-allnorm-confirmation-20261123/manifest.csv": "899f0464ecafa74e69defb054becdea8a0f7083c91e07c88284391592b28f506",
+    "runs/imagenette-allnorm-confirmation-20261123/source_freeze.json": "19dd5c32607d8c55ff0938ddd5c4af13e9d07a2f455a3a7e79e594b285891060",
+    "runs/imagenette-allnorm-confirmation-20261123/environment.json": "de3ddb369e6b7857051a255aa8c8c42e161922844f9fa4ea2f9571f30583d809",
+    "runs/imagenette-allnorm-confirmation-20261123/results.csv": "05e4a4aac6a44b69c5360a3249b3e48dfb150c345f886f1c9634795e11013147",
+    "runs/imagenette-allnorm-confirmation-validation-20261123/report/verification.csv": "bb793222c15c48997650293b2842ebbd5607013cd140026df26aa85b2ef50c1e",
+    "runs/imagenette-allnorm-confirmation-20261123/execution_amendment.json": "81abf7d377a4aa6ef00abfa1eac4626a88986657b32e54330929de7997e70d41",
+    "/home/archant/projects/cs454-adversarial/research/report_allnorm_execution.py": "37a9f2cb2e1088ac151c298f46bac48ea4da74b604493cfcc718bc0e0b6a972a",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n02979186_03_l2/execution.json": "bee32d39e6e12724bc77139fc1842ec7d5a53121119749e3f56700b39fa6c0ab",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03000684_00_perlin/execution.json": "c7db82124a66e3bb5837c0e936005517974607da4a657937aa4768b4a05ecc50",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03000684_00_linf/execution.json": "cd6da5611f573439cc278f79e1ed0a6cdc904df4d0f789fd1a32aeb9b3b97cb4",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03000684_00_l2/execution.json": "d9a81d7d7760b9a6ea2d3eb5596a44726002af64db322d73972c648988d56b50",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03000684_00_l0/execution.json": "fbbd6fd2a169a485ebabb0c1e73cdf0ce37ae99dacdc095e470e4d46e8125ec1",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03028079_00_linf/execution.json": "6fb656d854648d1e8c997d6b2bb7ce2572fe98113df22e7d848109a5f63f1135",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03028079_00_l2/execution.json": "69c1b3569dab4a393df2ed2f2cfe0e397e0c7c84fa319bf175da2ef5d00362c0",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03028079_00_l0/execution.json": "8d72ec962c3ffd6d1829c4632e3f44d35c554703a376f94191ced9aa91504ce2",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03028079_00_perlin/execution.json": "e9eeb03d17f5b5726ba8c19bc5679f999129410b1a6f37a937aa94210c7d7c9a",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03394916_01_l2/execution.json": "f4b4314f0015ed3e85166434274381e572690a4d7d65bf5170edf43e956c0f52",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03394916_01_l0/execution.json": "5fd5ac2df05d69ee030c058c6268d2d3bbab18f8438f2de6d524875b2c717970",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03394916_01_perlin/execution.json": "adbedb2f23bdb2661a94e26d4b3957b55a61d65902c5728adb87a5578f8aec5a",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03394916_01_linf/execution.json": "0cf7375466dec7e97df120bfabe25a70a345e23dbc7cc1890b27ff8d9711bf19",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03417042_00_l0/execution.json": "c66ffe3b9c27a6b5e0f0fb0ca85de702569a0ac8044baacf87ec661ee921f7b1",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03417042_00_perlin/execution.json": "d318d173ee01e04b9626f9444277e4fbad19b5eac0aa33eb295037a3c32ea4dc",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03417042_00_linf/execution.json": "782f76a95491e072ed3b83e8f6c29bc18b51e6a5e3e53a0ba887a30a49023a56",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03417042_00_l2/execution.json": "6448fc0a87002dcbd0a338395e061873ec6a8b18846d90d69ee3a4f3907b5647",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03425413_00_perlin/execution.json": "375ea7292b40882f0f41ae66e4e277d703928ecb3149753966e1d96769919064",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03425413_00_linf/execution.json": "b9b49e79778d44a4347d20a27f0ec8b732f8d5d22888b2984b828c1eef900fd3",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03425413_00_l2/execution.json": "4f06a049967dac93a6aa7d160b2bab5dc831e4a8ba33c1e8008304a5ed70ecb5",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03425413_00_l0/execution.json": "3ec2bd5176e75d0fb1e22c8f9589b25dc80266bdb8e71755f556364f4ef6635f",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03445777_00_linf/execution.json": "7949986456203f748e0127b64f32be661d588a2787363bd18a041876662dc259",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03445777_00_l2/execution.json": "159969fc24c1bfb9f85cd95d9e11044e78ffc0f4256080d79f4c893efd42e4a2",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03445777_00_l0/execution.json": "244d064c4f925e7fe751bc8b91fe9ad83ca76c7f1509d88bd0d390633ab95106",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03445777_00_perlin/execution.json": "940cffd5e84ea8ae370f439e5273c98d95a72439de668c829ba9f9f538724f52",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03888257_00_l2/execution.json": "b62dd9957a956107856870a8407fb9d6b2b68ce1e047ffd581cba55acfa430bd",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03888257_00_l0/execution.json": "8171fb58b1eceb807a645342bf4e667bcfcd7bd9f1ff5668667c7daed70fb374",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03888257_00_perlin/execution.json": "35bfbd6bbfd056060921e0a45317628c6bef9dae19c76eb3b0548526be916749",
+    "runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03888257_00_linf/execution.json": "6c7a7152a48739161028791ad3e33aca81c48d90b32fdc1604684c0ccb475823",
+    "runs/imagenette-allnorm-confirmation-validation-20261123/report/summary.json": "3e44d28aa7d5e887711b970d1bef93782ba3d4f8c96a276ed8b8d658a9c78cc1"
+  }
+}

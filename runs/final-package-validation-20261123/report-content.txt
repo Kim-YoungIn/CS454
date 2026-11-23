@@ -1,0 +1,417 @@
+CS454 / ASSIGNMENT 3
+
+Genetic Algorithms for<br/>Adversarial Testing
+
+Implementation, development evidence and final evaluation<br/>23 November 2026
+
+Executive summary
+
+The project implements gradient-free genetic searches for a fixed pretrained VGG-11, using different perturbation representations for L∞, L2 and L0 and an optional Perlin-fog genotype. A protected successful archive separates search fitness from the final objective. The submitted bundle contains 15 required adversarial tensors and five bonus fog cases, their original classification visualizations, legal fog expressions and the two required implementations.
+
+The strongest verified source was retained after two later global/local scheduling designs failed selection. A final, frozen Imagenette assessment succeeded on all 10 inputs for each of four attacks (40/40), including independent one-thread verification. This supports input transfer for the tested configuration; it neither establishes universal generalization nor proves that the perturbations are globally minimal.
+
+1. Task, baseline and scoring contract
+
+The supplied ZIP and README define the interfaces and scoring [1]. Both original attack modules contain unimplemented entry points. Two independent clean CPU runs reproduced all five expected classes; that established the reference predictions, not an adversarial optimization baseline. The final code preserves the instructor utilities, grader and the three supplied fog-rendering functions.
+
+Let x be the normalized 1 × 3 × 224 × 224 tensor returned by the unchanged loader. That loader resizes the image and applies the VGG weight transforms; distances are not RGB 8-bit pixel distances. The attack infers y = argmax p(x), rather than looking up a filename or label. Candidate images are clipped to [−3, 3], matching the model wrapper. A successful return must change the actual argmax.
+
+D∞(δ) = max<sub>i</sub> |δ<sub>i</sub>| &nbsp;&nbsp; D2(δ) = Σ<sub>i</sub> δ<sub>i</sub>² &nbsp;&nbsp; D0(δ) = Σ<sub>i</sub> 1[δ<sub>i</sub> ≠ 0]
+
+<b>Two important grading details:</b> the supplied “L2” helper reports the sum of squares, not its square root; L0 counts changed channel elements, not RGB pixels. The five seed reference IDs are knot 616, mink 357, orca 148, sock 806 and tank 847.
+
+Adversarial-example research motivates small, deliberate perturbations [2,3]; sparse evolutionary attacks motivate support search [4], and weather transformations motivate the optional fog task [5]. This work does not implement or benchmark those papers’ algorithms; all measured comparisons below are between this project’s own GA variants.
+
+2. Shared search and dense perturbations
+
+2.1 Fitness, genetic operators and protected feasibility
+
+The fitness is the untargeted log-probability margin below, with probabilities floored at 10<super>−35</super> for numerical stability. A negative margin means a rival outranks the reference. Archive acceptance still checks the actual argmax and authoritative distance, so fitness ties or later infeasible candidates cannot erase a valid result.
+
+m(x′) = log p<sub>y</sub>(x′) − max<sub>k ≠ y</sub> log p<sub>k</sub>(x′)
+
+Dense search uses four truncation-selected elites. The best parent is chosen with probability 0.8; otherwise a parent is drawn from the elite pool. Spatial crossover occurs periodically and mutation introduces new structure. Infeasible elites may guide search at a harder radius, while a separate archive retains the lowest-distance classifier-verified image. Scalar bisection and explicit deletion are deterministic refinements around the GA, not genetic crossover or gradient estimates.
+
+2.2 L∞: signed blocks and radius contraction
+
+The chromosome is a full perturbation tensor bounded by its maximum component. Initial vertical sign stripes provide inexpensive diversity. A mutation replaces a randomly positioned square with independently signed channel values; periodic crossover copies another elite’s block. The initial radius is 0.4. After success, the target contracts by 0.8; repeated failure before discovery can expand it by 1.6. The spatial fraction decreases within a stage, permitting finer changes. Up to 12 final scalar-bisection evaluations reduce the successful direction without losing feasibility.
+
+2.3 L2: structured energy and delayed boundary evolution
+
+Early additive color-block mutations were unreliable. The selected representation initializes smooth positive/negative lobes over spatial tiles. Mutation recovers energy from two windows, handles their overlap once, and reallocates energy into a perturbed direction while projecting to the allowed Euclidean radius. The search starts at radius 30, with 0.8 contractions after success. The reported score is that radius’s squared-distance counterpart.
+
+The final policy keeps global exploration for at least <b>512 main proposals and three successful stages</b>. It then evolves feasible directions near the boundary: target radius 0.99√D2, a 0.25 blend of parent and mutated direction, and up to three extra 0.98 scalar contractions after an accepted direction. Every probe is a charged model query; a failed probe never becomes the next feasible parent. Stagnation reduces the angular blend and can relax an overly hard boundary target.
+
+Control | Final default / role
+
+Norm budget | 165 s, four Torch threads; configurable hard maximum 170 s
+
+Cleanup reserve | Observed-forward-time slack and reserved final refinement calls
+
+Randomness | Default seed 454; separate fixed seeds used in recorded comparisons
+
+Control route | CS454_L2_SEARCH=original selects the preserved global-only GA
+
+3. Sparse changes and the fog genotype
+
+3.1 L0: discovery, hierarchy, restarts and support crossover
+
+Sparse discovery evolves large-valued channel-element changes. Once an adversary exists, discovery is bounded using a 0.55 fraction and a 900-call reference allocation, retaining the full fallback if no success has been found. This avoids spending most of the budget on a marginally smaller but difficult-to-prune discovery parent.
+
+Refinement first tests whole-channel and spatial-group deletion. A failed group is split along its widest coordinate; accepted deletions preserve misclassification. Singleton deletions are revisited after other elements disappear, because classifier interactions can make an earlier failed deletion possible later. “Deletion minimal” therefore refers to tested removals at the current endpoint values, not a proof of the globally smallest support.
+
+Protected restarts create independent parents. A further GA searches fixed-cardinality subsets of their combined loci: the target is one element smaller than the stronger parent. Four elites retain low-margin subsets, locus-exchange mutations and crossover/repair preserve target cardinality, and accepted children lower the target again. Overlapping loci inherit the stronger parent’s endpoint rather than adding amplitudes. The exact globally best feasible tensor survives failed restarts or offspring.
+
+3.2 Fog: mixtures followed by integer-octave evolution
+
+A genotype g is a list of positive-integer octaves and positive finite magnitudes, with at most 50 pairs. It produces the instructor’s deterministic Perlin fields, with generator seed 1. Opacity is clipped to [0,1] before blending toward the supplied normalized white color. The grading cost is only the sum of magnitudes; it is not an Lp image distance.
+
+F<sub>g</sub> = Σ<sub>j</sub> a<sub>j</sub>P<sub>oⱼ</sub>, &nbsp; α = clip(F<sub>g</sub>, 0, 1), &nbsp; x′ = (1 − α)x + αw, &nbsp; D<sub>fog</sub>(g) = Σ<sub>j</sub> a<sub>j</sub>
+
+The first GA uses 16 candidates over octave layers {1,2,3,4,6,8,12,24,32,48,64,96}. Pure layers and random mixtures seed the population; successful directions receive scalar boundary searches. Four parents are selected, crossover mixes their weights, and Gaussian mutations alternate broad and fine scales. The mixture phase has an 80-generation allowance and a stagnation stop. The remaining time evolves integer octaves 1–128 for up to 24 additional generations, using arithmetic crossover, local/global mutation and scalar magnitude reduction.
+
+Layers are cached only within a search and model evaluations use batches of at most four. Fast search arithmetic is never substituted for the grading renderer: the final genotype is regenerated and classified exactly, with a protected verified mixture fallback. The common fog target is 270 s, below the 300 s limit; the final confirmation also timed mandatory exact rendering and classification. This is the assignment’s fog-like perturbation, not a calibrated atmospheric visibility model.
+
+4. Development decisions and rejected approaches
+
+Development followed a verified-baseline → hypothesis → controlled comparison → retention/rejection cycle. Equal query ceilings are distinguished from equal actual calls; equal time ceilings are distinguished from equal runtimes. The original starter’s failure sentinel 999999999 is not a measured perturbation score, and clean classification accuracy is not attack success.
+
+Investigation | Measured evidence | Interpretation
+
+Dense representation | At 450-call ceilings, additive L2 succeeds 2/5; energy variant 5/5. | Energy adopted; a 12-call failure-accounting fix is a small confound.
+
+Hierarchical L0 pruning | Tank: 2240 → 99 at the 900-call ceiling. Ten image/seed pairs favor refinement. | Prune successful support rather than rely on random discovery alone.
+
+Compact rectangle L0 | Tank: 6228 versus 2240 at the same seed / 900-call ceiling. | Rejected; a compact genotype did not imply better sparse search.
+
+Discovery caching | One tank variant regresses 99 → 130 after changing discovery allocation. | Fewer repeated calls can change trajectory; caching is not automatically a quality gain.
+
+Parental support GA | Seed 455, 1800-call ceilings: mink 41 → 31; sock 46 → 43. | Uses otherwise idle allowance; actual candidate work is larger.
+
+Full-prefix fog extension | 90-s ceiling: mink .55664 → .45596; sock .16992 → .12345; tank .97656 → .90342. | Spends unused convergence time; not equal actual runtime or per-query evidence.
+
+The first 900-call L0 tank result of 2240 and the final saved result of 84 use different methods and budgets. They demonstrate the evolution of the saved artifact, not a controlled efficiency ratio. Similarly, some final fog artifacts originated in 90-second runs, while the final function permits 270 seconds. Successful phenotype protection was retained throughout.
+
+Engineering checks that changed decisions
+
+A noncontiguous input initially made flattened indexed writes modify a copy instead of the candidate; the implementation now makes the input contiguous. Export tests also caught a one-ulp endpoint change when reconstructing x + (image − x); the archive now preserves the exact evaluated tensor. These correctness checks matter near a classification boundary. Shape, dtype, finite values, thread restoration, randomness, archive protection and exact serialization are tested separately from real-model performance.
+
+Later experiments showed that evidence from the five supplied images was insufficient for policy selection. The next page documents why the selected delayed-boundary method was retained despite mixed labelled development results, and why two scheduling alternatives were rejected.
+
+5. Generalization-driven selection of L2
+
+The first external bank used eight fixed scikit-image fixtures: four development and four confirmation inputs. It used clean argmax as the attack reference without semantic eligibility filtering. Some inputs had low-confidence or semantically inconsistent clean predictions. The following ratios are candidate/control <b>squared-distance</b> ratios; lower is better.
+
+Comparison | Protocol | Wins | Geom. ratio
+
+Early boundary switch / global-only | 4 fixture development images, 900 calls | 1/4 | 1.400
+
+512-proposal policy / global-only | 4 fixture development images, 900 calls | 4/4 | 0.776
+
+Frozen selected policy / global-only | 4 fixture confirmation images, seed 455, 900 calls | 4/4 | 0.788
+
+Same frozen policy / global-only | 2 predeclared fixture confirmation images, 165 s | 2/2 | 0.599
+
+Current policy / global-only | 10 labelled development images, seed 456, 900 calls | 5/10 | 1.040
+
+First reversible windows / current | Same 10 labelled development images, 900 calls | 0/10 | 1.176
+
+State-preserving windows / current | Same 10 labelled development images, 900 calls | 2/10 | 1.050
+
+The 512-proposal requirement corrected premature local refinement on the first bank. However, the later ten-image labelled audit had a worst current/global-only ratio of 1.638. Thus the earlier confirmation result supported that small bank, not universal superiority. Fixed-query controls were reused only when source, seed, input and settings matched; an independent recovery replay reproduced a complete 900-call trajectory and final tensor exactly.
+
+Reversible allocation did not pass the actual-time gate
+
+The first window design alternated 96-call global/local windows using realized progress. A second design retained pending global elites, absolute targets, proposal clocks and separate RNG streams. The latter produced useful global gains on some inputs, but progress within an operator did not necessarily offset the local refinement it displaced.
+
+Candidate vs. current | 165-s development pairs | Geom. ratio | Worst ratio
+
+First reversible windows | 0 wins / 2 pairs | 1.122 | 1.143
+
+Preserved-state windows | 1 win / 2 pairs | 1.110 | 1.244
+
+Both failed the frozen full-time selection gate (aggregate ≤0.95, worst ≤1.05, no success regression). They were not promoted or tuned using confirmation. Fresh controls mattered: the gas-pump current control changed from 778.135 at 2096 calls to 635.221 at 2675 calls in separate 165-second windows. Reusing the earlier wall-time denominator would have understated the preserved-state regression. The production source was therefore fixed before the final all-norm confirmation.
+
+6. Submitted results on the five assignment seeds
+
+Table 1 reports the lowest verified saved artifact for each case. All 15 norm cases and five bonus fog cases change the expected class under the supplied utilities. Distances are recomputed from the stored raw tensors; fog cost and classification are computed from exact JSON regeneration. <b>These are a multi-run artifact portfolio, not a uniform run of the final default function.</b> Different seeds, methods and query/time budgets contributed to selection.
+
+Image | L∞ | Squared L2 | L0 | Fog magnitude
+
+knot | 0.163680 | 386.169647 | 109 | 0.912109375
+
+mink | 0.067076 | 235.238892 | 31 | 0.413872064
+
+orca | 0.162440 | 940.955627 | 82 | 0.501953125
+
+sock | 0.042834 | 131.672195 | 22 | 0.123451920
+
+tank | 0.103578 | 595.750488 | 84 | 0.903415341
+
+Table 1. Saved grading distances. The full values remain in the raw tensors and gene JSON; minor final-digit L2 differences can occur between parallel reduction thread counts.
+
+Observed class changes for every submitted case
+
+Image / reference | Attack | Predicted class (ID) | Result
+
+knot (616) | L∞ | swab (840) | Pass
+
+ | Squared L2 | starfish (327) | Pass
+
+ | L0 elements | starfish (327) | Pass
+
+ | Fog magnitude | damselfly (320) | Pass
+
+mink (357) | L∞ | beaver (337) | Pass
+
+ | Squared L2 | beaver (337) | Pass
+
+ | L0 elements | beaver (337) | Pass
+
+ | Fog magnitude | wild boar (342) | Pass
+
+orca (148) | L∞ | bow tie (457) | Pass
+
+ | Squared L2 | king penguin (145) | Pass
+
+ | L0 elements | speedboat (814) | Pass
+
+ | Fog magnitude | albatross (146) | Pass
+
+sock (806) | L∞ | mitten (658) | Pass
+
+ | Squared L2 | clog (502) | Pass
+
+ | L0 elements | mitten (658) | Pass
+
+ | Fog magnitude | mitten (658) | Pass
+
+tank (847) | L∞ | amphibian (408) | Pass
+
+ | Squared L2 | amphibian (408) | Pass
+
+ | L0 elements | amphibian (408) | Pass
+
+ | Fog magnitude | doormat (539) | Pass
+
+The clean reference names are knot, mink, killer whale, sock and tank. Figures 1–20 reproduce the actual get_viz_for plots for these artifacts, including the image and top-ten class probabilities. A rival need only exceed the reference; success does not require a top-class probability above 0.5.
+
+7. Exact bonus expressions and interpretation
+
+Each submitted bonus winner uses one octave. The expressions below are the complete saved genotypes, not rounded descriptions; magnitude is also the exact grading cost for a single pair. All octave values are positive integers and all magnitudes are positive finite numbers. The instructor’s unchanged generator supplies the Perlin realization, so no extra noise-image or random-state file is needed.
+
+Image | Complete genotype [(octave, magnitude)] | Predicted class
+
+knot | <font name="Mono" size="7.7">[(24, 0.912109375)]</font> | damselfly (320)
+
+mink | <font name="Mono" size="7.7">[(108, 0.4138720641500714)]</font> | wild boar (342)
+
+orca | <font name="Mono" size="7.7">[(24, 0.501953125)]</font> | albatross (146)
+
+sock | <font name="Mono" size="7.7">[(65, 0.12345191975844196)]</font> | mitten (658)
+
+tank | <font name="Mono" size="7.7">[(60, 0.9034153408370911)]</font> | doormat (539)
+
+The broader integer-octave stage found winners outside the initial layer set for mink (108), sock (65) and tank (60). The best saved magnitudes improved from 0.556640625 to 0.413872064 for mink, 0.169921875 to 0.123451920 for sock, and 0.976562500 to 0.903415341 for tank. Knot and orca retained their earlier verified octave-24 artifacts.
+
+Single-octave winners do not show that mixtures are generally inferior. The implementation retains the complete mixture search and its verified fallback, then tests a wider octave family using remaining time. Likewise, initial pure-octave screening, later genetic evolution and scalar boundary search all contribute; the final objective cannot be attributed to mutation alone.
+
+What the saved portfolio does and does not establish
+
+Every submitted file is directly checkable without rerunning an optimizer. The exact tensor is preserved; filenames follow the README and all expected class changes are verified. However, a fresh call to the final code on a different CPU need not reproduce the minimum saved distance: wall stopping, seed and search trajectory vary, and older verified searches contributed some files. The next section therefore reports a separate, uniform-configuration assessment of the final source on previously reserved inputs.
+
+Minimal submission layout
+
+This directory is an <b>overlay for the original cs454-assignment3-adversarial.zip skeleton</b>. Copy all files into the extracted cs454-adversarial project root, replacing only the two student implementation modules. Preserve the instructor’s util.py, grade.py, category_names.txt, dependency lists and images. Run commands from that project root, because the supplied utility reads the class-name file using a relative path.
+
+Files | Count
+
+epsilon_ball.py and perlin_fog.py | 2
+
+This PDF report | 1
+
+raw_&lt;image&gt;_&lt;norm&gt;.png (three norms + perlin) | 20
+
+&lt;image&gt;_&lt;norm&gt;.png classification visualizations | 20
+
+&lt;image&gt;_perlin.json complete genotypes | 5
+
+Total: only required work and attempted bonus deliverables | 48
+
+The files named raw_*.png are PyTorch tensor serializations written by the instructor helper, not ordinary bitmap PNGs. The provided reference files, datasets, model checkpoint, caches, research variants and logs are intentionally not duplicated in this minimal overlay.
+
+8. Frozen all-norm Imagenette confirmation
+
+A separate bank used the official Imagenette2-160 validation archive [6]. Per-class candidate pools were fixed by hashes before clean forwards. The first clean-correct image in each role/class was selected, without confidence or attack filtering: 20 images, ten development and ten confirmation, with exclusions recorded. Clean correctness is an eligibility condition, not a classifier-accuracy estimate.
+
+The final source, seed 457, settings, image hashes, environment and 40-case order were frozen before confirmation attacks. Each norm had a 165-second target and fog 270 seconds, with four Torch threads and no query ceiling. Following a request to accelerate execution, 11 completed serial cases were preserved and the remaining 29 used two workers pinned to disjoint four-core groups (logical CPUs 0,4,8,12 and 2,6,10,14). Shared memory bandwidth, package power and host scheduling remain uncontrolled. Execution mode is recorded per case; no equal-throughput or comparative algorithm-improvement claim is made from the mixed conditions.
+
+Confirmation class | L∞ | Squared L2 | L0 | Fog
+
+tench | 0.0670925 | 316.85 | 66 | 0.468539
+
+English springer | 0.00235724 | 0.216176 | 1 | 0.0634788
+
+cassette player | 0.0112536 | 23.3055 | 2 | 0.225533
+
+chain saw | 0.00188899 | 0.770055 | 1 | 0.0279209
+
+church | 0.0140705 | 7.09933 | 2 | 0.147926
+
+French horn | 0.16276 | 4039.34 | 177 | 0.628906
+
+garbage truck | 0.0273671 | 80.174 | 9 | 0.257237
+
+gas pump | 0.00898963 | 4.36172 | 8 | 0.0813156
+
+golf ball | 0.0274409 | 36.9618 | 94 | 0.188477
+
+parachute | 0.0089941 | 6.18852 | 3 | 0.117289
+
+Attack | Success | Median distance | Max grading seconds
+
+L∞ | 10 / 10 | 0.0126621 | 162.869
+
+Squared L2 | 10 / 10 | 15.2024 | 163.256
+
+L0 elements | 10 / 10 | 5.5 | 164.172
+
+Fog magnitude | 10 / 10 | 0.168201 | 228.110
+
+All 40 saved tensors passed independent one-thread reclassification and authoritative metric checks; every predicted class also matched the original four-thread record. Fog was regenerated from each JSON. Squared-L2 verification permits 10<super>−6</super> relative numeric tolerance across thread reductions; L∞ and L0 match exactly. Grading time includes attack plus required distance/rendering and classification, excluding export and validation. No 180/300-second grading timeout or 165/270-second optimizer overrun occurred.
+
+9. Conclusions, limits and reproducibility
+
+9.1 Conclusions supported by the measurements
+
+Different metrics favored different representations: signed blocks control the largest component; structured energy plus feasible-direction evolution distributes L2 changes; explicit support deletion and parental-locus evolution reduce L0; octave/magnitude genes expose a compact fog family. The largest supplied-image sparse improvements came from removing redundant successful support. The fog extension benefited from a wider octave range and time the earlier stagnation stop left unused.
+
+The failed compact rectangle, caching and reversible-window experiments are part of the result. Representation simplicity, fewer repeated calls, or an operator that sometimes improves the archive did not guarantee a better final distance. The clean baseline, saved-attack portfolio, fixed-call comparisons and actual-time confirmation answer different questions and were kept separate.
+
+9.2 Limits and next investigations
+
+Forty successful attacks cover only ten correlated inputs, one photo per class and one seed. Imagenette is ImageNet-derived and may overlap classifier pretraining. The 40 cases are an absolute assessment of one source, not a paired comparator or an estimate over all ImageNet classes. French horn remained costly: squared L2 4039.34 and L0 177; no global-minimality claim is justified. The confirmation bank is now consumed and cannot be treated as fresh independent validation after tuning.
+
+Further development should test a distinct L2 spatial-coefficient representation and L0 support-space exhaustion/neighbor expansion, with matched actual-time controls and another seed. Such changes belong on development data and require a new independent bank before another generalization claim. The instructor’s true hidden evaluation remains unknown.
+
+9.3 Tested execution environment and replay
+
+Measured environment: Python 3.14.4; torch 2.15.0+cpu; torchvision 0.29.2+cpu; NumPy 2.5.4; Pillow 13.0.0; matplotlib 3.11.2; perlin-noise 1.13. CPU: AMD Ryzen AI 7 350, Linux/WSL2. Default search seed is 454; final confirmation uses 457. There is no GPU or gradient-based optimization.
+
+After applying the 48-file overlay to the original skeleton:
+
+pip install -r torch_cpu.txt<br/>pip install -r requirements.txt<br/>python grade.py -n final -i all -l all
+
+The first model import downloads the official VGG-11 checkpoint if no cache exists. The full command reruns searches and may take several minutes per case; it checks the current functions rather than reproducing a multi-run artifact selection. CS454_SEED, CS454_THREADS and CS454_SECONDS expose norm experiment settings; CS454_FOG_SECONDS controls fog. Use the submitted defaults for the reported source configuration.
+
+The final combined contracts cover 93 distinct checks. A successful combined invocation executed 96 tests because one three-test module appeared twice; no real attack was repeated. These synthetic checks complement, but do not replace, actual classifier validation. The final-package audit also loads the 20 submitted raw results with the original ZIP utilities.
+
+10. References and artifact verification
+
+[1] CS454 assignment materials. README.md, util.py, grade.py and starter modules in cs454-assignment3-adversarial.zip (provided course skeleton). The local README has the same requirements; its only text difference is a trailing “# CS454”.
+
+[2] I. J. Goodfellow, J. Shlens and C. Szegedy. Explaining and Harnessing Adversarial Examples. arXiv:1412.6572, 2014; revised 2015.<br/><link href="https://arxiv.org/abs/1412.6572" color="#14566b">https://arxiv.org/abs/1412.6572</link>
+
+[3] N. Carlini and D. Wagner. Towards Evaluating the Robustness of Neural Networks. arXiv:1608.04644, 2016; revised 2017.<br/><link href="https://arxiv.org/abs/1608.04644" color="#14566b">https://arxiv.org/abs/1608.04644</link>
+
+[4] J. Su, D. V. Vargas and K. Sakurai. One pixel attack for fooling deep neural networks. arXiv:1710.08864, 2017; IEEE Transactions on Evolutionary Computation, 2019.<br/><link href="https://arxiv.org/abs/1710.08864" color="#14566b">https://arxiv.org/abs/1710.08864</link>
+
+[5] Y. Tian, K. Pei, S. Jana and B. Ray. DeepTest: Automated Testing of Deep-Neural-Network-driven Autonomous Cars. arXiv:1708.08559, 2017; revised 2018.<br/><link href="https://arxiv.org/abs/1708.08559" color="#14566b">https://arxiv.org/abs/1708.08559</link>
+
+[6] fast.ai. Imagenette: a ten-class ImageNet subset. Experiments use the official imagenette2-160.tgz validation archive, not a claim of classifier-training-unseen data.<br/><link href="https://github.com/fastai/imagenette" color="#14566b">https://github.com/fastai/imagenette</link>
+
+Direct check of an included raw tensor
+
+The supplied helpers can validate a saved result without rerunning its GA:
+
+import torch<br/>from util import *<br/>torch.set_num_threads(1)<br/>with torch.inference_mode():<br/>&nbsp;&nbsp;x = get_image_tensor_from("images/knot.jpg")<br/>&nbsp;&nbsp;z = torch.load("raw_knot_l2.png",<br/>&nbsp;&nbsp;&nbsp;&nbsp;map_location="cpu", weights_only=True)<br/>&nbsp;&nbsp;print(get_L2_norm_for(z - x))<br/>&nbsp;&nbsp;print(get_model_most_likely_for(z))
+
+Expected knot result: squared L2 ≈386.169647 and predicted class327 (starfish), different from the reference616. For fog, load &lt;image&gt;_perlin.json, call genotype2phenotype followed by add_noise_to_image, compare the resulting prediction, and sum the magnitudes. All 20 raw filenames and 20 visualization filenames appear beside their figures on the following pages.
+
+Integrity anchors
+
+epsilon_ball.py:<br/><font name="Mono" size="7.0">2a152f45637801c1c1991e96ad52a1afc0beaf3e8e4799efa9da2ee1e33880b7</font>
+
+perlin_fog.py:<br/><font name="Mono" size="7.0">85733d54ba8d1c02a1cd3221a4f7f499ef9af9df5ffdce2cf9b9fcb8462de8d0</font>
+
+VGG-11 checkpoint SHA-256:<br/><font name="Mono" size="7.0">8a7190461cb581dbcbd2c3b58f43cf12a0bca3ccf92898f867e4a9e9b898c464</font>
+
+Visual results: knot (1/2)
+
+Clean reference: knot [616]. Plots are the unmodified instructor get_viz_for outputs for the submitted raw tensors.
+
+Figure 1: knot_linf.png; raw_knot_linf.png; distance 0.163680077; predicted 840
+
+Figure 2: knot_l2.png; raw_knot_l2.png; distance 386.169647; predicted 327
+
+Visual results: knot (2/2)
+
+Clean reference: knot [616]. Plots are the unmodified instructor get_viz_for outputs for the submitted raw tensors.
+
+Figure 3: knot_l0.png; raw_knot_l0.png; distance 109; predicted 327
+
+Figure 4: knot_perlin.png; raw_knot_perlin.png; distance 0.912109375; predicted 320
+
+Visual results: mink (1/2)
+
+Clean reference: mink [357]. Plots are the unmodified instructor get_viz_for outputs for the submitted raw tensors.
+
+Figure 5: mink_linf.png; raw_mink_linf.png; distance 0.0670762062; predicted 337
+
+Figure 6: mink_l2.png; raw_mink_l2.png; distance 235.238892; predicted 337
+
+Visual results: mink (2/2)
+
+Clean reference: mink [357]. Plots are the unmodified instructor get_viz_for outputs for the submitted raw tensors.
+
+Figure 7: mink_l0.png; raw_mink_l0.png; distance 31; predicted 337
+
+Figure 8: mink_perlin.png; raw_mink_perlin.png; distance 0.413872064; predicted 342
+
+Visual results: orca (1/2)
+
+Clean reference: killer whale, killer, orca, grampus, sea wolf, Orcinus orca [148]. Plots are the unmodified instructor get_viz_for outputs for the submitted raw tensors.
+
+Figure 9: orca_linf.png; raw_orca_linf.png; distance 0.162440062; predicted 457
+
+Figure 10: orca_l2.png; raw_orca_l2.png; distance 940.955627; predicted 145
+
+Visual results: orca (2/2)
+
+Clean reference: killer whale, killer, orca, grampus, sea wolf, Orcinus orca [148]. Plots are the unmodified instructor get_viz_for outputs for the submitted raw tensors.
+
+Figure 11: orca_l0.png; raw_orca_l0.png; distance 82; predicted 814
+
+Figure 12: orca_perlin.png; raw_orca_perlin.png; distance 0.501953125; predicted 146
+
+Visual results: sock (1/2)
+
+Clean reference: sock [806]. Plots are the unmodified instructor get_viz_for outputs for the submitted raw tensors.
+
+Figure 13: sock_linf.png; raw_sock_linf.png; distance 0.0428343415; predicted 658
+
+Figure 14: sock_l2.png; raw_sock_l2.png; distance 131.672195; predicted 502
+
+Visual results: sock (2/2)
+
+Clean reference: sock [806]. Plots are the unmodified instructor get_viz_for outputs for the submitted raw tensors.
+
+Figure 15: sock_l0.png; raw_sock_l0.png; distance 22; predicted 658
+
+Figure 16: sock_perlin.png; raw_sock_perlin.png; distance 0.12345192; predicted 658
+
+Visual results: tank (1/2)
+
+Clean reference: tank, army tank, armored combat vehicle, armoured combat vehicle [847]. Plots are the unmodified instructor get_viz_for outputs for the submitted raw tensors.
+
+Figure 17: tank_linf.png; raw_tank_linf.png; distance 0.103577733; predicted 408
+
+Figure 18: tank_l2.png; raw_tank_l2.png; distance 595.750488; predicted 408
+
+Visual results: tank (2/2)
+
+Clean reference: tank, army tank, armored combat vehicle, armoured combat vehicle [847]. Plots are the unmodified instructor get_viz_for outputs for the submitted raw tensors.
+
+Figure 19: tank_l0.png; raw_tank_l0.png; distance 84; predicted 408
+
+Figure 20: tank_perlin.png; raw_tank_perlin.png; distance 0.903415341; predicted 539

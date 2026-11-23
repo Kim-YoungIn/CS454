@@ -1,0 +1,9 @@
+{
+  "case_id": "confirmation_n03028079_00_perlin",
+  "image_id": "confirmation_n03028079_00",
+  "norm": "perlin",
+  "seed": 457,
+  "seconds_limit": 270,
+  "threads": 4,
+  "grading_seconds_limit": 300
+}

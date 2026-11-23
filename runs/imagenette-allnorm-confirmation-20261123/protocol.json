@@ -1,0 +1,404 @@
+{
+  "version": "imagenette-allnorm-confirmation-20261123",
+  "authorization": "User explicitly requests consuming the10 confirmation images and completing all norm/fog generalization. Prior reservation is released for evaluating the already selected production implementation, not failed research variants.",
+  "scope": "One-time assessment of frozen strongest verified production on ten clean-correct Imagenette images across10classes. No tuning or image/class-specific choices after seeing results. No assertion of population-wide generalization or classifier-training-unseen data.",
+  "expected_cases": 40,
+  "seed": 457,
+  "threads": 4,
+  "cases": [
+    {
+      "case_id": "confirmation_n01440764_00_linf",
+      "image_id": "confirmation_n01440764_00",
+      "norm": "linf",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n01440764_00_l2",
+      "image_id": "confirmation_n01440764_00",
+      "norm": "l2",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n01440764_00_l0",
+      "image_id": "confirmation_n01440764_00",
+      "norm": "l0",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n01440764_00_perlin",
+      "image_id": "confirmation_n01440764_00",
+      "norm": "perlin",
+      "seed": 457,
+      "seconds_limit": 270,
+      "threads": 4,
+      "grading_seconds_limit": 300
+    },
+    {
+      "case_id": "confirmation_n02102040_01_l2",
+      "image_id": "confirmation_n02102040_01",
+      "norm": "l2",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n02102040_01_l0",
+      "image_id": "confirmation_n02102040_01",
+      "norm": "l0",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n02102040_01_perlin",
+      "image_id": "confirmation_n02102040_01",
+      "norm": "perlin",
+      "seed": 457,
+      "seconds_limit": 270,
+      "threads": 4,
+      "grading_seconds_limit": 300
+    },
+    {
+      "case_id": "confirmation_n02102040_01_linf",
+      "image_id": "confirmation_n02102040_01",
+      "norm": "linf",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n02979186_03_l0",
+      "image_id": "confirmation_n02979186_03",
+      "norm": "l0",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n02979186_03_perlin",
+      "image_id": "confirmation_n02979186_03",
+      "norm": "perlin",
+      "seed": 457,
+      "seconds_limit": 270,
+      "threads": 4,
+      "grading_seconds_limit": 300
+    },
+    {
+      "case_id": "confirmation_n02979186_03_linf",
+      "image_id": "confirmation_n02979186_03",
+      "norm": "linf",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n02979186_03_l2",
+      "image_id": "confirmation_n02979186_03",
+      "norm": "l2",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03000684_00_perlin",
+      "image_id": "confirmation_n03000684_00",
+      "norm": "perlin",
+      "seed": 457,
+      "seconds_limit": 270,
+      "threads": 4,
+      "grading_seconds_limit": 300
+    },
+    {
+      "case_id": "confirmation_n03000684_00_linf",
+      "image_id": "confirmation_n03000684_00",
+      "norm": "linf",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03000684_00_l2",
+      "image_id": "confirmation_n03000684_00",
+      "norm": "l2",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03000684_00_l0",
+      "image_id": "confirmation_n03000684_00",
+      "norm": "l0",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03028079_00_linf",
+      "image_id": "confirmation_n03028079_00",
+      "norm": "linf",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03028079_00_l2",
+      "image_id": "confirmation_n03028079_00",
+      "norm": "l2",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03028079_00_l0",
+      "image_id": "confirmation_n03028079_00",
+      "norm": "l0",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03028079_00_perlin",
+      "image_id": "confirmation_n03028079_00",
+      "norm": "perlin",
+      "seed": 457,
+      "seconds_limit": 270,
+      "threads": 4,
+      "grading_seconds_limit": 300
+    },
+    {
+      "case_id": "confirmation_n03394916_01_l2",
+      "image_id": "confirmation_n03394916_01",
+      "norm": "l2",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03394916_01_l0",
+      "image_id": "confirmation_n03394916_01",
+      "norm": "l0",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03394916_01_perlin",
+      "image_id": "confirmation_n03394916_01",
+      "norm": "perlin",
+      "seed": 457,
+      "seconds_limit": 270,
+      "threads": 4,
+      "grading_seconds_limit": 300
+    },
+    {
+      "case_id": "confirmation_n03394916_01_linf",
+      "image_id": "confirmation_n03394916_01",
+      "norm": "linf",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03417042_00_l0",
+      "image_id": "confirmation_n03417042_00",
+      "norm": "l0",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03417042_00_perlin",
+      "image_id": "confirmation_n03417042_00",
+      "norm": "perlin",
+      "seed": 457,
+      "seconds_limit": 270,
+      "threads": 4,
+      "grading_seconds_limit": 300
+    },
+    {
+      "case_id": "confirmation_n03417042_00_linf",
+      "image_id": "confirmation_n03417042_00",
+      "norm": "linf",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03417042_00_l2",
+      "image_id": "confirmation_n03417042_00",
+      "norm": "l2",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03425413_00_perlin",
+      "image_id": "confirmation_n03425413_00",
+      "norm": "perlin",
+      "seed": 457,
+      "seconds_limit": 270,
+      "threads": 4,
+      "grading_seconds_limit": 300
+    },
+    {
+      "case_id": "confirmation_n03425413_00_linf",
+      "image_id": "confirmation_n03425413_00",
+      "norm": "linf",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03425413_00_l2",
+      "image_id": "confirmation_n03425413_00",
+      "norm": "l2",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03425413_00_l0",
+      "image_id": "confirmation_n03425413_00",
+      "norm": "l0",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03445777_00_linf",
+      "image_id": "confirmation_n03445777_00",
+      "norm": "linf",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03445777_00_l2",
+      "image_id": "confirmation_n03445777_00",
+      "norm": "l2",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03445777_00_l0",
+      "image_id": "confirmation_n03445777_00",
+      "norm": "l0",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03445777_00_perlin",
+      "image_id": "confirmation_n03445777_00",
+      "norm": "perlin",
+      "seed": 457,
+      "seconds_limit": 270,
+      "threads": 4,
+      "grading_seconds_limit": 300
+    },
+    {
+      "case_id": "confirmation_n03888257_00_l2",
+      "image_id": "confirmation_n03888257_00",
+      "norm": "l2",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03888257_00_l0",
+      "image_id": "confirmation_n03888257_00",
+      "norm": "l0",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    },
+    {
+      "case_id": "confirmation_n03888257_00_perlin",
+      "image_id": "confirmation_n03888257_00",
+      "norm": "perlin",
+      "seed": 457,
+      "seconds_limit": 270,
+      "threads": 4,
+      "grading_seconds_limit": 300
+    },
+    {
+      "case_id": "confirmation_n03888257_00_linf",
+      "image_id": "confirmation_n03888257_00",
+      "norm": "linf",
+      "seed": 457,
+      "seconds_limit": 165,
+      "threads": 4,
+      "grading_seconds_limit": 180
+    }
+  ],
+  "environment": {
+    "CS454_L2_SEARCH": "exploration",
+    "CS454_L2_STYLE": "energy",
+    "CS454_BOUNDARY_MIN_GENERATIONS": "512",
+    "CS454_BOUNDARY_SUCCESSES": "3",
+    "CS454_BOUNDARY_FRACTION": ".99",
+    "CS454_BOUNDARY_ALPHA": ".25",
+    "CS454_L0_STYLE": "parental",
+    "CS454_DISCOVERY_REFERENCE": "900",
+    "CS454_DISCOVERY_FRACTION": ".55",
+    "CS454_FOG_SECONDS": "270",
+    "CS454_FOG_GENERATIONS": "80",
+    "CS454_FOG_OCTAVE_GENERATIONS": "24"
+  },
+  "implementation": {
+    "linf": "epsilon_ball.make_Linf_adversarial_from",
+    "l2": "epsilon_ball.make_L2_adversarial_from",
+    "l0": "epsilon_ball.make_L0_adversarial_from",
+    "perlin": "perlin_fog.adv_func"
+  },
+  "scheduling": "Sequential single-process attacks, fresh child per case, rotated norm order by fixed image index. No query cap; normal default upper guard100000. Common clean-reference warmup before timed entry point. No concurrent project model or test workloads.",
+  "metrics": {
+    "linf": "max absolute normalized channel difference",
+    "l2": "sum of squared normalized channel differences",
+    "l0": "changed normalized channel elements",
+    "perlin": "sum of positive gene magnitudes; original instructor renderer"
+  },
+  "success": "Required tensor/genes valid, expected clean class retained, prediction changes, grader-equivalent attack+distance/render+classification within180/300, exact serialized tensor reload. The165/270 optimization budget is a target and any overshoot is separately reported, not an invented grading failure. Independent one-thread revalidation follows.",
+  "failure_policy": "Retain all40cases including errors, unchanged classes and timeouts. Never rerun a terminal result or select best seeds. Partial nonterminal interrupted cases may be archived and resumed with explicit events.",
+  "grading_time": "Measured entry-point time plus mandatory scoring and prediction. Fog includes exact genotype2phenotype/add_noise renderer. Export/plot, tensor reload and independent verification are excluded from grader-equivalent time.",
+  "selection": "Current source selected before this confirmation. This is an absolute all-norm transfer assessment, not a comparative algorithm-improvement experiment. Do not promote rejected window variants based on these data.",
+  "reporting": "Successes/10 and all-case failure counts per norm; full perimage table, conditional distances, actual calls/time, one-thread results. Failures keep999999999 grade penalty as separate grader_score. One seed457; no seed robustness claim.",
+  "original_bank": "research/generalization_imagenette_v2",
+  "consumption_record": "research/labelled_v2_usage.json"
+}

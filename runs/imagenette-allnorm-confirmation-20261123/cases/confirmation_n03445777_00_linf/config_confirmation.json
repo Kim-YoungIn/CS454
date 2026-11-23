@@ -1,0 +1,79 @@
+{
+  "created_utc": "2026-11-23T12:16:31.673478+00:00",
+  "command": [
+    "/home/archant/projects/cs454-adversarial/research/run_allnorm_confirmation.py",
+    "--plan",
+    "research/imagenette_allnorm_confirmation_20261123",
+    "--output",
+    "/home/archant/projects/cs454-adversarial/runs/imagenette-allnorm-confirmation-20261123",
+    "--case-id",
+    "confirmation_n03445777_00_linf"
+  ],
+  "options": {
+    "images": [
+      "/home/archant/projects/cs454-adversarial/research/generalization_imagenette_v2/images/confirmation_n03445777_00.png"
+    ],
+    "norms": [
+      "linf"
+    ],
+    "seed": 457,
+    "seconds": 165,
+    "queries": null,
+    "threads": 4,
+    "implementation": "epsilon_ball",
+    "output": "/home/archant/projects/cs454-adversarial/runs/imagenette-allnorm-confirmation-20261123/cases/confirmation_n03445777_00_linf",
+    "tag": "confirmation"
+  },
+  "python": "3.14.4",
+  "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "packages": {
+    "torch": "2.15.0+cpu",
+    "torchvision": "0.29.2+cpu",
+    "numpy": "2.5.4",
+    "Pillow": "13.0.0",
+    "matplotlib": "3.11.2"
+  },
+  "cpu_threads": 4,
+  "source_sha256": {
+    "benchmark_attacks.py": "4699e27b1344017758642526bbe9a9751988f26a427e055b23c6db37170018dc",
+    "epsilon_ball.py": "2a152f45637801c1c1991e96ad52a1afc0beaf3e8e4799efa9da2ee1e33880b7",
+    "util.py": "28053bc959dac6064fcd1c55629f65f42382e0c7d546c44622b10f95d6b1fb45",
+    "grade.py": "c14e22a5e60c36a1d85417d09c4044c9332ad788353c702a52a41d16db017d6f",
+    "verify_artifacts.py": "575a01d95fc932b75f3ff015de71c811ab6a4a2190d363d3e4bb780f55e82a02"
+  },
+  "source_snapshot": {
+    "epsilon_ball.py": "epsilon_ball_confirmation.py"
+  },
+  "images_sha256": {
+    "/home/archant/projects/cs454-adversarial/research/generalization_imagenette_v2/images/confirmation_n03445777_00.png": "b6d332ad3932195347b5892431a533089efdc450f2fd8fc5a30a53978ecacc33"
+  },
+  "environment": {
+    "CS454_L2_SEARCH": "exploration",
+    "CS454_L2_STYLE": "energy",
+    "CS454_BOUNDARY_MIN_GENERATIONS": "512",
+    "CS454_BOUNDARY_SUCCESSES": "3",
+    "CS454_BOUNDARY_FRACTION": ".99",
+    "CS454_BOUNDARY_ALPHA": ".25",
+    "CS454_L0_STYLE": "parental",
+    "CS454_DISCOVERY_REFERENCE": "900",
+    "CS454_DISCOVERY_FRACTION": ".55",
+    "CS454_FOG_SECONDS": "270",
+    "CS454_FOG_GENERATIONS": "80",
+    "CS454_FOG_OCTAVE_GENERATIONS": "24",
+    "CS454_THREADS": "4",
+    "CS454_SEED": "457",
+    "CS454_SECONDS": "165",
+    "TORCH_HOME": "/home/archant/projects/cs454-adversarial/.runtime/torch-cache",
+    "CS454_EXECUTION_MODE": "parallel_two_disjoint_core_groups",
+    "CS454_CPU_AFFINITY": "2,6,10,14",
+    "OMP_NUM_THREADS": "4",
+    "MKL_NUM_THREADS": "4"
+  },
+  "metric_semantics": {
+    "linf": "max absolute normalized channel difference",
+    "l2": "sum of squared normalized channel differences",
+    "l0": "number of changed channel elements"
+  },
+  "timing": "entry point call only; excludes model import, clean reference check, visualization and independent reload verification",
+  "implementation": "epsilon_ball"
+}

@@ -1,0 +1,60 @@
+Preserved11 terminal cases; scheduling29 remaining with2workers.
+START slot0 cpus[0, 4, 8, 12] confirmation_n02979186_03_l2
+START slot1 cpus[2, 6, 10, 14] confirmation_n03000684_00_perlin
+{"case_id": "confirmation_n02979186_03_l2", "status": "pass", "distance": 23.305517196655273, "queries": 1741, "runtime_seconds": 161.39830458699998, "grading_runtime_seconds": 161.51479579199986}
+START slot0 cpus[0, 4, 8, 12] confirmation_n03000684_00_linf
+{"case_id": "confirmation_n03000684_00_perlin", "status": "pass", "distance": 0.027920943593631606, "queries": 1756, "runtime_seconds": 226.82504647199949, "grading_runtime_seconds": 228.10975700699964}
+START slot1 cpus[2, 6, 10, 14] confirmation_n03000684_00_l2
+{"case_id": "confirmation_n03000684_00_linf", "status": "pass", "distance": 0.0018889904022216797, "queries": 1762, "runtime_seconds": 162.2700962889994, "grading_runtime_seconds": 162.37230810899928}
+START slot0 cpus[0, 4, 8, 12] confirmation_n03000684_00_l0
+{"case_id": "confirmation_n03000684_00_l0", "status": "pass", "distance": 1, "queries": 498, "runtime_seconds": 52.690824331999465, "grading_runtime_seconds": 52.813366547999976}
+START slot0 cpus[0, 4, 8, 12] confirmation_n03028079_00_linf
+{"case_id": "confirmation_n03000684_00_l2", "status": "pass", "distance": 0.7700550556182861, "queries": 1615, "runtime_seconds": 163.03256190899992, "grading_runtime_seconds": 163.13970445199993}
+START slot1 cpus[2, 6, 10, 14] confirmation_n03028079_00_l2
+{"case_id": "confirmation_n03028079_00_linf", "status": "pass", "distance": 0.014070510864257812, "queries": 1555, "runtime_seconds": 162.0227164299995, "grading_runtime_seconds": 162.10307029599971}
+START slot0 cpus[0, 4, 8, 12] confirmation_n03028079_00_l0
+{"case_id": "confirmation_n03028079_00_l2", "status": "pass", "distance": 7.0993266105651855, "queries": 1567, "runtime_seconds": 163.14947284200025, "grading_runtime_seconds": 163.25649615600014}
+START slot1 cpus[2, 6, 10, 14] confirmation_n03028079_00_perlin
+{"case_id": "confirmation_n03028079_00_l0", "status": "pass", "distance": 2, "queries": 1854, "runtime_seconds": 164.05736888699994, "grading_runtime_seconds": 164.14029467799992}
+START slot0 cpus[0, 4, 8, 12] confirmation_n03394916_01_l2
+{"case_id": "confirmation_n03028079_00_perlin", "status": "pass", "distance": 0.14792551438361412, "queries": 1024, "runtime_seconds": 160.65086181300012, "grading_runtime_seconds": 161.85330785100086}
+START slot1 cpus[2, 6, 10, 14] confirmation_n03394916_01_l0
+{"case_id": "confirmation_n03394916_01_l2", "status": "pass", "distance": 4039.340087890625, "queries": 1712, "runtime_seconds": 162.08010466799988, "grading_runtime_seconds": 162.21994407200054}
+START slot0 cpus[0, 4, 8, 12] confirmation_n03394916_01_perlin
+{"case_id": "confirmation_n03394916_01_l0", "status": "pass", "distance": 177, "queries": 1724, "runtime_seconds": 162.38036751000072, "grading_runtime_seconds": 162.47200284300015}
+START slot1 cpus[2, 6, 10, 14] confirmation_n03394916_01_linf
+{"case_id": "confirmation_n03394916_01_perlin", "status": "pass", "distance": 0.62890625, "queries": 1030, "runtime_seconds": 142.08022442799938, "grading_runtime_seconds": 142.85555772299995}
+START slot0 cpus[0, 4, 8, 12] confirmation_n03417042_00_l0
+{"case_id": "confirmation_n03394916_01_linf", "status": "pass", "distance": 0.16276001930236816, "queries": 1939, "runtime_seconds": 162.00178886600042, "grading_runtime_seconds": 162.10020109300058}
+START slot1 cpus[2, 6, 10, 14] confirmation_n03417042_00_perlin
+{"case_id": "confirmation_n03417042_00_perlin", "status": "pass", "distance": 0.2572368621826172, "queries": 1024, "runtime_seconds": 127.89812393000011, "grading_runtime_seconds": 128.330032803}
+START slot1 cpus[2, 6, 10, 14] confirmation_n03417042_00_linf
+{"case_id": "confirmation_n03417042_00_l0", "status": "pass", "distance": 9, "queries": 1908, "runtime_seconds": 164.05312699499973, "grading_runtime_seconds": 164.13855940299982}
+START slot0 cpus[0, 4, 8, 12] confirmation_n03417042_00_l2
+{"case_id": "confirmation_n03417042_00_linf", "status": "pass", "distance": 0.027367055416107178, "queries": 1577, "runtime_seconds": 159.28392439599975, "grading_runtime_seconds": 159.37709531099972}
+START slot1 cpus[2, 6, 10, 14] confirmation_n03425413_00_perlin
+{"case_id": "confirmation_n03417042_00_l2", "status": "pass", "distance": 80.17401885986328, "queries": 1564, "runtime_seconds": 159.40738727899952, "grading_runtime_seconds": 159.49661655599994}
+START slot0 cpus[0, 4, 8, 12] confirmation_n03425413_00_linf
+{"case_id": "confirmation_n03425413_00_perlin", "status": "pass", "distance": 0.08131555557250977, "queries": 1042, "runtime_seconds": 137.08267111999976, "grading_runtime_seconds": 137.57506809299957}
+START slot1 cpus[2, 6, 10, 14] confirmation_n03425413_00_l2
+{"case_id": "confirmation_n03425413_00_linf", "status": "pass", "distance": 0.00898963212966919, "queries": 1795, "runtime_seconds": 161.6341672540002, "grading_runtime_seconds": 161.73204892499962}
+START slot0 cpus[0, 4, 8, 12] confirmation_n03425413_00_l0
+{"case_id": "confirmation_n03425413_00_l2", "status": "pass", "distance": 4.361721038818359, "queries": 1658, "runtime_seconds": 162.32300207800017, "grading_runtime_seconds": 162.4707842939997}
+START slot1 cpus[2, 6, 10, 14] confirmation_n03445777_00_linf
+{"case_id": "confirmation_n03425413_00_l0", "status": "pass", "distance": 8, "queries": 1691, "runtime_seconds": 164.0474074220001, "grading_runtime_seconds": 164.14847509099945}
+START slot0 cpus[0, 4, 8, 12] confirmation_n03445777_00_l2
+{"case_id": "confirmation_n03445777_00_linf", "status": "pass", "distance": 0.027440905570983887, "queries": 1632, "runtime_seconds": 162.20409174400083, "grading_runtime_seconds": 162.3098496980001}
+START slot1 cpus[2, 6, 10, 14] confirmation_n03445777_00_l0
+{"case_id": "confirmation_n03445777_00_l2", "status": "pass", "distance": 36.961814880371094, "queries": 1601, "runtime_seconds": 161.6660736390004, "grading_runtime_seconds": 161.7975167250006}
+START slot0 cpus[0, 4, 8, 12] confirmation_n03445777_00_perlin
+{"case_id": "confirmation_n03445777_00_l0", "status": "pass", "distance": 94, "queries": 1804, "runtime_seconds": 164.05267413300044, "grading_runtime_seconds": 164.12834861899955}
+START slot1 cpus[2, 6, 10, 14] confirmation_n03888257_00_l2
+{"case_id": "confirmation_n03445777_00_perlin", "status": "pass", "distance": 0.1884765625, "queries": 1005, "runtime_seconds": 148.13616654500038, "grading_runtime_seconds": 149.20137158499983}
+START slot0 cpus[0, 4, 8, 12] confirmation_n03888257_00_l0
+{"case_id": "confirmation_n03888257_00_l2", "status": "pass", "distance": 6.1885223388671875, "queries": 1646, "runtime_seconds": 162.4418399899996, "grading_runtime_seconds": 162.53362321700024}
+START slot1 cpus[2, 6, 10, 14] confirmation_n03888257_00_perlin
+{"case_id": "confirmation_n03888257_00_l0", "status": "pass", "distance": 3, "queries": 1670, "runtime_seconds": 164.045300408, "grading_runtime_seconds": 164.17239790000076}
+START slot0 cpus[0, 4, 8, 12] confirmation_n03888257_00_linf
+{"case_id": "confirmation_n03888257_00_perlin", "status": "pass", "distance": 0.11728859079079856, "queries": 1078, "runtime_seconds": 156.00142419000076, "grading_runtime_seconds": 156.86459622600069}
+{"case_id": "confirmation_n03888257_00_linf", "status": "pass", "distance": 0.008994102478027344, "queries": 1963, "runtime_seconds": 159.4746972870007, "grading_runtime_seconds": 159.52635460800047}
+All40 cases complete; serial and parallel execution modes are retained explicitly.

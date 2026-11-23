@@ -1,0 +1,17 @@
+test_logically_disjoint_groups_cannot_share_physical_core (research.test_allnorm_parallel.ParallelConfirmationTests.test_logically_disjoint_groups_cannot_share_physical_core) ... ok
+test_two_workers_preserve_terminal_case_and_complete_distinct_tasks (research.test_allnorm_parallel.ParallelConfirmationTests.test_two_workers_preserve_terminal_case_and_complete_distinct_tasks) ... Preserved1 terminal cases; scheduling4 remaining with2workers.
+START slot0 cpus[0, 4, 8, 12] image1_linf
+START slot1 cpus[2, 6, 10, 14] image2_linf
+{"case_id": "image1_linf", "status": "pass", "distance": 1, "queries": 500, "runtime_seconds": 164, "grading_runtime_seconds": 164.1}
+START slot0 cpus[0, 4, 8, 12] image3_linf
+{"case_id": "image2_linf", "status": "pass", "distance": 1, "queries": 500, "runtime_seconds": 164, "grading_runtime_seconds": 164.1}
+START slot1 cpus[2, 6, 10, 14] image4_linf
+{"case_id": "image3_linf", "status": "pass", "distance": 1, "queries": 500, "runtime_seconds": 164, "grading_runtime_seconds": 164.1}
+{"case_id": "image4_linf", "status": "pass", "distance": 1, "queries": 500, "runtime_seconds": 164, "grading_runtime_seconds": 164.1}
+All40 cases complete; serial and parallel execution modes are retained explicitly.
+ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.009s
+
+OK

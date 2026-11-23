@@ -1,0 +1,1 @@
+Superseded by ../execution-report-v2/. The initial JSON included a meaningless mixed-unit cross-norm mean. The corrected report emits null for that field and retains per-norm means. No attack, source result, verification, score or timing measurement changed.

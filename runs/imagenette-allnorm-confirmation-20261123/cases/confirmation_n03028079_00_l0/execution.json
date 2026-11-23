@@ -1,0 +1,14 @@
+{
+  "mode": "parallel_two_disjoint_core_groups",
+  "worker_slot": 0,
+  "cpu_affinity": [
+    0,
+    4,
+    8,
+    12
+  ],
+  "torch_threads": 4,
+  "started_utc": "2026-11-23T11:57:37.407692+00:00",
+  "note": "CPU cores disjoint; memory bandwidth, package power and host activity remain shared.",
+  "finished_utc": "2026-11-23T12:00:27.493727+00:00"
+}

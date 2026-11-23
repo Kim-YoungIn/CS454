@@ -1,0 +1,221 @@
+{
+  "directory": "/home/archant/projects/cs454-adversarial/final_submission",
+  "file_count": 48,
+  "report_source": "research/build_final_submission.py",
+  "figures": [
+    "submission/knot_linf.png",
+    "submission/knot_l2.png",
+    "submission/knot_l0.png",
+    "submission/knot_perlin.png",
+    "submission/mink_linf.png",
+    "submission/mink_l2.png",
+    "submission/mink_l0.png",
+    "submission/mink_perlin.png",
+    "submission/orca_linf.png",
+    "submission/orca_l2.png",
+    "submission/orca_l0.png",
+    "submission/orca_perlin.png",
+    "submission/sock_linf.png",
+    "submission/sock_l2.png",
+    "submission/sock_l0.png",
+    "submission/sock_perlin.png",
+    "submission/tank_linf.png",
+    "submission/tank_l2.png",
+    "submission/tank_l0.png",
+    "submission/tank_perlin.png"
+  ],
+  "files": {
+    "CS454_Assignment3_Report.pdf": {
+      "bytes": 4945381,
+      "sha256": "36616709f9882de195019efc7e1c6cb021d1e477bd42c09b9c9ef1a3ec49532e"
+    },
+    "epsilon_ball.py": {
+      "bytes": 42662,
+      "sha256": "2a152f45637801c1c1991e96ad52a1afc0beaf3e8e4799efa9da2ee1e33880b7"
+    },
+    "knot_l0.png": {
+      "bytes": 146131,
+      "sha256": "fe2c3a493a70e97dd42dc5ab321d870640e15f0249e960cceb4ad604dad39ce2"
+    },
+    "knot_l2.png": {
+      "bytes": 156957,
+      "sha256": "49d89811c583f049d7a61d3b8354ca8e36c2fc2a1bee5be97bfb8ace04e77b0a"
+    },
+    "knot_linf.png": {
+      "bytes": 157878,
+      "sha256": "f6c8a6e08bc6a515316886503da31586a5c6d82c5aaeb5d9c23dc1e245bfb2e3"
+    },
+    "knot_perlin.json": {
+      "bytes": 20,
+      "sha256": "c816438db045903277391d3fa757df305906a1ce206d477f8fd5867b1876bcfa"
+    },
+    "knot_perlin.png": {
+      "bytes": 144170,
+      "sha256": "8d5dbd3238907c943fae42808b4f79f3c63863bd7e3dbf97104264b38555dddd"
+    },
+    "mink_l0.png": {
+      "bytes": 155116,
+      "sha256": "f37f1cc46882e3880239634be83a2603b4392d44bedf5db8f9b14df994132219"
+    },
+    "mink_l2.png": {
+      "bytes": 159095,
+      "sha256": "ec8f23930fa161cb435f30b24323c26f86f65dae50846ba8f21d0062ecd05f42"
+    },
+    "mink_linf.png": {
+      "bytes": 160693,
+      "sha256": "dcc3a58bbeb66f4392c77dd4e558fb804f96748177f0616b3fb0bfd3c0e1c088"
+    },
+    "mink_perlin.json": {
+      "bytes": 28,
+      "sha256": "8c401496a9f2bb37d45914c63110e756e39dfa2f9bb0593515aa10f4721e17ff"
+    },
+    "mink_perlin.png": {
+      "bytes": 165238,
+      "sha256": "4741cb9f28897c10f241e5b6c60368f3ea82ba83b38cade71567163199fd7b9d"
+    },
+    "orca_l0.png": {
+      "bytes": 146718,
+      "sha256": "9bb70c5b89fe9e9f0b80d94fc89c2b7a72e18b6a431f9459d781157ffda3f806"
+    },
+    "orca_l2.png": {
+      "bytes": 158078,
+      "sha256": "7da11c3e7f646f5f2d52d8b40c1fa8df9ad74658edf5f9727428f68a87a7cb67"
+    },
+    "orca_linf.png": {
+      "bytes": 166400,
+      "sha256": "a51207071b665148caa056ad15fc09dc16fb66860d4b63641350fbb69510f638"
+    },
+    "orca_perlin.json": {
+      "bytes": 20,
+      "sha256": "06f4786135a1af896054dcd8a1356e333d76e959b8c203942b122db74d03bb18"
+    },
+    "orca_perlin.png": {
+      "bytes": 152932,
+      "sha256": "d89844aa1bd471dd0e8455948eee5cd18a8eb128aa73f820207b08a7142bf7cc"
+    },
+    "perlin_fog.py": {
+      "bytes": 15329,
+      "sha256": "85733d54ba8d1c02a1cd3221a4f7f499ef9af9df5ffdce2cf9b9fcb8462de8d0"
+    },
+    "raw_knot_l0.png": {
+      "bytes": 603717,
+      "sha256": "b8964105b945f0e49736b1a3cf08116471b3b88453d160159bc1a545d2342deb"
+    },
+    "raw_knot_l2.png": {
+      "bytes": 603717,
+      "sha256": "79e19f0a37af78338e292ab567967aec2de5652e7ffaa9cd374f9e5ed3fb9bfa"
+    },
+    "raw_knot_linf.png": {
+      "bytes": 603731,
+      "sha256": "532844e826f54abe6ced0fcf4f5fba486951c12ece6a1ce2a4d65dfd383758f4"
+    },
+    "raw_knot_perlin.png": {
+      "bytes": 603745,
+      "sha256": "8f79e5088695641893d93cbfad032032d90c06deac597dd85935349e03dc6ec9"
+    },
+    "raw_mink_l0.png": {
+      "bytes": 603717,
+      "sha256": "00224497b471731ecd3be3c823e2f0d7da62b779bc4cdd9af325dfbfb4adb8bd"
+    },
+    "raw_mink_l2.png": {
+      "bytes": 603717,
+      "sha256": "152b90757a400670e8d378b9f93f0e43f2b0e1db1a4fff42f67f9dc50891ebff"
+    },
+    "raw_mink_linf.png": {
+      "bytes": 603731,
+      "sha256": "c9f602c7bfa33e5a16ea4ba7b3e55488ab304e6501c12929e7505b69a38999b1"
+    },
+    "raw_mink_perlin.png": {
+      "bytes": 603745,
+      "sha256": "354a252094074304758b0c72917340a355dac1c86734ff4f0395f3d506329bf8"
+    },
+    "raw_orca_l0.png": {
+      "bytes": 603717,
+      "sha256": "13a659a31b430471380b50a6bb01499b17df9dc05af426c68e81cf8cb9e7fd9c"
+    },
+    "raw_orca_l2.png": {
+      "bytes": 603717,
+      "sha256": "7dad0e636d3b78efcee15ba5a4cb54e30eab55023775f625805015c48f281ee9"
+    },
+    "raw_orca_linf.png": {
+      "bytes": 603731,
+      "sha256": "21e4ffbcdbdb26ff5eb4356822aafb4b7c4ba0ba6b28e8c6a6acd7b90fb34d78"
+    },
+    "raw_orca_perlin.png": {
+      "bytes": 603745,
+      "sha256": "5e06b2624873f355f2b1a698a26bb28ade788aab30dbcb3b820213da8e510514"
+    },
+    "raw_sock_l0.png": {
+      "bytes": 603717,
+      "sha256": "d73795c6765623b16399f65b37a9e89d45fb10054286fd8b8e3310a4cdbbb1d8"
+    },
+    "raw_sock_l2.png": {
+      "bytes": 603717,
+      "sha256": "89cd564243711408e95a3f627d7668ef25f7db2defa64fc53accfa84ea2029ff"
+    },
+    "raw_sock_linf.png": {
+      "bytes": 603731,
+      "sha256": "6f1954123a49c56c9fb7deaa26196d8f25648f372de7f5e96407f50ede000ef7"
+    },
+    "raw_sock_perlin.png": {
+      "bytes": 603745,
+      "sha256": "da650da57e8626916450d611ea887b5e0516a4685126fde35ec4821e460c0a66"
+    },
+    "raw_tank_l0.png": {
+      "bytes": 603717,
+      "sha256": "8e2111edee124f131b3f841d123f339ed18d547403990ff46352063436a23959"
+    },
+    "raw_tank_l2.png": {
+      "bytes": 603717,
+      "sha256": "c98b50cd9a6b21365e4c16f08dee3da2fc419d3770b93cdd00a26e862a626054"
+    },
+    "raw_tank_linf.png": {
+      "bytes": 603731,
+      "sha256": "5ef43a7addb9acb35ce043640c57f4a58d755e42e0d70dbfdcf91d9989fde7a6"
+    },
+    "raw_tank_perlin.png": {
+      "bytes": 603745,
+      "sha256": "9617ea918973d9104b022084fc5898655896b0b3cde37e42a51ab2c01d51b95b"
+    },
+    "sock_l0.png": {
+      "bytes": 129004,
+      "sha256": "0c92f602c90bc481f62d5b2a8644dc66b7cefe116d0749b0a2bde3ceef45cb0a"
+    },
+    "sock_l2.png": {
+      "bytes": 138321,
+      "sha256": "8819c9b234012193fbb4e6b40a04ae78f241db8277c41407b4137b4922e7c046"
+    },
+    "sock_linf.png": {
+      "bytes": 143606,
+      "sha256": "4db67a1979bf11107ba5f05641b3d3a506b4ffdf52df7a47c6906df90fe5e375"
+    },
+    "sock_perlin.json": {
+      "bytes": 28,
+      "sha256": "c932b7433d0d68eab819c88b54d3cc957328752077b924a972658735cc44261f"
+    },
+    "sock_perlin.png": {
+      "bytes": 146935,
+      "sha256": "8487ae940eca587dedd5ccdd22504242bc1d387e22d4769125b73e3a26995aa1"
+    },
+    "tank_l0.png": {
+      "bytes": 156535,
+      "sha256": "f6af78fef378ac97c961363f6bc8d9b62fe0d16e41504807d333cdcedaaa61c0"
+    },
+    "tank_l2.png": {
+      "bytes": 157322,
+      "sha256": "db345883470670fcecb134755434e478b9aa946c4d582a6b77f4cad63ee23e0d"
+    },
+    "tank_linf.png": {
+      "bytes": 158592,
+      "sha256": "62d25449e304b2b62669127df6e0d56b3a33dbf4a713b875f9f435067bf4e861"
+    },
+    "tank_perlin.json": {
+      "bytes": 27,
+      "sha256": "a86efa52baac468dad2e96fca8046dc266bdc31e3ccf2b97cca3e961d78e6d83"
+    },
+    "tank_perlin.png": {
+      "bytes": 177504,
+      "sha256": "70498ff676d9bcbb8292cc3c0981836308e33c4ef0d853c09b93727f62e754a5"
+    }
+  }
+}

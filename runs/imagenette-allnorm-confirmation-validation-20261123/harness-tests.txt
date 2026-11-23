@@ -1,0 +1,27 @@
+test_child_environment_discards_experimental_query_cap (research.test_allnorm_runner.ConfirmationRunnerTests.test_child_environment_discards_experimental_query_cap) ... ok
+test_interruption_preserves_completed_trial_and_archives_partial (research.test_allnorm_runner.ConfirmationRunnerTests.test_interruption_preserves_completed_trial_and_archives_partial) ... START sample_linf
+{"case_id": "sample_linf", "status": "pass", "distance": 1, "queries": 3, "runtime_seconds": 164, "grading_runtime_seconds": 164.1}
+START sample_l2
+START sample_l2
+{"case_id": "sample_l2", "status": "pass", "distance": 1, "queries": 3, "runtime_seconds": 164, "grading_runtime_seconds": 164.1}
+Completed all40 confirmation cases; terminal failures retained.
+ok
+test_terminal_worker_failure_is_retained_without_retry (research.test_allnorm_runner.ConfirmationRunnerTests.test_terminal_worker_failure_is_retained_without_retry) ... START sample_linf
+{"case_id": "sample_linf", "status": "worker_error", "distance": "", "queries": "", "runtime_seconds": "", "grading_runtime_seconds": ""}
+START sample_l2
+{"case_id": "sample_l2", "status": "worker_error", "distance": "", "queries": "", "runtime_seconds": "", "grading_runtime_seconds": ""}
+Completed all40 confirmation cases; terminal failures retained.
+Completed all40 confirmation cases; terminal failures retained.
+ok
+test_conditional_statistics_and_complete_failure_penalty (research.test_allnorm_report.AllnormReportingTests.test_conditional_statistics_and_complete_failure_penalty) ... ok
+test_context_mismatch_and_duplicate_results_are_rejected (research.test_allnorm_report.AllnormReportingTests.test_context_mismatch_and_duplicate_results_are_rejected) ... ok
+test_grading_limit_is_authoritative_and_optimizer_overrun_is_diagnostic (research.test_allnorm_report.AllnormReportingTests.test_grading_limit_is_authoritative_and_optimizer_overrun_is_diagnostic) ... ok
+test_independent_failure_overrides_source_success (research.test_allnorm_report.AllnormReportingTests.test_independent_failure_overrides_source_success) ... ok
+test_nonfinite_or_invalid_distance_is_not_a_reported_success (research.test_allnorm_report.AllnormReportingTests.test_nonfinite_or_invalid_distance_is_not_a_reported_success) ... ok
+test_pending_and_failed_cases_stay_in_denominator (research.test_allnorm_report.AllnormReportingTests.test_pending_and_failed_cases_stay_in_denominator) ... ok
+test_report_imports_no_classifier_or_framework (research.test_allnorm_report.AllnormReportingTests.test_report_imports_no_classifier_or_framework) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.010s
+
+OK

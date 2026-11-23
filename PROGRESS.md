@@ -1,41 +1,42 @@
 # CS454 project status — 2026-11-23
 
-## Current verified implementation
+## Current verified solution
 
-`epsilon_ball.py` implements all required norm entry points; `perlin_fog.py` implements fog. Searches infer the clean prediction, use model probabilities without gradients and accept arbitrary supported image paths. Instructor README, utilities, grader and supplied fog-rendering functions remain unchanged. Submission implementations are self-contained.
+All required interfaces are implemented and self-contained. Searches infer the clean class and use model probabilities without gradients, saved attacks or image/class-specific recipes. Instructor utilities/grader and the three fog renderer functions are preserved. Production sources still byte-match `research/generalization_session_promoted/`.
 
-- **Linf:** unchanged four-elite spatial GA, signed blocks and radius refinement.
-- **L2 default:** global energy GA for at least **512 proposal generations** and three successful stages, then feasible-direction GA with bounded scalar probes. This prevents premature local refinement on initially easy images. **The grader uses sum of squared differences.** `CS454_L2_SEARCH=original` preserves the previous global-only route; `CS454_BOUNDARY_MIN_GENERATIONS` is an experimental override, not a proven optimum.
-- **L0 default (`parental`):** bounded discovery, hierarchical/repeated channel deletion, protected restarts and fixed-cardinality parental-support evolution. **L0 counts changed channel elements.** `CS454_L0_STYLE=multistart`, `refined`, `original` retain controls. The new one-parent neighbor tail remains research-only.
-- **Fog:** unchanged full mixture GA followed by up to 24 integer-octave generations within remaining time, exact renderer verification and protected mixture fallback. `CS454_FOG_GENERATIONS` controls mixtures; `CS454_FOG_OCTAVE_GENERATIONS` controls the extension.
+- **Linf:** four-elite signed spatial-block GA with radius refinement.
+- **L2:** global energy GA for at least512 main proposals and three successes, then feasible-direction GA and bounded scalar probes. `CS454_L2_SEARCH=original` retains the global-only route. **Grading L2 is sum of squares.**
+- **L0:** bounded discovery, hierarchical/repeated channel deletion, protected restarts and parental-support evolution (`parental`). **Grading L0 counts changed channel elements.** The neighbor-tail candidate remains research-only.
+- **Fog:** full mixture GA plus up to24 integer-octave generations, exact renderer verification and protected fallback.
 
-Norm defaults remain four threads / 165 seconds (hard configurable maximum 170); fog remains 270 seconds (hard maximum 285). **81 tests pass. All 50 distinct labelled-study tensors pass fresh one-thread verification.** Earlier one-thread verification passed all 20 canonical and 28 first-bank generalization artifacts; canonical and labelled-bank checksum manifests still match.
+Defaults: four Torch threads,165s per norm (hard configurable max170), fog270s (hard max285). **93 distinct tests pass; all40 new confirmation artifacts pass independent one-thread validation and retain the same predicted classes.** Canonical20 artifacts and source hashes are preserved.
 
-## Generalization evidence
+## Completed all-norm generalization confirmation
 
-The first external bank confirmed the current L2 method on four fixture images at 900 calls (geometric-mean squared-distance ratio **0.788**) and two at 165 seconds (**0.599**). This was a small bank using the clean argmax as its reference. Its confirmation set has already been used. [Earlier evidence](docs/history/2026-11-21-generalization.md).
+The user explicitly authorized consuming all ten previously reserved Imagenette confirmation images. Frozen before outcomes: one clean-correct photo/class across ten classes, seed457, no query cap, all four attacks. **40/40 succeed; no180/300-second grading timeout or165/270-second optimizer-target overrun.** Fog grading time includes exact regeneration and classification.
 
-The labelled Imagenette bank has ten clean-correct development and ten reserved confirmation images across ten classes. The 900-call development screens use seed 456 and four threads. Every method succeeded on every input.
-
-| Candidate vs. control | Wins / pairs | Geometric-mean squared L2 ratio | Worst ratio |
+| Attack | Verified success | Median grading distance | Maximum grading seconds |
 | --- | ---: | ---: | ---: |
-| Current search vs. original global GA | 5 / 10 | 1.040 | 1.638 |
-| First reversible candidate vs. current search | 0 / 10 | 1.176 | 1.333 |
-| State-preserving candidate vs. current search | 2 / 10 | 1.050 | 1.234 |
+| Linf | 10/10 | 0.0126621 | 162.869 |
+| Squared L2 | 10/10 | 15.2024 | 163.256 |
+| L0 elements | 10/10 | 5.5 | 164.172 |
+| Fog magnitude | 10/10 | 0.168201 | 228.110 |
 
-Both window candidates fail the frozen **165-second** selection: first reversible loses2/2 (ratio **1.122**); preserved-state wins1/2 but has ratio **1.110**, worst **1.244**. **Reject both; production and all ten labelled confirmation images remain untouched.** State retention produced some global gains but did not offset displaced local refinement. [Completed study and decisions](runs/labelled-v2-completion-study/study.json).
+At the user's request, after11 serial cases the remaining29 ran as two concurrent workers, each pinned to four disjoint physical cores according to the exposed CPU topology. Existing results were preserved without reruns. Shared memory bandwidth, package power/frequency and host scheduling remain uncontrolled. **These mixed execution conditions are recorded; this is absolute transfer evidence, not a comparative algorithm/throughput improvement claim.** One seed and ten classes do not establish population-wide generalization; Imagenette may overlap VGG pretraining. The bank is now consumed and cannot serve as fresh holdout after tuning.
 
-The separate original-global165-second audit is mixed: cassette4.248, gas pump631.773. Its geometric-mean ratio is0.990 against earlier current controls,1.123 against later controls. All control measurements are retained; changing CPU throughput makes the denominator consequential. These two development cases do not settle broader generalization. [Detailed evidence and limitations](docs/history/2026-11-21-labelled-research.md).
+Evidence: [norm summary](runs/imagenette-allnorm-confirmation-validation-20261123/report/results.md), [full10×4 table with execution conditions](runs/imagenette-allnorm-confirmation-validation-20261123/execution-report-v2/execution_results.md), [wide CSV](runs/imagenette-allnorm-confirmation-validation-20261123/execution-report-v2/image_norm_wide.csv), [independent checks](runs/imagenette-allnorm-confirmation-validation-20261123/report/verification.csv), [tests](runs/imagenette-allnorm-confirmation-validation-20261123/all-tests.txt), [source audit](runs/imagenette-allnorm-confirmation-validation-20261123/source-audit.json). Protocol/source/runtime freeze: `research/imagenette_allnorm_confirmation_20261123/`; live/terminal cases: `runs/imagenette-allnorm-confirmation-20261123/`. **All requested jobs and validation are complete.**
 
-## Next priorities
+## Research decisions and next priorities
 
-1. Broaden matched165-second L2 evaluation beyond these two classes and check another seed. Keep timings sequential, record actual calls, use fresh controls, and retain all failures/regressions. Do not repeat the rejected window variants or infer wall-time quality from900-call screens alone.
-2. Test L0 fixed-support exhaustion plus novel neighboring loci. One consumed development case spent136/156 support calls on repeated masks; cache/exhaustion handling may free useful work, but earlier generic discovery caches already had mixed results. Preserve the discovery/pruning prefix and measure actual165-second gains before promotion. The existing one-parent tail has only one activated900-call win; its full-time benefit remains unmeasured.
-3. Keep the ten labelled confirmation images reserved until a frozen method qualifies. If revisiting L2, a compact spatial-coefficient genotype tests a different proposal representation; avoid another window/gate sweep. Generalization of Linf/fog is also still limited. Imagenette covers ten classes and may overlap classifier pretraining. [Data protocol](research/generalization_imagenette_v2/README.md).
+The earlier labelled development study rejected both L2 window variants: first reversible165s ratio1.122; preserved-state1.110, worst1.244. Production was retained before this confirmation. Current-vs-global900-call development was mixed (5wins/5losses, ratio1.040), and the two-class full-time audit depended on timing controls. Do not repeat those candidates or reinterpret them as confirmed improvements. Details: [labelled L2 history](docs/history/2026-11-21-labelled-research.md), [closed study](runs/labelled-v2-completion-study/study.json). The earlier eight-image fixture bank is also already consumed.
+
+1. Optimize only on development data; keep the frozen production control, use matched actual-time runs and fresh timing controls, examine worst cases/another seed, and obtain a new independent bank before claiming further generalization improvements. French horn remains costly here (squaredL2 4039.34,L0 177); this is a limitation, not permission to tune a class-specific rule.
+2. Investigate L0 fixed-support exhaustion plus novel neighboring loci. A consumed development case spent136/156 support calls on repeated masks. Earlier generic discovery caches had mixed results; preserve discovery/pruning prefixes and prove actual165-second gains. The existing neighbor tail has one activated900-call win; full-time benefit remains unmeasured.
+3. A compact spatial-coefficient L2 genotype is a different proposal hypothesis if allocation designs stall. Avoid another window/gate sweep. Preserve failure-inclusive reporting and distinguish more actual work from a better operator.
 
 ## Canonical assignment artifacts
 
-`submission/` still contains 20 raw tensors, 20 plots, five fog JSON files, provenance, verified scores and checksums. These best artifacts mix methods, seeds and budgets; **they are not a uniform benchmark of the new default**. This session preserves them intact.
+`submission/` retains20 raw tensors,20 plots,five fog JSON files, scores, provenance and checksums. The best artifacts mix methods/seeds/budgets; **they are not a uniform benchmark of the current default**. They were previously independently verified; their checksum manifest still matches.
 
 | Image | Linf | Squared L2 | L0 | Fog magnitude |
 | --- | ---: | ---: | ---: | ---: |
@@ -45,24 +46,18 @@ The separate original-global165-second audit is mixed: cassette4.248, gas pump63
 | sock | 0.042834 | 131.672 | 22 | 0.123452 |
 | tank | 0.103578 | 595.750 | 84 | 0.903415 |
 
-Exact values/origins: [verification](submission/verification.csv), [selection](submission/selection.csv). Old bundles remain in `runs/submission-session3-before-improvements/`, `runs/submission-session2-before-recombination/`, `runs/submission-session1/`.
+Exact origins: [verification](submission/verification.csv), [selection](submission/selection.csv). Earlier bundles remain under `runs/submission-session*/`. The PDF report remains the user's responsibility.
 
-## Reproduction and retained records
+## Reproduction and retained history
 
-Run from the repository root. Persistent caches are ignored under `.runtime/`; run `python3 research/restore_runtime_links.py` after temporary-directory resets. Environment: `/tmp/cs454-baseline-env/bin/python`, `TORCH_HOME=/tmp/cs454-torch`, `MPLCONFIGDIR=/tmp/cs454-plot-cache`. Recreate missing temporary dependencies from `torch_cpu.txt` / `requirements.txt`; versions and checkpoint hashes are recorded in run metadata. Use fresh output paths.
+Run from the repository root. `.runtime/` contains ignored persistent dependencies and VGG weights; `python3 research/restore_runtime_links.py` restores `/tmp/cs454-baseline-env` and `/tmp/cs454-torch` aliases. Python/package/checkpoint hashes are in each frozen plan. Use fresh report/run destinations; completed terminal trials must not be repeated.
 
 ```sh
-TORCH_HOME=/tmp/cs454-torch MPLCONFIGDIR=/tmp/cs454-plot-cache \
-  /tmp/cs454-baseline-env/bin/python benchmark_attacks.py \
-  --images mink sock --norms l2 --queries 900 --seconds 165 \
-  --threads 4 --seed 455 --output NEW --tag trial
-# Set CS454_L2_SEARCH=original for the previous L2 route; remove --queries for wall-time evaluation.
-TORCH_HOME=/tmp/cs454-torch /tmp/cs454-baseline-env/bin/python \
+TORCH_HOME="$PWD/.runtime/torch-cache" .runtime/python-env/bin/python \
+  research/validate_allnorm_confirmation.py \
+  --run runs/imagenette-allnorm-confirmation-20261123 --output FRESH_REPORT
+TORCH_HOME="$PWD/.runtime/torch-cache" .runtime/python-env/bin/python \
   verify_artifacts.py submission --perlin
 ```
 
-Frozen production: `research/generalization_session_promoted/`; previous production: `research/session3_promoted/`; earlier baseline: `research/session3_baseline/`. Generalization protocols, manifests, algorithm/source freezes and exact commands are beside the run configurations. Strict historical source guards may require their captured dependencies in an isolated reproduction checkout; create new plans for current sources instead of changing old protocols. The labelled archive is pinned by official MD5 and recorded SHA256; selection retains all exclusions and does not filter on attack difficulty.
-
-Completed labelled outputs: [50 unique trial records](runs/labelled-v2-completion-study/results.csv), [independent verification](runs/labelled-v2-completion-validation/artifacts.csv), [81-test log](runs/labelled-v2-completion-validation/tests.txt), [source audit](runs/labelled-v2-completion-source-audit.json). All planned jobs have finished; no promotion is pending.
-
-Detailed history: [current labelled session](docs/history/2026-11-21-labelled-research.md), [prior generalization session](docs/history/2026-11-21-generalization.md), [earlier November 21 session](docs/history/2026-11-21-research.md), [original November 20 record](docs/history/2026-11-20-research-log.md). The original 277-line log is intact. `experiments.csv` is a clean-classification control and `grader_results.csv` is historical starter failure output. Saved-parent diagnostics are not online benchmarks. Attack entry points never read saved attacks or known seed labels. The PDF report remains the user's responsibility.
+Historical evidence and exact resume commands: [all-norm confirmation](docs/history/2026-11-23-allnorm-confirmation.md), [labelled L2](docs/history/2026-11-21-labelled-research.md), [earlier generalization](docs/history/2026-11-21-generalization.md), [November21](docs/history/2026-11-21-research.md), [original277-line log](docs/history/2026-11-20-research-log.md). Prior production snapshots remain under `research/session3_promoted/` and `research/session3_baseline/`; strict historical guards require captured dependencies. `experiments.csv` is a clean-classification baseline, not an adversarial optimization result.

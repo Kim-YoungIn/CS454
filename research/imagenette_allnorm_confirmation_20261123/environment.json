@@ -1,0 +1,15 @@
+{
+  "python": "3.14.4",
+  "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "packages": {
+    "torch": "2.15.0+cpu",
+    "torchvision": "0.29.2+cpu",
+    "numpy": "2.5.4",
+    "Pillow": "13.0.0",
+    "matplotlib": "3.11.2",
+    "perlin-noise": "1.13"
+  },
+  "checkpoint_sha256": "8a7190461cb581dbcbd2c3b58f43cf12a0bca3ccf92898f867e4a9e9b898c464",
+  "cpu": "AMD Ryzen AI 7 350 w/ Radeon 860M",
+  "frozen_utc": "2026-11-23T11:19:44.926311+00:00"
+}

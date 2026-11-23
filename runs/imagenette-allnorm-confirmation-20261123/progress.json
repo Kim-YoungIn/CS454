@@ -1,0 +1,24 @@
+{
+  "completed": 40,
+  "total": 40,
+  "by_norm": {
+    "linf": {
+      "completed": 10,
+      "passed": 10
+    },
+    "l2": {
+      "completed": 10,
+      "passed": 10
+    },
+    "l0": {
+      "completed": 10,
+      "passed": 10
+    },
+    "perlin": {
+      "completed": 10,
+      "passed": 10
+    }
+  },
+  "updated_utc": "2026-11-23T12:27:57.012272+00:00",
+  "next_case": null
+}

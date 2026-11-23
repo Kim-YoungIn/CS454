@@ -1,0 +1,7 @@
+{
+  "coordinator_pid": 16557,
+  "serial_tool_session": 45130,
+  "preserved_terminal_cases": 11,
+  "no_attack_repeated": true,
+  "transition": "SIGSTOP only coordinator, let active worker finish and atomically save result; SIGTERM+SIGCONT paused coordinator after verifying children were zombies. Original complete/orphan rows recovered without repeating attacks."
+}

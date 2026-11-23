@@ -1,0 +1,2 @@
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [0.029313922..1.0020586].
+{"case_id": "confirmation_n03425413_00_linf", "status": "pass", "distance": 0.00898963212966919, "runtime_seconds": 161.6341672540002}

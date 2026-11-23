@@ -1,0 +1,39 @@
+{
+  "version": "parallel-execution-amendment-1",
+  "authorized_by": "User explicitly asked whether evaluation can proceed in parallel while serial evaluation was running.",
+  "created_utc": "2026-11-23T11:47:42.922704+00:00",
+  "supersedes": "Original scheduling field only. Frozen attack source, all40images/norms, seed457, budgets, metrics, failure handling and one-thread validation remain unchanged.",
+  "workers": 2,
+  "cpu_groups": [
+    "0,4,8,12",
+    "2,6,10,14"
+  ],
+  "topology": "8physical/16logical CPUs; groups each use one SMT thread on four distinct cores, alternatingphysical coreindices tobalanceheterogeneity. cpu.max=max100000,cpuset0-15,~8GiBavailable beforeparallel.",
+  "serial_cases_preserved": [
+    "confirmation_n01440764_00_l0",
+    "confirmation_n01440764_00_l2",
+    "confirmation_n01440764_00_linf",
+    "confirmation_n01440764_00_perlin",
+    "confirmation_n02102040_01_l0",
+    "confirmation_n02102040_01_l2",
+    "confirmation_n02102040_01_linf",
+    "confirmation_n02102040_01_perlin",
+    "confirmation_n02979186_03_l0",
+    "confirmation_n02979186_03_linf",
+    "confirmation_n02979186_03_perlin"
+  ],
+  "remaining_cases": 29,
+  "transition": "SIGSTOP only coordinator, let active worker finish and atomically save result; SIGTERM+SIGCONT paused coordinator after verifying children were zombies. Original complete/orphan rows recovered without repeating attacks.",
+  "limitations": "Disjoint CPU cores do not isolate memory bandwidth, CPU packagepower, frequency orhostactivity. Mixedserial/parallel timings and callcounts must be labeled. No claim of equal-throughput singleattack standalone scores or algorithmic improvement.",
+  "tests": "2standardlib scheduler tests pass0.009s; no modelcalls. CPU groups checked for physical/SMT overlap.",
+  "sources": {
+    "research/run_allnorm_parallel.py": {
+      "sha256": "20b1ef0069252c91406261d808d90d0fd5e2bc5e68b110f49a876d4fba34f6f5",
+      "snapshot": "research/imagenette_allnorm_confirmation_20261123/amendment_sources/run_allnorm_parallel.py"
+    },
+    "research/test_allnorm_parallel.py": {
+      "sha256": "c8d7100449f65057def2c0037286476dfcce2792ee5c69d9ee4fdb9bfb12ec5c",
+      "snapshot": "research/imagenette_allnorm_confirmation_20261123/amendment_sources/test_allnorm_parallel.py"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "expected_cases": 40,
+  "completed_cases": 40,
+  "independently_verified": true,
+  "per_norm": {
+    "linf": {
+      "successes": 10,
+      "expected": 10,
+      "statuses": {
+        "pass": 10
+      }
+    },
+    "l2": {
+      "successes": 10,
+      "expected": 10,
+      "statuses": {
+        "pass": 10
+      }
+    },
+    "l0": {
+      "successes": 10,
+      "expected": 10,
+      "statuses": {
+        "pass": 10
+      }
+    },
+    "perlin": {
+      "successes": 10,
+      "expected": 10,
+      "statuses": {
+        "pass": 10
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "case_id": "confirmation_n02102040_01_linf",
+  "image_id": "confirmation_n02102040_01",
+  "norm": "linf",
+  "seed": 457,
+  "seconds_limit": 165,
+  "threads": 4,
+  "grading_seconds_limit": 180
+}

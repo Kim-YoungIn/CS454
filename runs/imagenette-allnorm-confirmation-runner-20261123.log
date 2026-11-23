@@ -1,0 +1,21 @@
+START confirmation_n01440764_00_linf
+{"case_id": "confirmation_n01440764_00_linf", "status": "pass", "distance": 0.06709253787994385, "queries": 2515, "runtime_seconds": 160.7995210539998, "grading_runtime_seconds": 160.86064156299972}
+START confirmation_n01440764_00_l2
+{"case_id": "confirmation_n01440764_00_l2", "status": "pass", "distance": 316.8497619628906, "queries": 2375, "runtime_seconds": 160.9641435929998, "grading_runtime_seconds": 161.05060875599975}
+START confirmation_n01440764_00_l0
+{"case_id": "confirmation_n01440764_00_l0", "status": "pass", "distance": 66, "queries": 2434, "runtime_seconds": 164.026898006, "grading_runtime_seconds": 164.08492611099973}
+START confirmation_n01440764_00_perlin
+{"case_id": "confirmation_n01440764_00_perlin", "status": "pass", "distance": 0.4685385704040527, "queries": 997, "runtime_seconds": 105.67226360299992, "grading_runtime_seconds": 106.33568890099923}
+START confirmation_n02102040_01_l2
+{"case_id": "confirmation_n02102040_01_l2", "status": "pass", "distance": 0.21617627143859863, "queries": 2443, "runtime_seconds": 162.6630172289997, "grading_runtime_seconds": 162.73478664399954}
+START confirmation_n02102040_01_l0
+{"case_id": "confirmation_n02102040_01_l0", "status": "pass", "distance": 1, "queries": 498, "runtime_seconds": 34.042438255999514, "grading_runtime_seconds": 34.12388576699959}
+START confirmation_n02102040_01_perlin
+{"case_id": "confirmation_n02102040_01_perlin", "status": "pass", "distance": 0.06347881350028572, "queries": 1496, "runtime_seconds": 140.10806674000014, "grading_runtime_seconds": 140.73472988999947}
+START confirmation_n02102040_01_linf
+{"case_id": "confirmation_n02102040_01_linf", "status": "pass", "distance": 0.0023572444915771484, "queries": 2501, "runtime_seconds": 162.80059957400044, "grading_runtime_seconds": 162.86890979600048}
+START confirmation_n02979186_03_l0
+{"case_id": "confirmation_n02979186_03_l0", "status": "pass", "distance": 2, "queries": 2435, "runtime_seconds": 164.0550406679995, "grading_runtime_seconds": 164.140532765}
+START confirmation_n02979186_03_perlin
+{"case_id": "confirmation_n02979186_03_perlin", "status": "pass", "distance": 0.22553315162658688, "queries": 1033, "runtime_seconds": 121.54758452799979, "grading_runtime_seconds": 121.9498135470003}
+START confirmation_n02979186_03_linf
